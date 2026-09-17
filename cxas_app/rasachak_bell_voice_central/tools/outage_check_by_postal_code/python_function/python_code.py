@@ -6,8 +6,9 @@ def outage_check_by_postal_code(postal_code: str) -> dict:
         if cleaned in ('H3Z2Y7', 'G1R4A6'):
             return {
                 'outage_active': True,
-                'affected_services': ['Internet', 'Fibe TV'],
-                'estimated_restoration': '4:00 PM today',
+                'status': 'ACTIVE',
+                'message': "I see there's an active outage in your area. We're working on it. Would you like me to text you when it's restored?",
+                'message_fr': "Je constate qu'il y a une panne active dans votre secteur. Nous y travaillons actuellement. Voulez-vous que je vous envoie un message texte dès que le service sera rétabli?",
                 'sms_updates_eligible': True
             }
         return {

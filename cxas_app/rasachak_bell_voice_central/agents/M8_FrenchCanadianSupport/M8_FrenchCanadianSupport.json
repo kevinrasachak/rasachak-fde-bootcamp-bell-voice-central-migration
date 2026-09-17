@@ -9,10 +9,15 @@
   "tools": [
     "outage_check_by_postal_code",
     "billing_process_payment",
+    "billing_process_credit_refund",
     "appointment_manage_booking",
     "account_restore_service",
+    "account_process_cancellation",
     "sales_process_warranty_replacement",
-    "sales_process_number_port_in"
+    "sales_process_number_port_in",
+    "auth_verify_pin_otp",
+    "account_manage_mfa",
+    "account_manage_password_reset"
   ],
   "beforeModelCallbacks": [
     {

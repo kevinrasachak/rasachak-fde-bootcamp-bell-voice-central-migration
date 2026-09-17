@@ -4,7 +4,7 @@ import sys
 
 APP_JSON_PATH = "cxas_app/rasachak_bell_voice_central/app.json"
 CMD = [
-    "/usr/local/google/home/rasachak/projects/.venv/bin/cxas",
+    "uv", "run", "cxas",
     "push",
     "--app-dir", "./cxas_app/rasachak_bell_voice_central",
     "--to", "projects/fde-bootcamp/locations/us/apps/1d5bf51d-1c25-4ebd-ae25-8e6ef940b3c8",

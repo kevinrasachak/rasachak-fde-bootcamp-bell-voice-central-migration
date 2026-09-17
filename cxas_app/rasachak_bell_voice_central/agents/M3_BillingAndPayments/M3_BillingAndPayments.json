@@ -10,7 +10,9 @@
     "billing_get_account_balance",
     "billing_process_payment",
     "billing_process_credit_refund",
-    "billing_manage_autopay"
+    "billing_manage_autopay",
+    "auth_verify_pin_otp",
+    "account_restore_service"
   ],
   "beforeModelCallbacks": [
     {

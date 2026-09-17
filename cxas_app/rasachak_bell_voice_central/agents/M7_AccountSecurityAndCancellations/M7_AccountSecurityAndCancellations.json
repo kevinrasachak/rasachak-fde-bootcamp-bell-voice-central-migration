@@ -11,7 +11,8 @@
     "account_manage_password_reset",
     "account_manage_mfa",
     "account_restore_service",
-    "account_process_cancellation"
+    "account_process_cancellation",
+    "auth_verify_pin_otp"
   ],
   "beforeModelCallbacks": [
     {
