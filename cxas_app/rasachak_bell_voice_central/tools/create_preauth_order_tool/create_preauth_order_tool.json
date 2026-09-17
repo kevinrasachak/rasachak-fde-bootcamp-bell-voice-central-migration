@@ -1,0 +1,9 @@
+{
+  "name": "create_preauth_order_tool",
+  "pythonFunction": {
+    "name": "create_preauth_order_tool",
+    "pythonCode": "tools/create_preauth_order_tool/python_function/python_code.py",
+    "description": "Webhook Wrapper: Creates the pre-auth order framework and returns transaction_id."
+  },
+  "displayName": "create_preauth_order_tool"
+}

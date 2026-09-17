@@ -1,0 +1,9 @@
+{
+  "name": "fetch_omf_order_details_wrapper",
+  "pythonFunction": {
+    "name": "fetch_omf_order_details_wrapper",
+    "pythonCode": "tools/fetch_omf_order_details_wrapper/python_function/python_code.py",
+    "description": "Fetches OMF order details via webhook based on LOB."
+  },
+  "displayName": "fetch_omf_order_details_wrapper"
+}

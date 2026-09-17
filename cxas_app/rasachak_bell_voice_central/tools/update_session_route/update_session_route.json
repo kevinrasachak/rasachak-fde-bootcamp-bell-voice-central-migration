@@ -1,0 +1,9 @@
+{
+  "name": "update_session_route",
+  "pythonFunction": {
+    "name": "update_session_route",
+    "pythonCode": "tools/update_session_route/python_function/python_code.py",
+    "description": "State Manipulator. Generative LLMs cannot reliably set or update session variables via plain text. This tool explicitly mutates the session state by updating the `route` variable to the provided string value."
+  },
+  "displayName": "update_session_route"
+}

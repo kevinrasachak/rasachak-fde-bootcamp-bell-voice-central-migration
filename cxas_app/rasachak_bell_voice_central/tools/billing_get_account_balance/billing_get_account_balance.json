@@ -1,0 +1,9 @@
+{
+  "name": "billing_get_account_balance",
+  "displayName": "billing_get_account_balance",
+  "pythonFunction": {
+    "name": "billing_get_account_balance",
+    "description": "Retrieves account balance and itemized charges.",
+    "pythonCode": "tools/billing_get_account_balance/python_function/python_code.py"
+  }
+}

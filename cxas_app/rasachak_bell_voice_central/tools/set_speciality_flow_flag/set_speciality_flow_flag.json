@@ -1,0 +1,9 @@
+{
+  "name": "set_speciality_flow_flag",
+  "pythonFunction": {
+    "name": "set_speciality_flow_flag",
+    "pythonCode": "tools/set_speciality_flow_flag/python_function/python_code.py",
+    "description": "State Manipulator: Modifies the session state natively by setting the speciality_flow variable to True."
+  },
+  "displayName": "set_speciality_flow_flag"
+}

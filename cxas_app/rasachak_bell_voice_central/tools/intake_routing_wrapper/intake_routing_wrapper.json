@@ -1,0 +1,9 @@
+{
+  "name": "intake_routing_wrapper",
+  "pythonFunction": {
+    "name": "intake_routing_wrapper",
+    "pythonCode": "tools/intake_routing_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper tool for TFN routing lookup."
+  },
+  "displayName": "intake_routing_wrapper"
+}

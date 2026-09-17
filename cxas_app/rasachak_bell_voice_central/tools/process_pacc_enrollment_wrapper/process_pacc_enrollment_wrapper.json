@@ -1,0 +1,9 @@
+{
+  "name": "process_pacc_enrollment_wrapper",
+  "pythonFunction": {
+    "name": "process_pacc_enrollment_wrapper",
+    "pythonCode": "tools/process_pacc_enrollment_wrapper/python_function/python_code.py",
+    "description": "Bundles sequential backend calls (create-order and cc-payment-details). Handles parsing of expiry_date into expiry_month and expiry_year."
+  },
+  "displayName": "process_pacc_enrollment_wrapper"
+}

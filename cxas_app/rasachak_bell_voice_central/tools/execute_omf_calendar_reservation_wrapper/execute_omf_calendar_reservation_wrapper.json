@@ -1,0 +1,9 @@
+{
+  "name": "execute_omf_calendar_reservation_wra",
+  "pythonFunction": {
+    "name": "execute_omf_calendar_reservation_wrapper",
+    "pythonCode": "tools/execute_omf_calendar_reservation_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper: Orchestrates omf_calendar#selected-interval, calendar#reserve, and control#submit in sequence."
+  },
+  "displayName": "execute_omf_calendar_reservation_wrapper"
+}

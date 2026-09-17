@@ -1,0 +1,9 @@
+{
+  "name": "fetch_account_profile_wrapper",
+  "pythonFunction": {
+    "name": "fetch_account_profile_wrapper",
+    "pythonCode": "tools/fetch_account_profile_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper. Evaluates banType and banSubType natively to conditionally call BAN Profile or Customer Profile webhook."
+  },
+  "displayName": "fetch_account_profile_wrapper"
+}

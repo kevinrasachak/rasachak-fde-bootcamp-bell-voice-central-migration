@@ -1,0 +1,9 @@
+{
+  "name": "extract_tv_account_details",
+  "pythonFunction": {
+    "name": "extract_tv_account_details",
+    "pythonCode": "tools/extract_tv_account_details/python_function/python_code.py",
+    "description": "Extracts TV account details from raw profile and sets SAT_COUNT, FIBE_COUNT, tv_account_number, province."
+  },
+  "displayName": "extract_tv_account_details"
+}

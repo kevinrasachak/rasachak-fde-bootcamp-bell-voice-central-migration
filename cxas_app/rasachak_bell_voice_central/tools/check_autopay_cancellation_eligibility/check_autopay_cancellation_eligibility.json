@@ -1,0 +1,9 @@
+{
+  "name": "check_autopay_cancellation_eligibili",
+  "pythonFunction": {
+    "name": "check_autopay_cancellation_eligibility",
+    "pythonCode": "tools/check_autopay_cancellation_eligibility/python_function/python_code.py",
+    "description": "Evaluates autopay cancellation eligibility and returns a route flag: AQD, IVR_HANDOFF, SMS_INPUT, NOT_AVAILABLE, or ERROR."
+  },
+  "displayName": "check_autopay_cancellation_eligibility"
+}

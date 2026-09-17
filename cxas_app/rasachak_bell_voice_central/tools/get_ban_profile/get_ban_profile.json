@@ -1,0 +1,9 @@
+{
+  "name": "get_ban_profile",
+  "pythonFunction": {
+    "name": "get_ban_profile",
+    "pythonCode": "tools/get_ban_profile/python_function/python_code.py",
+    "description": "Webhook Wrapper for fetching customer ban profile."
+  },
+  "displayName": "get_ban_profile"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "8767dc49-161a-4151-b51c-b24b3ebb1112",
+  "displayName": "M7 AccountSecurityAndCancellations",
+  "description": "Consolidated agent: M7_AccountSecurityAndCancellations",
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "instruction": "agents/M7_AccountSecurityAndCancellations/instruction.txt",
+  "tools": [
+    "auth_send_step_up_email",
+    "account_manage_password_reset",
+    "account_manage_mfa",
+    "account_restore_service",
+    "account_process_cancellation"
+  ],
+  "beforeModelCallbacks": [
+    {
+      "pythonCode": "agents/M7_AccountSecurityAndCancellations/before_model_callbacks/before_model_callbacks_01/python_code.py"
+    }
+  ],
+  "llmAgent": {}
+}

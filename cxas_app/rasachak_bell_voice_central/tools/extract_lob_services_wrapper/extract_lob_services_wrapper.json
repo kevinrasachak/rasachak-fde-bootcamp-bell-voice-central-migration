@@ -1,0 +1,9 @@
+{
+  "name": "extract_lob_services_wrapper",
+  "pythonFunction": {
+    "name": "extract_lob_services_wrapper",
+    "pythonCode": "tools/extract_lob_services_wrapper/python_function/python_code.py",
+    "description": "State Manipulator. Extracts all service_ids that match the LOB into an array."
+  },
+  "displayName": "extract_lob_services_wrapper"
+}

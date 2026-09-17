@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_payment_eligibility_wrapper",
+  "pythonFunction": {
+    "name": "evaluate_payment_eligibility_wrapper",
+    "pythonCode": "tools/evaluate_payment_eligibility_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper for complex payment eligibility evaluation."
+  },
+  "displayName": "evaluate_payment_eligibility_wrapper"
+}

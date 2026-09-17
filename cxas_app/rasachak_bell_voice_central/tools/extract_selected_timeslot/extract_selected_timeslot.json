@@ -1,0 +1,9 @@
+{
+  "name": "extract_selected_timeslot",
+  "pythonFunction": {
+    "name": "extract_selected_timeslot",
+    "pythonCode": "tools/extract_selected_timeslot/python_function/python_code.py",
+    "description": "Validates user selected day against WFAS arrays."
+  },
+  "displayName": "extract_selected_timeslot"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "16bb6189-de6b-4597-a50b-20581dd7e515",
+  "displayName": "M8 FrenchCanadianSupport",
+  "description": "Consolidated agent: M8_FrenchCanadianSupport",
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "instruction": "agents/M8_FrenchCanadianSupport/instruction.txt",
+  "tools": [
+    "outage_check_by_postal_code",
+    "billing_process_payment",
+    "appointment_manage_booking",
+    "account_restore_service",
+    "sales_process_warranty_replacement",
+    "sales_process_number_port_in"
+  ],
+  "beforeModelCallbacks": [
+    {
+      "pythonCode": "agents/M8_FrenchCanadianSupport/before_model_callbacks/before_model_callbacks_01/python_code.py"
+    }
+  ],
+  "llmAgent": {}
+}

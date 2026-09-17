@@ -1,0 +1,9 @@
+{
+  "name": "set_routing_parameters",
+  "pythonFunction": {
+    "name": "set_routing_parameters",
+    "pythonCode": "tools/set_routing_parameters/python_function/python_code.py",
+    "description": "Updates session variables to route the user to the correct downstream agent based on matched conditions."
+  },
+  "displayName": "set_routing_parameters"
+}

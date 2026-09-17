@@ -1,0 +1,9 @@
+{
+  "name": "process_lob_and_services",
+  "pythonFunction": {
+    "name": "process_lob_and_services",
+    "pythonCode": "tools/process_lob_and_services/python_function/python_code.py",
+    "description": "Evaluates billing_account_info_list array against the provided LOB string. Returns a count of matching LOBs and extracts primary identifiers."
+  },
+  "displayName": "process_lob_and_services"
+}

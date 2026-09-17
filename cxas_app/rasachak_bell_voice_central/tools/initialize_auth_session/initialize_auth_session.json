@@ -1,0 +1,9 @@
+{
+  "name": "initialize_auth_session",
+  "pythonFunction": {
+    "name": "initialize_auth_session",
+    "pythonCode": "tools/initialize_auth_session/python_function/python_code.py",
+    "description": "Bundles start-auth-session and cpm_profile_info calls to retrieve auth options."
+  },
+  "displayName": "initialize_auth_session"
+}

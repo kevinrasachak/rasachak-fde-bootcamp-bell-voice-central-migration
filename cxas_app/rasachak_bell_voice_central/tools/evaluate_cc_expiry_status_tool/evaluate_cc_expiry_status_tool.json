@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_cc_expiry_status_tool",
+  "pythonFunction": {
+    "name": "evaluate_cc_expiry_status_tool",
+    "pythonCode": "tools/evaluate_cc_expiry_status_tool/python_function/python_code.py",
+    "description": "Fetches customer profile, parses ccExpiryDate, and calculates expiration status."
+  },
+  "displayName": "evaluate_cc_expiry_status_tool"
+}

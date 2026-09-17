@@ -1,0 +1,9 @@
+{
+  "name": "extract_multiban_profile_metrics",
+  "pythonFunction": {
+    "name": "extract_multiban_profile_metrics",
+    "pythonCode": "tools/extract_multiban_profile_metrics/python_function/python_code.py",
+    "description": "Extracts metrics from customer_id_search_response and sets native variables."
+  },
+  "displayName": "extract_multiban_profile_metrics"
+}

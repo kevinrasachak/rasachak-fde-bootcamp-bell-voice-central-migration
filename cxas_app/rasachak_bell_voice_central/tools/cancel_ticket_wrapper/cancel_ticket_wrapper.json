@@ -1,0 +1,9 @@
+{
+  "name": "cancel_ticket_wrapper",
+  "pythonFunction": {
+    "name": "cancel_ticket_wrapper",
+    "pythonCode": "tools/cancel_ticket_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper. Triggers the ACUT modify close ticket endpoint conditionally based on task_type."
+  },
+  "displayName": "cancel_ticket_wrapper"
+}

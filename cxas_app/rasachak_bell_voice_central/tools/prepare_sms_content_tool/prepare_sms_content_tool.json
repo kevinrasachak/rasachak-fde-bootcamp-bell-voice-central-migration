@@ -1,0 +1,9 @@
+{
+  "name": "prepare_sms_content_tool",
+  "pythonFunction": {
+    "name": "prepare_sms_content_tool",
+    "pythonCode": "tools/prepare_sms_content_tool/python_function/python_code.py",
+    "description": "State/Variable Manipulator: Sets sms_type and sms_content localized messages for pre-auth setup."
+  },
+  "displayName": "prepare_sms_content_tool"
+}

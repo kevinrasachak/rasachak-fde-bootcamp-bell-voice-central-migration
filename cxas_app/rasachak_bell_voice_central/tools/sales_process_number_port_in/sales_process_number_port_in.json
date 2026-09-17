@@ -1,0 +1,9 @@
+{
+  "name": "sales_process_number_port_in",
+  "displayName": "sales_process_number_port_in",
+  "pythonFunction": {
+    "name": "sales_process_number_port_in",
+    "description": "Processes number port-in from competitor carrier, landline-to-mobile, or family plan add-a-line.",
+    "pythonCode": "tools/sales_process_number_port_in/python_function/python_code.py"
+  }
+}

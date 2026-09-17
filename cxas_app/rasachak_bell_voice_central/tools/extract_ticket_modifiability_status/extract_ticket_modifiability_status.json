@@ -1,0 +1,9 @@
+{
+  "name": "extract_ticket_modifiability_status",
+  "pythonFunction": {
+    "name": "extract_ticket_modifiability_status",
+    "pythonCode": "tools/extract_ticket_modifiability_status/python_function/python_code.py",
+    "description": "State Manipulator: Extracts contains_not_modifiable boolean from order_detail_response and sets is_ticket_modifiable variable."
+  },
+  "displayName": "extract_ticket_modifiability_status"
+}

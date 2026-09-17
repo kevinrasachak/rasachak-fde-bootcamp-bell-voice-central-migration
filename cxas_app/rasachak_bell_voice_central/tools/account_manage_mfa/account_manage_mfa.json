@@ -1,0 +1,9 @@
+{
+  "name": "account_manage_mfa",
+  "displayName": "account_manage_mfa",
+  "pythonFunction": {
+    "name": "account_manage_mfa",
+    "description": "Enables or disables Multi-Factor Authentication.",
+    "pythonCode": "tools/account_manage_mfa/python_function/python_code.py"
+  }
+}

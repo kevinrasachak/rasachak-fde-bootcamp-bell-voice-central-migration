@@ -1,0 +1,9 @@
+{
+  "name": "set_routing_context",
+  "pythonFunction": {
+    "name": "set_routing_context",
+    "pythonCode": "tools/set_routing_context/python_function/python_code.py",
+    "description": "State Manipulator. Updates routing context variables such as handoff_from and utterance. Generative LLMs cannot reliably mutate variables via plain text; they MUST execute this tool to securely alter session variables before executing a routing transition."
+  },
+  "displayName": "set_routing_context"
+}

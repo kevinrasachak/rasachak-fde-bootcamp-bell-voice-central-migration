@@ -1,0 +1,9 @@
+{
+  "name": "set_generic_faq_flags",
+  "pythonFunction": {
+    "name": "set_generic_faq_flags",
+    "pythonCode": "tools/set_generic_faq_flags/python_function/python_code.py",
+    "description": "Sets string/boolean flags prior to downstream routing."
+  },
+  "displayName": "set_generic_faq_flags"
+}

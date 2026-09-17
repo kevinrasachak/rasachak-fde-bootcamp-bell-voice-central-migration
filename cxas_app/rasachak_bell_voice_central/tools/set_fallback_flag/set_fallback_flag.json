@@ -1,0 +1,9 @@
+{
+  "name": "set_fallback_flag",
+  "pythonFunction": {
+    "name": "set_fallback_flag",
+    "pythonCode": "tools/set_fallback_flag/python_function/python_code.py",
+    "description": "State Manipulator. Updates the conversation state by setting the fallback_3_triggered session variable to True."
+  },
+  "displayName": "set_fallback_flag"
+}

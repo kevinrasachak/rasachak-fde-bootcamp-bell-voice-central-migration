@@ -1,0 +1,9 @@
+{
+  "name": "tool_get_customer_profile",
+  "pythonFunction": {
+    "name": "tool_get_customer_profile",
+    "pythonCode": "tools/tool_get_customer_profile/python_function/python_code.py",
+    "description": "Webhook Wrapper Tool. Implements calls to NM1 BAN and Customer Profile logic."
+  },
+  "displayName": "tool_get_customer_profile"
+}

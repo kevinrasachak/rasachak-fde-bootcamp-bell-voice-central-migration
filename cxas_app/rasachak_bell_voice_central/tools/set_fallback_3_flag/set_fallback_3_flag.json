@@ -1,0 +1,9 @@
+{
+  "name": "set_fallback_3_flag",
+  "pythonFunction": {
+    "name": "set_fallback_3_flag",
+    "pythonCode": "tools/set_fallback_3_flag/python_function/python_code.py",
+    "description": "State Manipulator. Sets the session variable 'fallback_3_triggered' to True. This ensures the downstream flows recognize that a terminal error threshold was reached."
+  },
+  "displayName": "set_fallback_3_flag"
+}

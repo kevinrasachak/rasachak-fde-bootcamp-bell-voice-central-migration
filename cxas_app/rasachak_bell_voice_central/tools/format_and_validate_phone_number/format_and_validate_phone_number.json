@@ -1,0 +1,9 @@
+{
+  "name": "format_and_validate_phone_number",
+  "pythonFunction": {
+    "name": "format_and_validate_phone_number",
+    "pythonCode": "tools/format_and_validate_phone_number/python_function/python_code.py",
+    "description": "State/Variable Manipulator: Sanitizes and validates a 10-digit phone number."
+  },
+  "displayName": "format_and_validate_phone_number"
+}

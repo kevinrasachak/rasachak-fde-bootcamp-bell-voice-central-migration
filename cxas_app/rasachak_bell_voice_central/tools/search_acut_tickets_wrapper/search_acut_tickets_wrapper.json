@@ -1,0 +1,9 @@
+{
+  "name": "search_acut_tickets_wrapper",
+  "pythonFunction": {
+    "name": "search_acut_tickets_wrapper",
+    "pythonCode": "tools/search_acut_tickets_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper. Searches for ACUT tickets using the specific LOB service ID."
+  },
+  "displayName": "search_acut_tickets_wrapper"
+}

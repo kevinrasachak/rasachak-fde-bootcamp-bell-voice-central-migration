@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_routing_rules",
+  "pythonFunction": {
+    "name": "evaluate_routing_rules",
+    "pythonCode": "tools/evaluate_routing_rules/python_function/python_code.py",
+    "description": "Evaluates the complex IF/OR/AND logic for Special Status and Self-Serve Routes to determine the exact routing path."
+  },
+  "displayName": "evaluate_routing_rules"
+}

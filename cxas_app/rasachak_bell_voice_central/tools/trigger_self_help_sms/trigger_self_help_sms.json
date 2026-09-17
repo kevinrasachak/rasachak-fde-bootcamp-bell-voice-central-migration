@@ -1,0 +1,9 @@
+{
+  "name": "trigger_self_help_sms",
+  "pythonFunction": {
+    "name": "trigger_self_help_sms",
+    "pythonCode": "tools/trigger_self_help_sms/python_function/python_code.py",
+    "description": "Webhook Wrapper: Triggers the self-help SMS API."
+  },
+  "displayName": "trigger_self_help_sms"
+}

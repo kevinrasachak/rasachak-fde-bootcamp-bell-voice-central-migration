@@ -1,0 +1,9 @@
+{
+  "name": "get_clp_and_bill_details_wrapper",
+  "pythonFunction": {
+    "name": "get_clp_and_bill_details_wrapper",
+    "pythonCode": "tools/get_clp_and_bill_details_wrapper/python_function/python_code.py",
+    "description": "Retrieves CLP balance, restrictions, and optional upcoming billing date. Flattens data into session variables."
+  },
+  "displayName": "get_clp_and_bill_details_wrapper"
+}

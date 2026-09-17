@@ -1,0 +1,9 @@
+{
+  "name": "get_sms_vanity_url",
+  "pythonFunction": {
+    "name": "get_sms_vanity_url",
+    "pythonCode": "tools/get_sms_vanity_url/python_function/python_code.py",
+    "description": "Fetches an SDL mapping URL for fallback links via SMS."
+  },
+  "displayName": "get_sms_vanity_url"
+}

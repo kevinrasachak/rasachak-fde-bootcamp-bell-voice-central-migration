@@ -1,0 +1,9 @@
+{
+  "name": "get_sdl_vanity_url_wrapper",
+  "pythonFunction": {
+    "name": "get_sdl_vanity_url_wrapper",
+    "pythonCode": "tools/get_sdl_vanity_url_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper tool to fetch the vanity URL based on intent routing."
+  },
+  "displayName": "get_sdl_vanity_url_wrapper"
+}

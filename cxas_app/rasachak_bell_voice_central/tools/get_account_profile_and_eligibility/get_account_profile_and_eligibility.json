@@ -1,0 +1,9 @@
+{
+  "name": "get_account_profile_and_eligibility",
+  "pythonFunction": {
+    "name": "get_account_profile_and_eligibility",
+    "pythonCode": "tools/get_account_profile_and_eligibility/python_function/python_code.py",
+    "description": "Fetches ban profile, customer profile, NPA-NXX lookup, and PA eligibility sequentially to establish account status and eligibility."
+  },
+  "displayName": "get_account_profile_and_eligibility"
+}

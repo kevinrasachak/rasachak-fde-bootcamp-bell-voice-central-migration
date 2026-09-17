@@ -1,0 +1,9 @@
+{
+  "name": "validate_payment_amount",
+  "pythonFunction": {
+    "name": "validate_payment_amount",
+    "pythonCode": "tools/validate_payment_amount/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Validates the user's spoken amount, converts to NUMBER, checks limits."
+  },
+  "displayName": "validate_payment_amount"
+}

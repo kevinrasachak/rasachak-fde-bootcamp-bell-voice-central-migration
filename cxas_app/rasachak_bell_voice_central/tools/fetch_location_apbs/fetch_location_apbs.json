@@ -1,0 +1,9 @@
+{
+  "name": "fetch_location_apbs",
+  "pythonFunction": {
+    "name": "fetch_location_apbs",
+    "pythonCode": "tools/fetch_location_apbs/python_function/python_code.py",
+    "description": "Webhook Wrapper: Retrieves Advanced Preferred Billing/Location details."
+  },
+  "displayName": "fetch_location_apbs"
+}

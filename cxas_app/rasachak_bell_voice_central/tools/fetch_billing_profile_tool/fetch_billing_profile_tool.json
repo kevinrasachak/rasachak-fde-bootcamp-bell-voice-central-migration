@@ -1,0 +1,9 @@
+{
+  "name": "fetch_billing_profile_tool",
+  "pythonFunction": {
+    "name": "fetch_billing_profile_tool",
+    "pythonCode": "tools/fetch_billing_profile_tool/python_function/python_code.py",
+    "description": "Webhook Wrapper: Evaluates banType and banSubType to conditionally call either customer-profile or ban-profile."
+  },
+  "displayName": "fetch_billing_profile_tool"
+}

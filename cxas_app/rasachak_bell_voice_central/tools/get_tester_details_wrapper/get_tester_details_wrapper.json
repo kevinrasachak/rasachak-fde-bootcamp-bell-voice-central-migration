@@ -1,0 +1,9 @@
+{
+  "name": "get_tester_details_wrapper",
+  "pythonFunction": {
+    "name": "get_tester_details_wrapper",
+    "pythonCode": "tools/get_tester_details_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper for retrieving tester details."
+  },
+  "displayName": "get_tester_details_wrapper"
+}

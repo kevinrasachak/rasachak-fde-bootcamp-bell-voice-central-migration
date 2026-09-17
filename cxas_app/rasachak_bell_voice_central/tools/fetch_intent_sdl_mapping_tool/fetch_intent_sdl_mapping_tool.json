@@ -1,0 +1,9 @@
+{
+  "name": "fetch_intent_sdl_mapping_tool",
+  "pythonFunction": {
+    "name": "fetch_intent_sdl_mapping_tool",
+    "pythonCode": "tools/fetch_intent_sdl_mapping_tool/python_function/python_code.py",
+    "description": "Webhook Wrapper: Fetches the vanity URL for self-serve fallback based on intent and brand."
+  },
+  "displayName": "fetch_intent_sdl_mapping_tool"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "account_process_cancellation",
+  "displayName": "account_process_cancellation",
+  "pythonFunction": {
+    "name": "account_process_cancellation",
+    "description": "Executes service cancellation or port-out after mandatory contract disclosure confirmation.",
+    "pythonCode": "tools/account_process_cancellation/python_function/python_code.py"
+  }
+}

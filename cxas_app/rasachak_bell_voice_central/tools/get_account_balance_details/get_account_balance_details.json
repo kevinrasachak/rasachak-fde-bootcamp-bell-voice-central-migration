@@ -1,0 +1,9 @@
+{
+  "name": "get_account_balance_details",
+  "pythonFunction": {
+    "name": "get_account_balance_details",
+    "pythonCode": "tools/get_account_balance_details/python_function/python_code.py",
+    "description": "Webhook Wrapper for fetching account balance.\nImplements mock logic based on 'mock_mode' variable.\nExtracts 'brs_postpaid_details.last_payment_amount' and sets 'last_payment_amount' and 'webhook_success'."
+  },
+  "displayName": "get_account_balance_details"
+}

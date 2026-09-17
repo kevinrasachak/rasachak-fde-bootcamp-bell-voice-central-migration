@@ -1,0 +1,9 @@
+{
+  "name": "get_nm1_billing_profile",
+  "pythonFunction": {
+    "name": "get_nm1_billing_profile",
+    "pythonCode": "tools/get_nm1_billing_profile/python_function/python_code.py",
+    "description": "Bundles nm1_get ban-profile and customer-profile."
+  },
+  "displayName": "get_nm1_billing_profile"
+}

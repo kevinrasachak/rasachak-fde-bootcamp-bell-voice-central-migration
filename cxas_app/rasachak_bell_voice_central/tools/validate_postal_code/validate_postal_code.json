@@ -1,0 +1,9 @@
+{
+  "name": "validate_postal_code",
+  "pythonFunction": {
+    "name": "validate_postal_code",
+    "pythonCode": "tools/validate_postal_code/python_function/python_code.py",
+    "description": "State Manipulator to compare 3 chars of user postal code with backend."
+  },
+  "displayName": "validate_postal_code"
+}

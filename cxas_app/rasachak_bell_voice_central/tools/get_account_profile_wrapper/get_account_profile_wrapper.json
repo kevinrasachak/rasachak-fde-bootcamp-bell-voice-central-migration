@@ -1,0 +1,9 @@
+{
+  "name": "get_account_profile_wrapper",
+  "pythonFunction": {
+    "name": "get_account_profile_wrapper",
+    "pythonCode": "tools/get_account_profile_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper for fetching ban-profile or customer-profile."
+  },
+  "displayName": "get_account_profile_wrapper"
+}

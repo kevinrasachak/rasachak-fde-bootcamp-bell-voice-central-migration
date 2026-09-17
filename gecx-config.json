@@ -1,0 +1,10 @@
+{
+  "gcp_project_id": "fde-bootcamp",
+  "location": "us",
+  "app_name": "rasachak_bell_voice_central",
+  "deployed_app_id": "1d5bf51d-1c25-4ebd-ae25-8e6ef940b3c8",
+  "app_dir": "cxas_app/rasachak_bell_voice_central",
+  "model": "gemini-2.5-flash-001",
+  "modality": "audio",
+  "default_channel": "audio"
+}

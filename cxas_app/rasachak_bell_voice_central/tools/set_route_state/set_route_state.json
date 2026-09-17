@@ -1,0 +1,9 @@
+{
+  "name": "set_route_state",
+  "pythonFunction": {
+    "name": "set_route_state",
+    "pythonCode": "tools/set_route_state/python_function/python_code.py",
+    "description": "State Manipulator. Sets the 'route' variable in the session state to the provided value."
+  },
+  "displayName": "set_route_state"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "get_apbs_for_location_wrapper",
+  "pythonFunction": {
+    "name": "get_apbs_for_location_wrapper",
+    "pythonCode": "tools/get_apbs_for_location_wrapper/python_function/python_code.py",
+    "description": "Executes API call to fetch APBs for a given location."
+  },
+  "displayName": "get_apbs_for_location_wrapper"
+}

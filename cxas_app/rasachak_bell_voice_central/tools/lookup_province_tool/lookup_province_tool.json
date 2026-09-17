@@ -1,0 +1,9 @@
+{
+  "name": "lookup_province_tool",
+  "pythonFunction": {
+    "name": "lookup_province_tool",
+    "pythonCode": "tools/lookup_province_tool/python_function/python_code.py",
+    "description": "Webhook Wrapper: Extracts NPA and NXX components from a phone number, calls lookup API, and returns Province."
+  },
+  "displayName": "lookup_province_tool"
+}

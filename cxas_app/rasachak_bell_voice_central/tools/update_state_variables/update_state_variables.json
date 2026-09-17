@@ -1,0 +1,9 @@
+{
+  "name": "update_state_variables",
+  "pythonFunction": {
+    "name": "update_state_variables",
+    "pythonCode": "tools/update_state_variables/python_function/python_code.py",
+    "description": "State Manipulator. Sets routing and event tracking parameters (route, event_type) required by the conversational state machine before a transition."
+  },
+  "displayName": "update_state_variables"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "7ec2b9c9-a2e4-47e6-9701-565f8087daff",
+  "displayName": "M5 SalesUpgradesAndWarranty",
+  "description": "Consolidated agent: M5_SalesUpgradesAndWarranty",
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "instruction": "agents/M5_SalesUpgradesAndWarranty/instruction.txt",
+  "tools": [
+    "sales_get_plan_recommendations",
+    "sales_process_warranty_replacement",
+    "sales_process_number_port_in"
+  ],
+  "beforeModelCallbacks": [
+    {
+      "pythonCode": "agents/M5_SalesUpgradesAndWarranty/before_model_callbacks/before_model_callbacks_01/python_code.py"
+    }
+  ],
+  "afterModelCallbacks": [
+    {
+      "pythonCode": "agents/M5_SalesUpgradesAndWarranty/after_model_callbacks/after_model_callbacks_01/python_code.py"
+    }
+  ],
+  "llmAgent": {}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "check_service_outage_bundled",
+  "pythonFunction": {
+    "name": "check_service_outage_bundled",
+    "pythonCode": "tools/check_service_outage_bundled/python_function/python_code.py",
+    "description": "Webhook Wrapper: Bundles outage check initialization and status polling."
+  },
+  "displayName": "check_service_outage_bundled"
+}

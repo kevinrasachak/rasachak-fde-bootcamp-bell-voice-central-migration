@@ -1,0 +1,9 @@
+{
+  "name": "send_otp_wrapper",
+  "pythonFunction": {
+    "name": "send_otp_wrapper",
+    "pythonCode": "tools/send_otp_wrapper/python_function/python_code.py",
+    "description": "Dispatches an SMS to the specified target_otp_number."
+  },
+  "displayName": "send_otp_wrapper"
+}

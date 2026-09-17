@@ -1,0 +1,9 @@
+{
+  "name": "set_sms_payload",
+  "pythonFunction": {
+    "name": "set_sms_payload",
+    "pythonCode": "tools/set_sms_payload/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Evaluates language session variable and sets SMS payload."
+  },
+  "displayName": "set_sms_payload"
+}

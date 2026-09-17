@@ -1,0 +1,9 @@
+{
+  "name": "process_acut_ticket_data",
+  "pythonFunction": {
+    "name": "process_acut_ticket_data",
+    "pythonCode": "tools/process_acut_ticket_data/python_function/python_code.py",
+    "description": "Bundles ACUT ticket retrieval and content lookups. Returns flattened ticket context."
+  },
+  "displayName": "process_acut_ticket_data"
+}

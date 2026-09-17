@@ -1,0 +1,9 @@
+{
+  "name": "validate_cvv",
+  "pythonFunction": {
+    "name": "validate_cvv",
+    "pythonCode": "tools/validate_cvv/python_function/python_code.py",
+    "description": "Validates CVV length based on card brand."
+  },
+  "displayName": "validate_cvv"
+}

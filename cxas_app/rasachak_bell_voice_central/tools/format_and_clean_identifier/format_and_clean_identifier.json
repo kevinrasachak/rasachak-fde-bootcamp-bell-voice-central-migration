@@ -1,0 +1,9 @@
+{
+  "name": "format_and_clean_identifier",
+  "pythonFunction": {
+    "name": "format_and_clean_identifier",
+    "pythonCode": "tools/format_and_clean_identifier/python_function/python_code.py",
+    "description": "State/Variable Manipulator to clean and identify phone number or BAN."
+  },
+  "displayName": "format_and_clean_identifier"
+}

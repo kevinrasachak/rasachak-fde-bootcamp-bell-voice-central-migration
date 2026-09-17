@@ -1,0 +1,9 @@
+{
+  "name": "extract_apb_data_manipulator",
+  "pythonFunction": {
+    "name": "extract_apb_data_manipulator",
+    "pythonCode": "tools/extract_apb_data_manipulator/python_function/python_code.py",
+    "description": "Reads get_ras_apb_response and flattens routing variables. Takes no arguments."
+  },
+  "displayName": "extract_apb_data_manipulator"
+}

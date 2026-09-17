@@ -1,0 +1,9 @@
+{
+  "name": "lookup_province_by_phone",
+  "pythonFunction": {
+    "name": "lookup_province_by_phone",
+    "pythonCode": "tools/lookup_province_by_phone/python_function/python_code.py",
+    "description": "Looks up the province by phone number."
+  },
+  "displayName": "lookup_province_by_phone"
+}

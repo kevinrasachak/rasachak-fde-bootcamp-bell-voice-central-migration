@@ -1,0 +1,9 @@
+{
+  "name": "lookup_npa_nxx_wrapper",
+  "pythonFunction": {
+    "name": "lookup_npa_nxx_wrapper",
+    "pythonCode": "tools/lookup_npa_nxx_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper to look up province and region based on NPA-NXX."
+  },
+  "displayName": "lookup_npa_nxx_wrapper"
+}

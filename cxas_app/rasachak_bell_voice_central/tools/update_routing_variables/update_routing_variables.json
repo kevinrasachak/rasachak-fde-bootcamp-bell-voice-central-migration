@@ -1,0 +1,9 @@
+{
+  "name": "update_routing_variables",
+  "pythonFunction": {
+    "name": "update_routing_variables",
+    "pythonCode": "tools/update_routing_variables/python_function/python_code.py",
+    "description": "State Manipulator to update routing variables before transitions."
+  },
+  "displayName": "update_routing_variables"
+}

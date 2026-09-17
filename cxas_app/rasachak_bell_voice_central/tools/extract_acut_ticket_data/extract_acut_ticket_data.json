@@ -1,0 +1,9 @@
+{
+  "name": "extract_acut_ticket_data",
+  "pythonFunction": {
+    "name": "extract_acut_ticket_data",
+    "pythonCode": "tools/extract_acut_ticket_data/python_function/python_code.py",
+    "description": "Extracts necessary fields from the ACUT retrieve response and flattens them to state variables."
+  },
+  "displayName": "extract_acut_ticket_data"
+}

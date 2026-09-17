@@ -1,0 +1,9 @@
+{
+  "name": "appointment_manage_booking",
+  "displayName": "appointment_manage_booking",
+  "pythonFunction": {
+    "name": "appointment_manage_booking",
+    "description": "Tracks technician arrival, open repair tickets, and books reschedule slots.",
+    "pythonCode": "tools/appointment_manage_booking/python_function/python_code.py"
+  }
+}

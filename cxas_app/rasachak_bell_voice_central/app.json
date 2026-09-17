@@ -1,0 +1,961 @@
+{
+  "name": "1d5bf51d-1c25-4ebd-ae25-8e6ef940b3c8",
+  "displayName": "rasachak_bell_voice_central",
+  "rootAgent": "M1_SessionLifecycleAndRouting",
+  "audioProcessingConfig": {
+    "inactivityTimeout": "7s"
+  },
+  "loggingSettings": {
+    "conversationLoggingSettings": {
+      "retentionWindow": "31536000s"
+    }
+  },
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "variableDeclarations": [
+    {
+      "name": "auth_status",
+      "description": "auth status",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "clid",
+      "description": "clid",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "customer_type",
+      "description": "Customer type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "identification_status",
+      "description": "identification status",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "language",
+      "description": "Language",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "lob",
+      "description": "Line of Business",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "route",
+      "description": "the detected intent",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "tv_sub_type",
+      "description": "Fibe TV or Satellite TV",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "tfn",
+      "schema": {
+        "type": "STRING",
+        "description": "Toll-free number dialed",
+        "required": []
+      },
+      "description": "Session variable tfn"
+    },
+    {
+      "name": "cirn",
+      "schema": {
+        "type": "STRING",
+        "description": "Customer reference number (spoken/logged as last-4 only)",
+        "required": []
+      },
+      "description": "Session variable cirn"
+    },
+    {
+      "name": "billing_account",
+      "schema": {
+        "type": "STRING",
+        "description": "9-digit account number (spoken/logged as last-4 only)",
+        "required": []
+      },
+      "description": "Session variable billing_account"
+    },
+    {
+      "name": "postal_code",
+      "schema": {
+        "type": "STRING",
+        "description": "Canadian postal code for outage checks",
+        "required": []
+      },
+      "description": "Session variable postal_code"
+    },
+    {
+      "name": "step_up_auth_status",
+      "schema": {
+        "type": "STRING",
+        "description": "Pass or Fail for high-risk mutations (MFA disable)",
+        "required": []
+      },
+      "description": "Session variable step_up_auth_status"
+    },
+    {
+      "name": "business_flag",
+      "schema": {
+        "type": "BOOLEAN",
+        "description": "True triggers immediate business deflection",
+        "required": []
+      },
+      "description": "Session variable business_flag"
+    },
+    {
+      "name": "auth_retry_count",
+      "schema": {
+        "type": "INTEGER",
+        "description": "Consecutive PIN/OTP failure strikes (escalates at 3)",
+        "required": []
+      },
+      "description": "Session variable auth_retry_count"
+    },
+    {
+      "name": "dtmf_digits",
+      "schema": {
+        "type": "STRING",
+        "description": "Keypad digits captured on current turn",
+        "required": []
+      },
+      "description": "Session variable dtmf_digits"
+    },
+    {
+      "name": "dispute_or_refund_amount",
+      "schema": {
+        "type": "NUMBER",
+        "description": "Requested dispute/refund amount",
+        "required": []
+      },
+      "description": "Session variable dispute_or_refund_amount"
+    },
+    {
+      "name": "budget_cap",
+      "schema": {
+        "type": "NUMBER",
+        "description": "Caller maximum monthly budget constraint for upgrades",
+        "required": []
+      },
+      "description": "Session variable budget_cap"
+    },
+    {
+      "name": "warranty_damage_free",
+      "schema": {
+        "type": "BOOLEAN",
+        "description": "Mandatory eligibility confirmation of zero physical/water damage",
+        "required": []
+      },
+      "description": "Session variable warranty_damage_free"
+    },
+    {
+      "name": "warranty_urgent_safety",
+      "schema": {
+        "type": "BOOLEAN",
+        "description": "Flags hazardous hardware defects (swollen battery) for priority dispatch",
+        "required": []
+      },
+      "description": "Session variable warranty_urgent_safety"
+    },
+    {
+      "name": "port_in_payload",
+      "schema": {
+        "type": "OBJECT",
+        "description": "Number porting payload",
+        "properties": {
+          "temp_bell_number": {
+            "type": "STRING"
+          },
+          "external_number_to_port": {
+            "type": "STRING"
+          },
+          "old_carrier_account": {
+            "type": "STRING"
+          },
+          "port_type": {
+            "type": "STRING"
+          }
+        },
+        "required": []
+      },
+      "description": "Session variable port_in_payload"
+    },
+    {
+      "name": "local_noinput_counter",
+      "schema": {
+        "type": "INTEGER",
+        "description": "Consecutive no-input turns (resets to 0 on valid speech)",
+        "required": []
+      },
+      "description": "Session variable local_noinput_counter"
+    },
+    {
+      "name": "no_match_confirmation_count",
+      "schema": {
+        "type": "INTEGER",
+        "description": "Consecutive no-match confirmation count",
+        "required": []
+      },
+      "description": "Session variable no_match_confirmation_count"
+    },
+    {
+      "name": "global_err_count",
+      "schema": {
+        "type": "INTEGER",
+        "description": "Cumulative system or validation error count",
+        "required": []
+      },
+      "description": "Session variable global_err_count"
+    },
+    {
+      "name": "amount",
+      "schema": {
+        "type": "NUMBER",
+        "description": "Dispute, refund, or payment dollar amount",
+        "required": []
+      },
+      "description": "Session variable amount"
+    },
+    {
+      "name": "BAN",
+      "description": "BAN",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "CIRN",
+      "description": "CIRN",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "CLID",
+      "description": "clid",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "Expired_credit_card_check",
+      "description": "Checks for expired credit card ",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "LOB",
+      "description": "Line of business",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "account_detail_type",
+      "description": "account_detail_type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "add_ons",
+      "description": "add_ons",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "additional_query",
+      "description": "additional_query",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "apb_location_id",
+      "description": "apb_location_id",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "appointment_type",
+      "description": "appointment_type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "aqd_device_confirm",
+      "description": "indicates route to be triggered",
+      "schema": {
+        "type": "BOOLEAN",
+        "required": []
+      }
+    },
+    {
+      "name": "billing_account_status",
+      "description": "billing_account_status",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "brand",
+      "description": "brand",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "business",
+      "description": "business",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "caller_chanel",
+      "description": "caller chanel",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "caller_channel",
+      "description": "caller_channel",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "caller_id",
+      "description": "caller_id",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "calling_feature",
+      "description": "calling_feature",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "coming_from",
+      "description": "source",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "competitor_brand",
+      "description": "competitor_brand",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "customer_answer1_id",
+      "description": "Dynamic routing parameter: customer_answer1_id",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "device_issue",
+      "description": "device_issue",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "device_type",
+      "description": "device type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "different_number",
+      "description": "different_number",
+      "schema": {
+        "type": "BOOLEAN",
+        "required": []
+      }
+    },
+    {
+      "name": "entry_route_again",
+      "description": "entry_route_again",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "entry_route_postal",
+      "description": "route",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "event_type",
+      "description": "event type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "faq_link",
+      "description": "faq link",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "feedback_description",
+      "description": "Detailed description of customer feedback",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "feedback_sentiment",
+      "description": "Sentiment of feedback either Positive or Negative",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "first_turn",
+      "description": "Tracks whether this is first turn of conversation. Used by callbacks for deterministic greetings.",
+      "schema": {
+        "type": "BOOLEAN",
+        "default": true,
+        "required": []
+      }
+    },
+    {
+      "name": "global_error_counter",
+      "description": "Counts the total number of no matches and no inputs given by the customer throughout the conversation",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "ibm_application_id",
+      "description": "ibm_application_id",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "id_channel",
+      "description": "id_channel",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "identfication_status",
+      "description": "identfication_status",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "infobot_flag",
+      "description": "inforbot_flag",
+      "schema": {
+        "type": "BOOLEAN",
+        "required": []
+      }
+    },
+    {
+      "name": "initial_utterance",
+      "description": "initial_utterance",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "internal_brand",
+      "description": "internal_brand",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "is_mobility",
+      "description": "is mob",
+      "schema": {
+        "type": "BOOLEAN",
+        "required": []
+      }
+    },
+    {
+      "name": "issue_type",
+      "description": "issue_type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "line_type",
+      "description": "Line Type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "lob_agent",
+      "description": "s2a",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "lob_agent_2",
+      "description": "s2a",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "lob_agent_3",
+      "description": "s2a",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "login_assistance_type",
+      "description": "login_assistance_type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "manufacturer",
+      "description": "manufacturer",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "mfa",
+      "description": "mfa",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "mobility_sub_type",
+      "description": "mobility_sub_type",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "mock_mode",
+      "description": "Global toggle. If true, Python tool wrappers will return mock data instead of executing real backend API calls.",
+      "schema": {
+        "type": "BOOLEAN",
+        "default": false,
+        "required": []
+      }
+    },
+    {
+      "name": "mya_link",
+      "description": "Link for sms",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "no_input_retry_count",
+      "description": "Tracks the number of consecutive times the user has provided no input (silence). Used by callbacks.",
+      "schema": {
+        "type": "INTEGER",
+        "default": 0.0,
+        "required": []
+      }
+    },
+    {
+      "name": "noinput_flag",
+      "description": "noinput_flag",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "number_of_services",
+      "description": "number_of_services",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "otp_device",
+      "description": "Indicates if user has access to device receiving OTP",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "payment_method",
+      "description": "payment_method",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "plans",
+      "description": "plans",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "postal_agent",
+      "description": "s2a",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "postal_agent_2",
+      "description": "s2a",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "postcode",
+      "description": "postcode",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "ppv",
+      "description": "ppv",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "prev_conv_summary",
+      "description": "Previous Conversation summary",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "prev_msg",
+      "description": "Previous message to repeat when asked",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "province",
+      "description": "Customer region",
+      "schema": {
+        "type": "STRING",
+        "required": []
+      }
+    },
+    {
+      "name": "sales_feedback",
+      "description": "sales_feedback",
+      "schema": {
+        "type": "NUMBER",
+        "required": []
+      }
+    },
+    {
+      "name": "second_intent_true",
+      "description": "the value captured by the bell_NLU_Query_Rewriter agent for \"second_intent_true\"",
+      "schema": {
+        "type": "BOOLEAN",
+        "required": []
+      }
+    }
+  ],
+  "timeZoneSettings": {
+    "timeZone": "America/Los_Angeles"
+  },
+  "tools": [
+    "lookup_province_tool",
+    "get_agent_queue_details",
+    "increment_global_error_counter",
+    "update_different_number_state",
+    "validate_and_format_phone_number",
+    "set_routing_context",
+    "format_handoff_parameters",
+    "tool_get_customer_profile",
+    "create_payment_order_wrapper",
+    "update_no_match_counters",
+    "check_sales_propensity_tool",
+    "validate_postal_code",
+    "fetch_intent_vanity_url_wrapper",
+    "fetch_customized_sdl_url",
+    "create_preauth_order_tool",
+    "evaluate_routing_rules",
+    "extract_tv_account_details",
+    "get_account_balance_details",
+    "acut_search_retrieve_wrapper",
+    "initialize_auth_session",
+    "get_apbs_for_location_wrapper",
+    "evaluate_mya_eligibility_wrapper",
+    "submit_cc_payment_details",
+    "initialize_aqd_variables",
+    "format_and_validate_phone_number",
+    "execute_intake_initialization",
+    "extract_date_from_timestamp",
+    "manage_routing_state",
+    "set_sms_payload",
+    "check_number_in_account",
+    "set_autopay_sms_payload",
+    "extract_acut_retrieve_parameters",
+    "check_home_phone_status",
+    "execute_ivr_telephony_transfer",
+    "evaluate_cc_expiry_status_tool",
+    "set_tech_visit_routing_variables",
+    "npa_nxx_lookup_wrapper",
+    "acut_ticket_orchestrator_wrapper",
+    "set_default_faq_url",
+    "evaluate_collection_status",
+    "format_and_clean_identifier",
+    "set_fallback_3_flag",
+    "get_intent_sdl_mapping_wrapper",
+    "wfas_book_and_acut_modify_wrapper",
+    "cancel_wfas_appointment",
+    "intake_routing_wrapper",
+    "search_omf_orders_wrapper",
+    "update_sms_payload_variables",
+    "submit_pre_auth_payment_wrapper",
+    "set_sms_content_manipulator",
+    "extract_acut_ticket_data",
+    "filter_lob_services_manipulator",
+    "tool_get_intent_sdl",
+    "extract_apb_data_manipulator",
+    "set_event_type",
+    "get_tester_details_wrapper",
+    "fetch_account_balance_and_profile_wrapper",
+    "increment_payment_counter_tool",
+    "evaluate_payment_eligibility_wrapper",
+    "format_date_and_validate",
+    "fetch_account_profile_wrapper",
+    "get_clp_details_wrapper",
+    "fetch_billing_profile",
+    "validate_cvv",
+    "check_mya_eligibility_wrapper",
+    "format_sms_payload",
+    "validate_cc_number",
+    "format_sms_content_tool",
+    "check_service_outage_bundled",
+    "resolve_npa_and_province",
+    "process_pa_eligibility_and_order_wrapper",
+    "lookup_npa_nxx_wrapper",
+    "send_otp_wrapper",
+    "update_test_wrapper_state",
+    "calculate_clp_status_manipulator",
+    "get_clp_and_bill_details_wrapper",
+    "set_fallback_flag",
+    "book_wfas_appointment",
+    "finalize_payment_notification",
+    "get_dts_token_wrapper",
+    "set_routing_variables",
+    "check_wfas_availability",
+    "wfas_check_availability_wrapper",
+    "get_ban_profile",
+    "update_routing_variables",
+    "process_clp_payment_wrapper",
+    "check_existing_payment_method_wrapper",
+    "fetch_active_omf_and_acut_tickets",
+    "extract_customer_postal_code",
+    "extract_mya_eligibility_data",
+    "set_tv_sync_sms_variables",
+    "clear_sensitive_billing_data",
+    "evaluate_pad_eligibility",
+    "get_account_profile_and_eligibility",
+    "check_payment_arrangement_eligibility",
+    "fetch_province_info_wrapper",
+    "clear_cc_data_manipulator",
+    "validate_expiry_date",
+    "process_acut_ticket_data",
+    "get_nm1_billing_profile",
+    "check_existing_payment_method",
+    "set_route_state",
+    "update_state_variables",
+    "process_pacc_enrollment_wrapper",
+    "extract_acut_appointment_details",
+    "get_preauth_status",
+    "tool_check_preauth_payment",
+    "modify_close_ticket_wrapper",
+    "extract_multiban_profile_metrics",
+    "tool_process_pacc_order",
+    "trigger_self_help_sms",
+    "create_payment_order",
+    "submit_payment_arrangement_order",
+    "evaluate_payment_amount",
+    "get_intent_sdl_mapping",
+    "tool_lookup_province",
+    "clear_infobot_flag",
+    "prepare_sms_content_tool",
+    "extract_time_slot_object",
+    "prepare_sms_content",
+    "extract_service_identifier_tool",
+    "generate_sms_content_for_billing",
+    "validate_and_format_amount",
+    "validate_payment_amount",
+    "create_one_time_payment_order",
+    "evaluate_cancellation_eligibility_wrapper",
+    "check_system_outage",
+    "cancel_wfas_transaction",
+    "validate_customer_identity_wrapper",
+    "lookup_customer_account_wrapper",
+    "get_sdl_vanity_url_wrapper",
+    "fetch_active_appointments_wrapper",
+    "execute_sat_rehit",
+    "fetch_location_apbs",
+    "fetch_intent_sdl_mapping_tool",
+    "set_speciality_flow_flag",
+    "set_sms_payload_tool",
+    "get_vanity_url_mapping",
+    "process_payment_wrapper",
+    "evaluate_consolidated_customer_logic",
+    "filter_customer_accounts_by_criteria",
+    "check_autopay_cancellation_eligibility",
+    "extract_ticket_modifiability_status",
+    "extract_selected_timeslot",
+    "trigger_sat_rehit_wrapper",
+    "fetch_and_process_customer_tickets",
+    "cancel_ticket_wrapper",
+    "send_agent_transfer_data",
+    "parse_order_details_and_dates",
+    "check_preauth_eligibility_tool",
+    "format_mya_sms_content_manipulator",
+    "search_acut_tickets_wrapper",
+    "set_route_variable",
+    "get_account_balance_details_wrapper",
+    "set_payment_arrangement_sms_params",
+    "get_account_profile_wrapper",
+    "fetch_finalized_acut_wrapper",
+    "update_acut_contact_preferences",
+    "set_routing_parameters",
+    "get_clp_ban_profile_wrapper",
+    "format_ticket_details_manipulator",
+    "update_session_route",
+    "validate_otp_wrapper",
+    "set_refund_variables",
+    "set_session_variable",
+    "format_availability_options",
+    "validate_pin_wrapper",
+    "execute_omf_calendar_reservation_wrapper",
+    "process_lob_and_services",
+    "set_generic_faq_flags",
+    "prepare_sms_variables",
+    "lookup_province_by_phone",
+    "check_omf_calendar_availability_wrapper",
+    "execute_business_transfer_protocol",
+    "acut_modify_contact_wrapper",
+    "extract_lob_services_wrapper",
+    "get_sms_vanity_url",
+    "fetch_billing_profile_tool",
+    "extract_otp_numbers",
+    "reset_session_counters",
+    "evaluate_account_and_services",
+    "fetch_omf_order_details_wrapper",
+    "search_by_tn_wrapper",
+    "end_session"
+  ]
+}

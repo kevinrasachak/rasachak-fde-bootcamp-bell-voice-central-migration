@@ -1,0 +1,9 @@
+{
+  "name": "set_routing_variables",
+  "pythonFunction": {
+    "name": "set_routing_variables",
+    "pythonCode": "tools/set_routing_variables/python_function/python_code.py",
+    "description": "State Manipulator. Updates the 'special_queue' variable in the session state."
+  },
+  "displayName": "set_routing_variables"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "filter_lob_services_manipulator",
+  "pythonFunction": {
+    "name": "filter_lob_services_manipulator",
+    "pythonCode": "tools/filter_lob_services_manipulator/python_function/python_code.py",
+    "description": "Extracts and counts services from billing_account_info_list matching lob."
+  },
+  "displayName": "filter_lob_services_manipulator"
+}

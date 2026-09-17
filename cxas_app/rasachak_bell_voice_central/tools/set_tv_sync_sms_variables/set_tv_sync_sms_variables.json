@@ -1,0 +1,9 @@
+{
+  "name": "set_tv_sync_sms_variables",
+  "pythonFunction": {
+    "name": "set_tv_sync_sms_variables",
+    "pythonCode": "tools/set_tv_sync_sms_variables/python_function/python_code.py",
+    "description": "STATE MANIPULATOR. Sets TV sync SMS variables based on user consent and language."
+  },
+  "displayName": "set_tv_sync_sms_variables"
+}

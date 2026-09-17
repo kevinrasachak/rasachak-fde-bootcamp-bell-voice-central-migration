@@ -1,0 +1,9 @@
+{
+  "name": "prepare_sms_variables",
+  "pythonFunction": {
+    "name": "prepare_sms_variables",
+    "pythonCode": "tools/prepare_sms_variables/python_function/python_code.py",
+    "description": "Evaluates 'tv_sub_type' (fibe vs sat) and 'language' (en vs fr-ca).\nWrites 'sms_type'='Public' to session state. Writes 'sms_content' with the appropriate URL and copy based on the legacy logic.\nMust update the session variables directly."
+  },
+  "displayName": "prepare_sms_variables"
+}

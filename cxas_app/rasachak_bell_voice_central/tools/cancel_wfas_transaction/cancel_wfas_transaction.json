@@ -1,0 +1,9 @@
+{
+  "name": "cancel_wfas_transaction",
+  "pythonFunction": {
+    "name": "cancel_wfas_transaction",
+    "pythonCode": "tools/cancel_wfas_transaction/python_function/python_code.py",
+    "description": "Releases the WFAS appointment lock."
+  },
+  "displayName": "cancel_wfas_transaction"
+}

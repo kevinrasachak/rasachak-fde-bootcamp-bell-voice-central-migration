@@ -1,0 +1,9 @@
+{
+  "name": "set_payment_arrangement_sms_params",
+  "pythonFunction": {
+    "name": "set_payment_arrangement_sms_params",
+    "pythonCode": "tools/set_payment_arrangement_sms_params/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Sets sms_type, sms_content, and different_number based on user decision and language."
+  },
+  "displayName": "set_payment_arrangement_sms_params"
+}

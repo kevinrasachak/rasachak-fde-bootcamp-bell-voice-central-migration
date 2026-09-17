@@ -1,0 +1,9 @@
+{
+  "name": "extract_date_from_timestamp",
+  "pythonFunction": {
+    "name": "extract_date_from_timestamp",
+    "pythonCode": "tools/extract_date_from_timestamp/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Takes a full ISO timestamp string, splits on 'T',\nand extracts the YYYY-MM-DD date format natively. Sets the resulting string to 'dueDate'."
+  },
+  "displayName": "extract_date_from_timestamp"
+}

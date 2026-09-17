@@ -1,0 +1,9 @@
+{
+  "name": "tech_execute_virtual_repair",
+  "displayName": "tech_execute_virtual_repair",
+  "pythonFunction": {
+    "name": "tech_execute_virtual_repair",
+    "description": "Performs automated line diagnostic and device recovery procedures.",
+    "pythonCode": "tools/tech_execute_virtual_repair/python_function/python_code.py"
+  }
+}

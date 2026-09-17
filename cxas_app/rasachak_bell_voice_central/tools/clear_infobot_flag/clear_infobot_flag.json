@@ -1,0 +1,9 @@
+{
+  "name": "clear_infobot_flag",
+  "pythonFunction": {
+    "name": "clear_infobot_flag",
+    "pythonCode": "tools/clear_infobot_flag/python_function/python_code.py",
+    "description": "State Manipulator. Sets the infobot_flag session variable to None."
+  },
+  "displayName": "clear_infobot_flag"
+}

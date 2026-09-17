@@ -1,0 +1,9 @@
+{
+  "name": "update_test_wrapper_state",
+  "pythonFunction": {
+    "name": "update_test_wrapper_state",
+    "pythonCode": "tools/update_test_wrapper_state/python_function/python_code.py",
+    "description": "State/Variable Manipulator for setting test state routing variables safely."
+  },
+  "displayName": "update_test_wrapper_state"
+}

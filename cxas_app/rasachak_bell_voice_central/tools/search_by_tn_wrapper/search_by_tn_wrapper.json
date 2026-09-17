@@ -1,0 +1,9 @@
+{
+  "name": "search_by_tn_wrapper",
+  "pythonFunction": {
+    "name": "search_by_tn_wrapper",
+    "pythonCode": "tools/search_by_tn_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper for the customer-identification search-by-tn API."
+  },
+  "displayName": "search_by_tn_wrapper"
+}

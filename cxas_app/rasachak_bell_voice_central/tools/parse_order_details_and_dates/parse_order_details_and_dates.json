@@ -1,0 +1,9 @@
+{
+  "name": "parse_order_details_and_dates",
+  "pythonFunction": {
+    "name": "parse_order_details_and_dates",
+    "pythonCode": "tools/parse_order_details_and_dates/python_function/python_code.py",
+    "description": "Parses OMF order response, executes date logic, and sets routing string."
+  },
+  "displayName": "parse_order_details_and_dates"
+}

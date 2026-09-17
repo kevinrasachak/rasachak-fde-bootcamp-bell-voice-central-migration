@@ -1,0 +1,9 @@
+{
+  "name": "manage_routing_state",
+  "pythonFunction": {
+    "name": "manage_routing_state",
+    "pythonCode": "tools/manage_routing_state/python_function/python_code.py",
+    "description": "Compares current_route to previous_route. Increments loop counter if they match, resets otherwise."
+  },
+  "displayName": "manage_routing_state"
+}

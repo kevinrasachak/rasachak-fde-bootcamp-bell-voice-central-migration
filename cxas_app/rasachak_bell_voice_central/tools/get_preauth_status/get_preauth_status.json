@@ -1,0 +1,9 @@
+{
+  "name": "get_preauth_status",
+  "pythonFunction": {
+    "name": "get_preauth_status",
+    "pythonCode": "tools/get_preauth_status/python_function/python_code.py",
+    "description": "Retrieves the customer's existing pre-authorized payment setup."
+  },
+  "displayName": "get_preauth_status"
+}

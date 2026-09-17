@@ -1,0 +1,9 @@
+{
+  "name": "get_intent_sdl_mapping",
+  "pythonFunction": {
+    "name": "get_intent_sdl_mapping",
+    "pythonCode": "tools/get_intent_sdl_mapping/python_function/python_code.py",
+    "description": "Fetches fallback URL for failures from intent-sdl-mapping API."
+  },
+  "displayName": "get_intent_sdl_mapping"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "create_payment_order",
+  "pythonFunction": {
+    "name": "create_payment_order",
+    "pythonCode": "tools/create_payment_order/python_function/python_code.py",
+    "description": "Initiates a payment notification order."
+  },
+  "displayName": "create_payment_order"
+}

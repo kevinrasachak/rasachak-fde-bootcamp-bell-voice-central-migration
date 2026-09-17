@@ -1,0 +1,9 @@
+{
+  "name": "format_sms_payload",
+  "pythonFunction": {
+    "name": "format_sms_payload",
+    "pythonCode": "tools/format_sms_payload/python_function/python_code.py",
+    "description": "State Manipulator to set sms_content and sms_type based on language and offer_type."
+  },
+  "displayName": "format_sms_payload"
+}

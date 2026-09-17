@@ -1,0 +1,9 @@
+{
+  "name": "check_home_phone_status",
+  "pythonFunction": {
+    "name": "check_home_phone_status",
+    "pythonCode": "tools/check_home_phone_status/python_function/python_code.py",
+    "description": "Webhook Wrapper. Checks if the collected number is a home phone within the BAN."
+  },
+  "displayName": "check_home_phone_status"
+}

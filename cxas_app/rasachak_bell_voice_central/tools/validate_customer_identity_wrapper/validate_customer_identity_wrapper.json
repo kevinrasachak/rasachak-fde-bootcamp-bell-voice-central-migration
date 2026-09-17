@@ -1,0 +1,9 @@
+{
+  "name": "validate_customer_identity_wrapper",
+  "pythonFunction": {
+    "name": "validate_customer_identity_wrapper",
+    "pythonCode": "tools/validate_customer_identity_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper to validate identity using CIRN or BAN and flatten response."
+  },
+  "displayName": "validate_customer_identity_wrapper"
+}

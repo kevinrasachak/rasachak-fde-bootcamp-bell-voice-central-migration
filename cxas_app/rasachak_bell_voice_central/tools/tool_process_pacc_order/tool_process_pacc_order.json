@@ -1,0 +1,9 @@
+{
+  "name": "tool_process_pacc_order",
+  "pythonFunction": {
+    "name": "tool_process_pacc_order",
+    "pythonCode": "tools/tool_process_pacc_order/python_function/python_code.py",
+    "description": "Bundles pa-eligibility and pre-auth-payment#create-order."
+  },
+  "displayName": "tool_process_pacc_order"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "check_payment_arrangement_eligibilit",
+  "pythonFunction": {
+    "name": "check_payment_arrangement_eligibility",
+    "pythonCode": "tools/check_payment_arrangement_eligibility/python_function/python_code.py",
+    "description": "Webhook Wrapper. Calls the payment-arrangement service to check user eligibility criteria."
+  },
+  "displayName": "check_payment_arrangement_eligibility"
+}

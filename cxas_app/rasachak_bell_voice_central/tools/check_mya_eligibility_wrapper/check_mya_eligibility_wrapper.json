@@ -1,0 +1,9 @@
+{
+  "name": "check_mya_eligibility_wrapper",
+  "pythonFunction": {
+    "name": "check_mya_eligibility_wrapper",
+    "pythonCode": "tools/check_mya_eligibility_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper for cpm#mya_information. Checks MYA eligibility."
+  },
+  "displayName": "check_mya_eligibility_wrapper"
+}

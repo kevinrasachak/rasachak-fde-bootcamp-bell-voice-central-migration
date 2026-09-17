@@ -1,0 +1,9 @@
+{
+  "name": "initialize_aqd_variables",
+  "pythonFunction": {
+    "name": "initialize_aqd_variables",
+    "pythonCode": "tools/initialize_aqd_variables/python_function/python_code.py",
+    "description": "Parses session state. Formats clid, maps to CIRN, and counts unique services."
+  },
+  "displayName": "initialize_aqd_variables"
+}

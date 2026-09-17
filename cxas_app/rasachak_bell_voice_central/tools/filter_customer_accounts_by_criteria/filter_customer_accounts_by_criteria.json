@@ -1,0 +1,9 @@
+{
+  "name": "filter_customer_accounts_by_criteria",
+  "pythonFunction": {
+    "name": "filter_customer_accounts_by_criteria",
+    "pythonCode": "tools/filter_customer_accounts_by_criteria/python_function/python_code.py",
+    "description": "Filters billing accounts natively in session state based on LOB, postcode, or account number."
+  },
+  "displayName": "filter_customer_accounts_by_criteria"
+}

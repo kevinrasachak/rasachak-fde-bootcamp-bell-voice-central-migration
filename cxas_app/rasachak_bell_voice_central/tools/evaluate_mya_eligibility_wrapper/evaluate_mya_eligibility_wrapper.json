@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_mya_eligibility_wrapper",
+  "pythonFunction": {
+    "name": "evaluate_mya_eligibility_wrapper",
+    "pythonCode": "tools/evaluate_mya_eligibility_wrapper/python_function/python_code.py",
+    "description": "Extracts the first service ID and determines MYA eligibility by calling the legacy backend. Updates session variables mya_application_url and mya_is_eligible."
+  },
+  "displayName": "evaluate_mya_eligibility_wrapper"
+}

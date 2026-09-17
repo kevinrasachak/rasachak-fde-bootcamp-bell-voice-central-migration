@@ -1,0 +1,9 @@
+{
+  "name": "extract_mya_eligibility_data",
+  "pythonFunction": {
+    "name": "extract_mya_eligibility_data",
+    "pythonCode": "tools/extract_mya_eligibility_data/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Parses the JSON structure contained in the session variable 'mya_information_response', extracts all '$.notification[*].MYAApplicationUrl' into an array, calculates the length, and stores the first index. Natively sets 'mya_links', 'arr_size', 'mya_link', and 'mya_eligible' in the session state."
+  },
+  "displayName": "extract_mya_eligibility_data"
+}

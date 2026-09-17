@@ -1,0 +1,9 @@
+{
+  "name": "format_sms_content_tool",
+  "pythonFunction": {
+    "name": "format_sms_content_tool",
+    "pythonCode": "tools/format_sms_content_tool/python_function/python_code.py",
+    "description": "Evaluates context to format SMS content and update global variables securely."
+  },
+  "displayName": "format_sms_content_tool"
+}

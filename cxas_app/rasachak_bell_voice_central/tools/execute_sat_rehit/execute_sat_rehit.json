@@ -1,0 +1,9 @@
+{
+  "name": "execute_sat_rehit",
+  "pythonFunction": {
+    "name": "execute_sat_rehit",
+    "pythonCode": "tools/execute_sat_rehit/python_function/python_code.py",
+    "description": "Webhook Wrapper: Executes the backend logic to send a rehit signal to the satellite TV receiver. Sets webhook_success variable."
+  },
+  "displayName": "execute_sat_rehit"
+}

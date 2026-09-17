@@ -1,0 +1,9 @@
+{
+  "name": "process_pa_eligibility_and_order_wra",
+  "pythonFunction": {
+    "name": "process_pa_eligibility_and_order_wrapper",
+    "pythonCode": "tools/process_pa_eligibility_and_order_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper bundling a sequential chain: 1) get-delinquency-details, 2) get-eligibility-criteria, 3) create-order."
+  },
+  "displayName": "process_pa_eligibility_and_order_wrapper"
+}

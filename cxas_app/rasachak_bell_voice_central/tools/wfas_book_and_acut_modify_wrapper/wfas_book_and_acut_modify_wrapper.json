@@ -1,0 +1,9 @@
+{
+  "name": "wfas_book_and_acut_modify_wrapper",
+  "pythonFunction": {
+    "name": "wfas_book_and_acut_modify_wrapper",
+    "pythonCode": "tools/wfas_book_and_acut_modify_wrapper/python_function/python_code.py",
+    "description": "Executes the combined WFAS appointment booking and ACUT modification webhook."
+  },
+  "displayName": "wfas_book_and_acut_modify_wrapper"
+}

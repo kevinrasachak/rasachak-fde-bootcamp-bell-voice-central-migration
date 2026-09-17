@@ -1,0 +1,9 @@
+{
+  "name": "trigger_sat_rehit_wrapper",
+  "pythonFunction": {
+    "name": "trigger_sat_rehit_wrapper",
+    "pythonCode": "tools/trigger_sat_rehit_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper for the TV/Satellite rehit process.\nExecutes the rehit action and natively sets the webhook_success variable."
+  },
+  "displayName": "trigger_sat_rehit_wrapper"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "check_system_outage",
+  "pythonFunction": {
+    "name": "check_system_outage",
+    "pythonCode": "tools/check_system_outage/python_function/python_code.py",
+    "description": "Checks if the current time is between 12 AM and 2 AM. Uses override if available."
+  },
+  "displayName": "check_system_outage"
+}

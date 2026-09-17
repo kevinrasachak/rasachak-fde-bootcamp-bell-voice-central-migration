@@ -1,0 +1,9 @@
+{
+  "name": "reset_session_counters",
+  "pythonFunction": {
+    "name": "reset_session_counters",
+    "pythonCode": "tools/reset_session_counters/python_function/python_code.py",
+    "description": "State Manipulator. Sets sms_counter, loud_counter, more_time_counter, mistake_counter, phn_invalid_counter, fallback_counter, and repeat_counter to 0 in the session state."
+  },
+  "displayName": "reset_session_counters"
+}

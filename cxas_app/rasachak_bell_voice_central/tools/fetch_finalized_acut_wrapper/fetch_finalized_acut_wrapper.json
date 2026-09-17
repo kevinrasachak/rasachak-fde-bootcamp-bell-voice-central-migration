@@ -1,0 +1,9 @@
+{
+  "name": "fetch_finalized_acut_wrapper",
+  "pythonFunction": {
+    "name": "fetch_finalized_acut_wrapper",
+    "pythonCode": "tools/fetch_finalized_acut_wrapper/python_function/python_code.py",
+    "description": "Fetches finalized ACUT tickets for the specified accounts."
+  },
+  "displayName": "fetch_finalized_acut_wrapper"
+}

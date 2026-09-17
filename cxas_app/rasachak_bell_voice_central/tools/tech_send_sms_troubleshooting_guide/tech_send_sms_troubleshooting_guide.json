@@ -1,0 +1,9 @@
+{
+  "name": "tech_send_sms_troubleshooting_guide",
+  "displayName": "tech_send_sms_troubleshooting_guide",
+  "pythonFunction": {
+    "name": "tech_send_sms_troubleshooting_guide",
+    "description": "Dispatches self-service virtual repair guide via SMS.",
+    "pythonCode": "tools/tech_send_sms_troubleshooting_guide/python_function/python_code.py"
+  }
+}

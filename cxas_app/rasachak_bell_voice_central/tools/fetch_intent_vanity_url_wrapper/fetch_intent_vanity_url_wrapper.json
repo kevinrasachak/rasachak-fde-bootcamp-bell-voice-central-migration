@@ -1,0 +1,9 @@
+{
+  "name": "fetch_intent_vanity_url_wrapper",
+  "pythonFunction": {
+    "name": "fetch_intent_vanity_url_wrapper",
+    "pythonCode": "tools/fetch_intent_vanity_url_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper Tool for intent vanity URL retrieval."
+  },
+  "displayName": "fetch_intent_vanity_url_wrapper"
+}

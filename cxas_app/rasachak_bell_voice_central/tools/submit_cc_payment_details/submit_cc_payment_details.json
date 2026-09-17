@@ -1,0 +1,9 @@
+{
+  "name": "submit_cc_payment_details",
+  "pythonFunction": {
+    "name": "submit_cc_payment_details",
+    "pythonCode": "tools/submit_cc_payment_details/python_function/python_code.py",
+    "description": "Submits CC details to pre-auth-payment API."
+  },
+  "displayName": "submit_cc_payment_details"
+}

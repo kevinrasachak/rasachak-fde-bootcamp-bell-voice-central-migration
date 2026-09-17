@@ -1,0 +1,9 @@
+{
+  "name": "check_existing_payment_method_wrappe",
+  "pythonFunction": {
+    "name": "check_existing_payment_method_wrapper",
+    "pythonCode": "tools/check_existing_payment_method_wrapper/python_function/python_code.py",
+    "description": "Calls backend to retrieve existing payment method. Execution conditional based on mock_mode state retrieved natively."
+  },
+  "displayName": "check_existing_payment_method_wrapper"
+}

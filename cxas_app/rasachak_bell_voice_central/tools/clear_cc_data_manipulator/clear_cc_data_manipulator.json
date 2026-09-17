@@ -1,0 +1,9 @@
+{
+  "name": "clear_cc_data_manipulator",
+  "pythonFunction": {
+    "name": "clear_cc_data_manipulator",
+    "pythonCode": "tools/clear_cc_data_manipulator/python_function/python_code.py",
+    "description": "State Manipulator tool to securely overwrite credit card related session variables to None."
+  },
+  "displayName": "clear_cc_data_manipulator"
+}

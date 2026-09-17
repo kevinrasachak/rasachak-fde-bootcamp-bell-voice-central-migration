@@ -1,0 +1,9 @@
+{
+  "name": "acut_search_retrieve_wrapper",
+  "pythonFunction": {
+    "name": "acut_search_retrieve_wrapper",
+    "pythonCode": "tools/acut_search_retrieve_wrapper/python_function/python_code.py",
+    "description": "Fetches ACUT address data, extracts street details, and saves to session variables."
+  },
+  "displayName": "acut_search_retrieve_wrapper"
+}

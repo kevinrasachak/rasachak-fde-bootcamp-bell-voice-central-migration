@@ -1,0 +1,9 @@
+{
+  "name": "extract_time_slot_object",
+  "pythonFunction": {
+    "name": "extract_time_slot_object",
+    "pythonCode": "tools/extract_time_slot_object/python_function/python_code.py",
+    "description": "Parses selected time string against the interval array."
+  },
+  "displayName": "extract_time_slot_object"
+}

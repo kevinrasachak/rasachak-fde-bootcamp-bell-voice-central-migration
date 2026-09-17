@@ -1,0 +1,26 @@
+{
+  "name": "392bbc58-637a-4c65-a03a-15d1b20e8b2c",
+  "displayName": "M3 BillingAndPayments",
+  "description": "Consolidated agent: M3_BillingAndPayments",
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "instruction": "agents/M3_BillingAndPayments/instruction.txt",
+  "tools": [
+    "billing_get_account_balance",
+    "billing_process_payment",
+    "billing_process_credit_refund",
+    "billing_manage_autopay"
+  ],
+  "beforeModelCallbacks": [
+    {
+      "pythonCode": "agents/M3_BillingAndPayments/before_model_callbacks/before_model_callbacks_01/python_code.py"
+    }
+  ],
+  "afterModelCallbacks": [
+    {
+      "pythonCode": "agents/M3_BillingAndPayments/after_model_callbacks/after_model_callbacks_01/python_code.py"
+    }
+  ],
+  "llmAgent": {}
+}

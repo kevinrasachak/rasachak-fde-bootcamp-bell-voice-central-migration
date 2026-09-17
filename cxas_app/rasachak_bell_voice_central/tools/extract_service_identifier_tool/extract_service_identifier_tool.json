@@ -1,0 +1,9 @@
+{
+  "name": "extract_service_identifier_tool",
+  "pythonFunction": {
+    "name": "extract_service_identifier_tool",
+    "pythonCode": "tools/extract_service_identifier_tool/python_function/python_code.py",
+    "description": "State Manipulator. Reads billing_account_info_list and ticket_lob directly from session state."
+  },
+  "displayName": "extract_service_identifier_tool"
+}

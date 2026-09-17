@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_payment_amount",
+  "pythonFunction": {
+    "name": "evaluate_payment_amount",
+    "pythonCode": "tools/evaluate_payment_amount/python_function/python_code.py",
+    "description": "State Manipulator Tool to handle float comparisons for payment amounts safely outside the LLM."
+  },
+  "displayName": "evaluate_payment_amount"
+}

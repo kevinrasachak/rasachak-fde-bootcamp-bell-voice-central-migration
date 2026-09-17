@@ -1,0 +1,9 @@
+{
+  "name": "fetch_province_info_wrapper",
+  "pythonFunction": {
+    "name": "fetch_province_info_wrapper",
+    "pythonCode": "tools/fetch_province_info_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper Tool to determine province based on NPA/NXX natively checking mock_mode."
+  },
+  "displayName": "fetch_province_info_wrapper"
+}

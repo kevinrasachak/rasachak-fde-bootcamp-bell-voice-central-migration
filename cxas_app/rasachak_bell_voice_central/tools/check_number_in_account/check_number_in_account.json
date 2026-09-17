@@ -1,0 +1,9 @@
+{
+  "name": "check_number_in_account",
+  "pythonFunction": {
+    "name": "check_number_in_account",
+    "pythonCode": "tools/check_number_in_account/python_function/python_code.py",
+    "description": "State/Variable Manipulator: Checks if the phone_number exists in customer_id_search_response."
+  },
+  "displayName": "check_number_in_account"
+}

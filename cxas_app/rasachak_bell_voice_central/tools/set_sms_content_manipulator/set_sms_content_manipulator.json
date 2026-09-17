@@ -1,0 +1,9 @@
+{
+  "name": "set_sms_content_manipulator",
+  "pythonFunction": {
+    "name": "set_sms_content_manipulator",
+    "pythonCode": "tools/set_sms_content_manipulator/python_function/python_code.py",
+    "description": "Reads language session variable and sets sms_type and sms_content based on language preference."
+  },
+  "displayName": "set_sms_content_manipulator"
+}

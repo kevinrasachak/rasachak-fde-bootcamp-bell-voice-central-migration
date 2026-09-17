@@ -1,0 +1,9 @@
+{
+  "name": "wfas_check_availability_wrapper",
+  "pythonFunction": {
+    "name": "wfas_check_availability_wrapper",
+    "pythonCode": "tools/wfas_check_availability_wrapper/python_function/python_code.py",
+    "description": "Calls WFAS check availability backend tool or returns mocked data based on state variables."
+  },
+  "displayName": "wfas_check_availability_wrapper"
+}

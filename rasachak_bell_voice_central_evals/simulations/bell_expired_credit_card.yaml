@@ -1,0 +1,147 @@
+tests:
+- name: Credit expired Global - error
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: d
+    variables:
+      global_error_counter: 0
+      local_noinput_counter: 0
+      local_nomatch_counter: 0
+    expectations:
+    - type: fuzzy_match
+      value: Sorry, I didn’t understand. Can you please say that again?
+  - turn: Turn 2
+    user: '44'
+    expectations:
+    - type: fuzzy_match
+      value: Sorry, I'm having trouble understanding. Try speaking slowly and clearly
+        for me to understand.
+- name: EEPA-2560 Expired CC
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: hi
+    variables:
+      auth_status: Pass
+      bee_testing: true
+      nm1_get_cust_profile_response:
+        arBalance: '-1478.58'
+        banNumber: '520675749'
+        banPostalCode: G3H1M3
+        banStatus: O
+        banSubType: V
+        banType: I
+        ccExpiryDate: '1224'
+        colDate: '2014-01-07T00:00:00.000Z'
+        colInd: N
+        consoBan: '0'
+        creditCardNumber: MC86308344877601
+        creditCardType: '45'
+        creditNumChange: '2'
+        ctnNumber: '5813724035'
+        ctnStatus: A
+        equipType: '4'
+        initActvDate: '2012-09-08T00:00:00.000Z'
+        invChargeAmt: '10.0'
+        invNumOfMonth: '6'
+        ivrInd: Y
+        langInd: F
+        lastCrdChangeDate: '2016-04-04T00:00:00.000Z'
+        marketSegment: PRS
+        oneBill: N
+        padStatus: ''
+        pastDueAmount: '0.0'
+        paymentMethod: C
+        pinNumber: ''
+        pinStatus: ''
+        prePaidInd: N
+        safPrice: '0.0'
+        safType: ''
+        sharingInd: N
+        siOwner: MOBL
+        spendingCapsAmount: '0.0'
+        statActvCode: NAC
+        statActvRsnCode: NAC
+        subMarketCode: UQC
+        subscriberNum: '94933515'
+        timeStamp: 4778 202508050718004773 20250805071800
+    expectations:
+    - type: fuzzy_match
+      value: I noticed your credit card on file is expired. Do you want to update
+        it now?
+- name: EEPA-2560 Expiring soon
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: hi
+    variables:
+      auth_status: Pass
+      bee_testing: true
+      nm1_get_cust_profile_response:
+        arBalance: '-1478.58'
+        banNumber: '520675749'
+        banPostalCode: G3H1M3
+        banStatus: O
+        banSubType: V
+        banType: I
+        ccExpiryDate: 0825
+        colDate: '2014-01-07T00:00:00.000Z'
+        colInd: N
+        consoBan: '0'
+        creditCardNumber: MC86308344877601
+        creditCardType: '45'
+        creditNumChange: '2'
+        ctnNumber: '5813724035'
+        ctnStatus: A
+        equipType: '4'
+        initActvDate: '2012-09-08T00:00:00.000Z'
+        invChargeAmt: '10.0'
+        invNumOfMonth: '6'
+        ivrInd: Y
+        langInd: F
+        lastCrdChangeDate: '2016-04-04T00:00:00.000Z'
+        marketSegment: PRS
+        oneBill: N
+        padStatus: ''
+        pastDueAmount: '0.0'
+        paymentMethod: C
+        pinNumber: ''
+        pinStatus: ''
+        prePaidInd: N
+        safPrice: '0.0'
+        safType: ''
+        sharingInd: N
+        siOwner: MOBL
+        spendingCapsAmount: '0.0'
+        statActvCode: NAC
+        statActvRsnCode: NAC
+        subMarketCode: UQC
+        subscriberNum: '94933515'
+        timeStamp: 4778 202508050718004773 20250805071800
+    expectations:
+    - type: fuzzy_match
+      value: I noticed your credit card on file is about to expire. Do you want to
+        update it now?
+- name: bell_expired_credit_card - Global Error counter
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: d
+    variables:
+      global_error_counter: 0
+      local_noinput_counter: 0
+      local_nomatch_counter: 0
+    expectations:
+    - type: fuzzy_match
+      value: Sorry, I didn’t understand. Can you please say that again?
+  - turn: Turn 2
+    user: '44'
+    expectations:
+    - type: fuzzy_match
+      value: Sorry, I'm having trouble understanding. Try speaking slowly and clearly
+        for me to understand.

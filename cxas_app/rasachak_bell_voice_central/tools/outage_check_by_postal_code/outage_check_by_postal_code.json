@@ -1,0 +1,9 @@
+{
+  "name": "outage_check_by_postal_code",
+  "displayName": "outage_check_by_postal_code",
+  "pythonFunction": {
+    "name": "outage_check_by_postal_code",
+    "description": "Checks regional outage status by Canadian postal code (Guest tier).",
+    "pythonCode": "tools/outage_check_by_postal_code/python_function/python_code.py"
+  }
+}

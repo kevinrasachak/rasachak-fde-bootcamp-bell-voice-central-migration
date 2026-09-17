@@ -1,0 +1,9 @@
+{
+  "name": "tool_get_intent_sdl",
+  "pythonFunction": {
+    "name": "tool_get_intent_sdl",
+    "pythonCode": "tools/tool_get_intent_sdl/python_function/python_code.py",
+    "description": "Invokes intent-sdl-mapping using intent route and language to fetch a vanity URL."
+  },
+  "displayName": "tool_get_intent_sdl"
+}

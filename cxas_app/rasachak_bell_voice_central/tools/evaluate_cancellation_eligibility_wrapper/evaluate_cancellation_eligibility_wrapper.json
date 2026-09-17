@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_cancellation_eligibility_wr",
+  "pythonFunction": {
+    "name": "evaluate_cancellation_eligibility_wrapper",
+    "pythonCode": "tools/evaluate_cancellation_eligibility_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper & State Manipulator for evaluating ticket cancellation eligibility. Returns flattened status and formatted strings."
+  },
+  "displayName": "evaluate_cancellation_eligibility_wrapper"
+}

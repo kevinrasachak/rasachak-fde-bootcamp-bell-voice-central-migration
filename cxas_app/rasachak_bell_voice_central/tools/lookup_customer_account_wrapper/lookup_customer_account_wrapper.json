@@ -1,0 +1,9 @@
+{
+  "name": "lookup_customer_account_wrapper",
+  "pythonFunction": {
+    "name": "lookup_customer_account_wrapper",
+    "pythonCode": "tools/lookup_customer_account_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper for customer-identification#search-by-tn. Parses response and sets state directly."
+  },
+  "displayName": "lookup_customer_account_wrapper"
+}

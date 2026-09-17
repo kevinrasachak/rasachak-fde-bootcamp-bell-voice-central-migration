@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_pad_eligibility",
+  "pythonFunction": {
+    "name": "evaluate_pad_eligibility",
+    "pythonCode": "tools/evaluate_pad_eligibility/python_function/python_code.py",
+    "description": "State/Variable Manipulator to evaluate PAD eligibility routing logic without LLM hallucinations."
+  },
+  "displayName": "evaluate_pad_eligibility"
+}

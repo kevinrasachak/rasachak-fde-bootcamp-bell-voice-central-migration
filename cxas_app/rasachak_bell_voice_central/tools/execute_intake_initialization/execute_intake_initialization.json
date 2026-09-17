@@ -1,0 +1,9 @@
+{
+  "name": "execute_intake_initialization",
+  "pythonFunction": {
+    "name": "execute_intake_initialization",
+    "pythonCode": "tools/execute_intake_initialization/python_function/python_code.py",
+    "description": "Webhook Wrapper: Bundles initial configuration calls."
+  },
+  "displayName": "execute_intake_initialization"
+}

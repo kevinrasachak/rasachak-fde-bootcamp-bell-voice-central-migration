@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_consolidated_customer_logic",
+  "pythonFunction": {
+    "name": "evaluate_consolidated_customer_logic",
+    "pythonCode": "tools/evaluate_consolidated_customer_logic/python_function/python_code.py",
+    "description": "State Manipulator. Evaluates if the customer is a supported consolidated customer based on account parameters."
+  },
+  "displayName": "evaluate_consolidated_customer_logic"
+}

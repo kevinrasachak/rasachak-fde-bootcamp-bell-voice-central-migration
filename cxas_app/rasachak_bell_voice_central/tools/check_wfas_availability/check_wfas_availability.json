@@ -1,0 +1,9 @@
+{
+  "name": "check_wfas_availability",
+  "pythonFunction": {
+    "name": "check_wfas_availability",
+    "pythonCode": "tools/check_wfas_availability/python_function/python_code.py",
+    "description": "Retrieves WFAS available dates/slots."
+  },
+  "displayName": "check_wfas_availability"
+}

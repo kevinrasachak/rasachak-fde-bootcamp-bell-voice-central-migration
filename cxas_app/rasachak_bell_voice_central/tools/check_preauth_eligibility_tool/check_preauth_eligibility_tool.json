@@ -1,0 +1,9 @@
+{
+  "name": "check_preauth_eligibility_tool",
+  "pythonFunction": {
+    "name": "check_preauth_eligibility_tool",
+    "pythonCode": "tools/check_preauth_eligibility_tool/python_function/python_code.py",
+    "description": "Webhook Wrapper: Calls get-existing, then sequentially calls pa-eligibility if applicable. Returns payment_method_check and eligInd."
+  },
+  "displayName": "check_preauth_eligibility_tool"
+}

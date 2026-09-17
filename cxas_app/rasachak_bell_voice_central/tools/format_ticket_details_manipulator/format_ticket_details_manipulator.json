@@ -1,0 +1,9 @@
+{
+  "name": "format_ticket_details_manipulator",
+  "pythonFunction": {
+    "name": "format_ticket_details_manipulator",
+    "pythonCode": "tools/format_ticket_details_manipulator/python_function/python_code.py",
+    "description": "Extracts and formats ACUT ticket data from the raw response, skipping CREATION dispatches and updating session state natively."
+  },
+  "displayName": "format_ticket_details_manipulator"
+}

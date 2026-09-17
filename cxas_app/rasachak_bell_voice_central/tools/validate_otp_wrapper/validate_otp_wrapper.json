@@ -1,0 +1,9 @@
+{
+  "name": "validate_otp_wrapper",
+  "pythonFunction": {
+    "name": "validate_otp_wrapper",
+    "pythonCode": "tools/validate_otp_wrapper/python_function/python_code.py",
+    "description": "Validates a 6-digit OTP code against the callKey session."
+  },
+  "displayName": "validate_otp_wrapper"
+}

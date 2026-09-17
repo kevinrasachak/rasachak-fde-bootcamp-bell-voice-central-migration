@@ -1,0 +1,9 @@
+{
+  "name": "update_sms_payload_variables",
+  "pythonFunction": {
+    "name": "update_sms_payload_variables",
+    "pythonCode": "tools/update_sms_payload_variables/python_function/python_code.py",
+    "description": "Maps faq_topic and language to an SMS payload and writes to session variables."
+  },
+  "displayName": "update_sms_payload_variables"
+}

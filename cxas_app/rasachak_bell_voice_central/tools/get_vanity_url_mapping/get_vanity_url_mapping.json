@@ -1,0 +1,9 @@
+{
+  "name": "get_vanity_url_mapping",
+  "pythonFunction": {
+    "name": "get_vanity_url_mapping",
+    "pythonCode": "tools/get_vanity_url_mapping/python_function/python_code.py",
+    "description": "Retrieves a self-serve vanity URL based on intent."
+  },
+  "displayName": "get_vanity_url_mapping"
+}

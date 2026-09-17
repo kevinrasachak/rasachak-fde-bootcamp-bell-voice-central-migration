@@ -1,0 +1,9 @@
+{
+  "name": "billing_manage_autopay",
+  "displayName": "billing_manage_autopay",
+  "pythonFunction": {
+    "name": "billing_manage_autopay",
+    "description": "Enrolls or modifies Autopay (Credit Card or Pre-Authorized Debit).",
+    "pythonCode": "tools/billing_manage_autopay/python_function/python_code.py"
+  }
+}

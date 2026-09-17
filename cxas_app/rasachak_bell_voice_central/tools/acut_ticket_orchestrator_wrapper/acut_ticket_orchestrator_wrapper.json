@@ -1,0 +1,9 @@
+{
+  "name": "acut_ticket_orchestrator_wrapper",
+  "pythonFunction": {
+    "name": "acut_ticket_orchestrator_wrapper",
+    "pythonCode": "tools/acut_ticket_orchestrator_wrapper/python_function/python_code.py",
+    "description": "Bundles multi-step ACUT ticket lookups into a single call."
+  },
+  "displayName": "acut_ticket_orchestrator_wrapper"
+}

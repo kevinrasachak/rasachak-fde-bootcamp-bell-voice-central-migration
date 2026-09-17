@@ -1,0 +1,79 @@
+tests:
+- name: EEPA - 2094 Id New service
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: Hi
+    variables:
+      caller_channel: TFN
+    expectations:
+    - type: fuzzy_match
+      value: If you're looking to order a new service, please say 'new service.' Otherwise,
+        what’s the 10-digit p
+  - turn: Turn 2
+    user: new service
+    expectations:
+    - type: fuzzy_match
+      value: The sales use case is under development.
+- name: EEPA-2094 | Wrong Clid into Right Clid
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: Hi
+    variables:
+      caller_channel: TFN
+    expectations:
+    - type: fuzzy_match
+      value: If you're looking to order a new service, please say 'new service.' Otherwise,
+        what’s the 10-digit p
+  - turn: Turn 2
+    user: '4165718783'
+    expectations:
+    - type: fuzzy_match
+      value: That was 4165718783, right?
+  - turn: Turn 3
+    user: 'yes'
+    expectations:
+    - type: fuzzy_match
+      value: I'm not finding an account associated with that number. Could you please
+        re-enter the 10-digit phone
+  - turn: Turn 4
+    user: '4165718784'
+- name: EEPA-2094 - Short Code Prompt
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: Hi
+    expectations:
+    - type: fuzzy_match
+      value: Are you calling about the account associated with number you’re calling
+        from?
+  - turn: Turn 2
+    user: 'yes'
+- name: EEPA-2094, search by tn
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: Hi
+    variables:
+      caller_channel: TFN
+    expectations:
+    - type: fuzzy_match
+      value: If you're looking to order a new service, please say 'new service.' Otherwise,
+        what’s the 10-digit p
+  - turn: Turn 2
+    user: '4165718784'
+- name: EEPA-2798 - 2
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: hhh
+    expectations:
+    - type: fuzzy_match
+      value: 'Sorry, I''m unable to transfer you to an agent due to an unexpected
+        system issue. Please try calling '

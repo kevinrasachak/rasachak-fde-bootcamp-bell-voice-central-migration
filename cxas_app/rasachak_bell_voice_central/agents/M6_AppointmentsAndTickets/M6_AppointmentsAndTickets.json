@@ -1,0 +1,23 @@
+{
+  "name": "45967b22-3df9-4951-aa03-7ef56ec93a59",
+  "displayName": "M6 AppointmentsAndTickets",
+  "description": "Consolidated agent: M6_AppointmentsAndTickets",
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "instruction": "agents/M6_AppointmentsAndTickets/instruction.txt",
+  "tools": [
+    "appointment_manage_booking"
+  ],
+  "beforeModelCallbacks": [
+    {
+      "pythonCode": "agents/M6_AppointmentsAndTickets/before_model_callbacks/before_model_callbacks_01/python_code.py"
+    }
+  ],
+  "afterModelCallbacks": [
+    {
+      "pythonCode": "agents/M6_AppointmentsAndTickets/after_model_callbacks/after_model_callbacks_01/python_code.py"
+    }
+  ],
+  "llmAgent": {}
+}

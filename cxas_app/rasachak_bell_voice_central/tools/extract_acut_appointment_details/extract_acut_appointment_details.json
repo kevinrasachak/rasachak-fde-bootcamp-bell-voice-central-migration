@@ -1,0 +1,9 @@
+{
+  "name": "extract_acut_appointment_details",
+  "pythonFunction": {
+    "name": "extract_acut_appointment_details",
+    "pythonCode": "tools/extract_acut_appointment_details/python_function/python_code.py",
+    "description": "Parses raw acut_retrieve_response JSON to flatten required details and sets state variables."
+  },
+  "displayName": "extract_acut_appointment_details"
+}

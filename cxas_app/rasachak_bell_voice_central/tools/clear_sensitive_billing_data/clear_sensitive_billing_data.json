@@ -1,0 +1,9 @@
+{
+  "name": "clear_sensitive_billing_data",
+  "pythonFunction": {
+    "name": "clear_sensitive_billing_data",
+    "pythonCode": "tools/clear_sensitive_billing_data/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Programmatically clears sensitive credit card session variables and readies the session for termination."
+  },
+  "displayName": "clear_sensitive_billing_data"
+}

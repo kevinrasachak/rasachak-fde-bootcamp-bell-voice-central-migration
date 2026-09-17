@@ -1,0 +1,9 @@
+{
+  "name": "format_availability_options",
+  "pythonFunction": {
+    "name": "format_availability_options",
+    "pythonCode": "tools/format_availability_options/python_function/python_code.py",
+    "description": "Parses WFAS availability response and formats options."
+  },
+  "displayName": "format_availability_options"
+}

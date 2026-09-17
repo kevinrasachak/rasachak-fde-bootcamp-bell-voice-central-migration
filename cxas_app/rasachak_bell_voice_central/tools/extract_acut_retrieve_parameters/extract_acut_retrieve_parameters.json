@@ -1,0 +1,9 @@
+{
+  "name": "extract_acut_retrieve_parameters",
+  "pythonFunction": {
+    "name": "extract_acut_retrieve_parameters",
+    "pythonCode": "tools/extract_acut_retrieve_parameters/python_function/python_code.py",
+    "description": "Parses raw ACUT data into flat parameters."
+  },
+  "displayName": "extract_acut_retrieve_parameters"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "update_acut_contact_preferences",
+  "pythonFunction": {
+    "name": "update_acut_contact_preferences",
+    "pythonCode": "tools/update_acut_contact_preferences/python_function/python_code.py",
+    "description": "Updates ACUT contact preferences via modify#modify."
+  },
+  "displayName": "update_acut_contact_preferences"
+}

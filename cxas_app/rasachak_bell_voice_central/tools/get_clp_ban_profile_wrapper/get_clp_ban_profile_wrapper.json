@@ -1,0 +1,9 @@
+{
+  "name": "get_clp_ban_profile_wrapper",
+  "pythonFunction": {
+    "name": "get_clp_ban_profile_wrapper",
+    "pythonCode": "tools/get_clp_ban_profile_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper. Retrieves the user's updated BAN profile limits."
+  },
+  "displayName": "get_clp_ban_profile_wrapper"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "validate_cc_number",
+  "pythonFunction": {
+    "name": "validate_cc_number",
+    "pythonCode": "tools/validate_cc_number/python_function/python_code.py",
+    "description": "Validates the raw CC number string, determines card brand, and saves to session variables."
+  },
+  "displayName": "validate_cc_number"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "submit_pre_auth_payment_wrapper",
+  "pythonFunction": {
+    "name": "submit_pre_auth_payment_wrapper",
+    "pythonCode": "tools/submit_pre_auth_payment_wrapper/python_function/python_code.py",
+    "description": "Submits payment order and natively clears sensitive credit card variables."
+  },
+  "displayName": "submit_pre_auth_payment_wrapper"
+}

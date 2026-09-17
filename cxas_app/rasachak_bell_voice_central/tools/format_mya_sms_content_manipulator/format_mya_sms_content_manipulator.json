@@ -1,0 +1,9 @@
+{
+  "name": "format_mya_sms_content_manipulator",
+  "pythonFunction": {
+    "name": "format_mya_sms_content_manipulator",
+    "pythonCode": "tools/format_mya_sms_content_manipulator/python_function/python_code.py",
+    "description": "Safely constructs the exact string payload for the SMS message based on language. Mutates the sms_content state variable directly."
+  },
+  "displayName": "format_mya_sms_content_manipulator"
+}

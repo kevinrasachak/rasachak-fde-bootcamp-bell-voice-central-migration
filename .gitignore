@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.zip
+task-*.log
+.gemini/
+scratch/
+raw_dfcx_agent/
+pulled_inspect/
+pulled_test/
+*.zip
+task-*.log
+.gemini/
+scratch/
+rasachak_bell_voice_central_ir.json

@@ -1,0 +1,9 @@
+{
+  "name": "set_autopay_sms_payload",
+  "pythonFunction": {
+    "name": "set_autopay_sms_payload",
+    "pythonCode": "tools/set_autopay_sms_payload/python_function/python_code.py",
+    "description": "Evaluates user confirmation and sets sms-related session variables."
+  },
+  "displayName": "set_autopay_sms_payload"
+}

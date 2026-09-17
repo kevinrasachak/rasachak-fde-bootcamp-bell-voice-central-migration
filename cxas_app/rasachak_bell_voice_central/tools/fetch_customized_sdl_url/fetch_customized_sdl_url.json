@@ -1,0 +1,9 @@
+{
+  "name": "fetch_customized_sdl_url",
+  "pythonFunction": {
+    "name": "fetch_customized_sdl_url",
+    "pythonCode": "tools/fetch_customized_sdl_url/python_function/python_code.py",
+    "description": "Webhook Wrapper & State Manipulator. Replaces intent-sdl-mapping webhook."
+  },
+  "displayName": "fetch_customized_sdl_url"
+}

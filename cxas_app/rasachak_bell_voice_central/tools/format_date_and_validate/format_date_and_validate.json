@@ -1,0 +1,9 @@
+{
+  "name": "format_date_and_validate",
+  "pythonFunction": {
+    "name": "format_date_and_validate",
+    "pythonCode": "tools/format_date_and_validate/python_function/python_code.py",
+    "description": "Validates spoken day against available dates."
+  },
+  "displayName": "format_date_and_validate"
+}

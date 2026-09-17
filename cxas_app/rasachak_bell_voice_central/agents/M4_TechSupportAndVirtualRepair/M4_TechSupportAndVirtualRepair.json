@@ -1,0 +1,25 @@
+{
+  "name": "a6a7c3af-b7c8-4acf-b709-a11959454334",
+  "displayName": "M4 TechSupportAndVirtualRepair",
+  "description": "Consolidated agent: M4_TechSupportAndVirtualRepair",
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "instruction": "agents/M4_TechSupportAndVirtualRepair/instruction.txt",
+  "tools": [
+    "outage_check_by_postal_code",
+    "tech_send_sms_troubleshooting_guide",
+    "tech_execute_virtual_repair"
+  ],
+  "beforeModelCallbacks": [
+    {
+      "pythonCode": "agents/M4_TechSupportAndVirtualRepair/before_model_callbacks/before_model_callbacks_01/python_code.py"
+    }
+  ],
+  "afterModelCallbacks": [
+    {
+      "pythonCode": "agents/M4_TechSupportAndVirtualRepair/after_model_callbacks/after_model_callbacks_01/python_code.py"
+    }
+  ],
+  "llmAgent": {}
+}

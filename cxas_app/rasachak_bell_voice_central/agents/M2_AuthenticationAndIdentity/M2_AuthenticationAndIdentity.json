@@ -1,0 +1,24 @@
+{
+  "name": "76d75f1f-ae56-42b5-ba8e-2f18f69d4ca1",
+  "displayName": "M2 AuthenticationAndIdentity",
+  "description": "Consolidated agent: M2_AuthenticationAndIdentity",
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "instruction": "agents/M2_AuthenticationAndIdentity/instruction.txt",
+  "tools": [
+    "auth_lookup_account",
+    "auth_verify_pin_otp"
+  ],
+  "beforeModelCallbacks": [
+    {
+      "pythonCode": "agents/M2_AuthenticationAndIdentity/before_model_callbacks/before_model_callbacks_01/python_code.py"
+    }
+  ],
+  "afterModelCallbacks": [
+    {
+      "pythonCode": "agents/M2_AuthenticationAndIdentity/after_model_callbacks/after_model_callbacks_01/python_code.py"
+    }
+  ],
+  "llmAgent": {}
+}

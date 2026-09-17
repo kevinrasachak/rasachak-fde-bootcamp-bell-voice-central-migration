@@ -1,0 +1,9 @@
+{
+  "name": "process_payment_wrapper",
+  "pythonFunction": {
+    "name": "process_payment_wrapper",
+    "pythonCode": "tools/process_payment_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper. Bundles the capture amount paid and submit order webhooks. Validates credit card details and submits the payment."
+  },
+  "displayName": "process_payment_wrapper"
+}

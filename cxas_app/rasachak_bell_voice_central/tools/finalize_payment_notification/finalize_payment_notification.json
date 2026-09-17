@@ -1,0 +1,9 @@
+{
+  "name": "finalize_payment_notification",
+  "pythonFunction": {
+    "name": "finalize_payment_notification",
+    "pythonCode": "tools/finalize_payment_notification/python_function/python_code.py",
+    "description": "Updates the order with the user's payment amount/method, submits the order, and fetches the updated past_due_amount."
+  },
+  "displayName": "finalize_payment_notification"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "auth_send_step_up_email",
+  "displayName": "auth_send_step_up_email",
+  "pythonFunction": {
+    "name": "auth_send_step_up_email",
+    "description": "Dispatches step-up verification code to registered backup email.",
+    "pythonCode": "tools/auth_send_step_up_email/python_function/python_code.py"
+  }
+}

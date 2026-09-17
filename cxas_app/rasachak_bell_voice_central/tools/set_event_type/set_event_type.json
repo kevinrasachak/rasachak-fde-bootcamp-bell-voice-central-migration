@@ -1,0 +1,9 @@
+{
+  "name": "set_event_type",
+  "pythonFunction": {
+    "name": "set_event_type",
+    "pythonCode": "tools/set_event_type/python_function/python_code.py",
+    "description": "Sets the event_type session variable."
+  },
+  "displayName": "set_event_type"
+}

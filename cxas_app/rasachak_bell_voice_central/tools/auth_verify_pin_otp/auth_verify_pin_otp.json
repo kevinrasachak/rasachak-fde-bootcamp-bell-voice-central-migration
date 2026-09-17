@@ -1,0 +1,9 @@
+{
+  "name": "auth_verify_pin_otp",
+  "displayName": "auth_verify_pin_otp",
+  "pythonFunction": {
+    "name": "auth_verify_pin_otp",
+    "description": "Validates 4-digit PIN or 6-digit SMS OTP.",
+    "pythonCode": "tools/auth_verify_pin_otp/python_function/python_code.py"
+  }
+}

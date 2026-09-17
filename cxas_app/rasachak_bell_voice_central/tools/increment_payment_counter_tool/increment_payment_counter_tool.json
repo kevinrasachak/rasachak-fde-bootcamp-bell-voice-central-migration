@@ -1,0 +1,9 @@
+{
+  "name": "increment_payment_counter_tool",
+  "pythonFunction": {
+    "name": "increment_payment_counter_tool",
+    "pythonCode": "tools/increment_payment_counter_tool/python_function/python_code.py",
+    "description": "State/Variable Manipulator: Increments the incorrect_payment_method_counter session variable and resets payment_method."
+  },
+  "displayName": "increment_payment_counter_tool"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "30b5e650-682c-4d04-9cb5-fde14b22480f",
+  "displayName": "M1 SessionLifecycleAndRouting",
+  "description": "Consolidated agent: M1_SessionLifecycleAndRouting",
+  "modelSettings": {
+    "model": "gemini-2.5-flash-001"
+  },
+  "instruction": "agents/M1_SessionLifecycleAndRouting/instruction.txt",
+  "tools": [
+    "end_session"
+  ],
+  "childAgents": [
+    "M2 AuthenticationAndIdentity",
+    "M3 BillingAndPayments",
+    "M4 TechSupportAndVirtualRepair",
+    "M5 SalesUpgradesAndWarranty",
+    "M6 AppointmentsAndTickets",
+    "M7 AccountSecurityAndCancellations",
+    "M8 FrenchCanadianSupport"
+  ],
+  "beforeModelCallbacks": [
+    {
+      "pythonCode": "agents/M1_SessionLifecycleAndRouting/before_model_callbacks/before_model_callbacks_01/python_code.py"
+    }
+  ],
+  "afterModelCallbacks": [
+    {
+      "pythonCode": "agents/M1_SessionLifecycleAndRouting/after_model_callbacks/after_model_callbacks_01/python_code.py"
+    }
+  ],
+  "llmAgent": {}
+}

@@ -1,0 +1,9 @@
+{
+  "name": "sales_get_plan_recommendations",
+  "displayName": "sales_get_plan_recommendations",
+  "pythonFunction": {
+    "name": "sales_get_plan_recommendations",
+    "description": "Retrieves curated plan upgrade options filtered by budget cap or feature requirements.",
+    "pythonCode": "tools/sales_get_plan_recommendations/python_function/python_code.py"
+  }
+}

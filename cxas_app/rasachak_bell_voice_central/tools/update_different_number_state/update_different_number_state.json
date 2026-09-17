@@ -1,0 +1,9 @@
+{
+  "name": "update_different_number_state",
+  "pythonFunction": {
+    "name": "update_different_number_state",
+    "pythonCode": "tools/update_different_number_state/python_function/python_code.py",
+    "description": "Updates internal session variables securely for a different number scenario."
+  },
+  "displayName": "update_different_number_state"
+}

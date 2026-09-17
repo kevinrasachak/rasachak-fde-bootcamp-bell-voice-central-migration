@@ -1,0 +1,9 @@
+{
+  "name": "fetch_active_omf_and_acut_tickets",
+  "pythonFunction": {
+    "name": "fetch_active_omf_and_acut_tickets",
+    "pythonCode": "tools/fetch_active_omf_and_acut_tickets/python_function/python_code.py",
+    "description": "Fetches active OMF and ACUT tickets by calling order#summary and search#find sequentially."
+  },
+  "displayName": "fetch_active_omf_and_acut_tickets"
+}

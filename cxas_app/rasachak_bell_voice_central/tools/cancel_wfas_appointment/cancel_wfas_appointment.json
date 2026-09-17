@@ -1,0 +1,9 @@
+{
+  "name": "cancel_wfas_appointment",
+  "pythonFunction": {
+    "name": "cancel_wfas_appointment",
+    "pythonCode": "tools/cancel_wfas_appointment/python_function/python_code.py",
+    "description": "Cancels a pending WFAS reservation."
+  },
+  "displayName": "cancel_wfas_appointment"
+}

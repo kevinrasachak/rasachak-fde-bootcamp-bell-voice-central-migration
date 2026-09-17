@@ -1,0 +1,9 @@
+{
+  "name": "auth_lookup_account",
+  "displayName": "auth_lookup_account",
+  "pythonFunction": {
+    "name": "auth_lookup_account",
+    "description": "Looks up customer account by 10-digit phone number or 9-digit account number.",
+    "pythonCode": "tools/auth_lookup_account/python_function/python_code.py"
+  }
+}

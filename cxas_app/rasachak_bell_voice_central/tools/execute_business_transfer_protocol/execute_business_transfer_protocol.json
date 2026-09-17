@@ -1,0 +1,9 @@
+{
+  "name": "execute_business_transfer_protocol",
+  "pythonFunction": {
+    "name": "execute_business_transfer_protocol",
+    "pythonCode": "tools/execute_business_transfer_protocol/python_function/python_code.py",
+    "description": "Executes business transfer protocol by sequentializing configurations and department fetching."
+  },
+  "displayName": "execute_business_transfer_protocol"
+}

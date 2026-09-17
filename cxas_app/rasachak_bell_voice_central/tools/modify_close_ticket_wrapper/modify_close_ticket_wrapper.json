@@ -1,0 +1,9 @@
+{
+  "name": "modify_close_ticket_wrapper",
+  "pythonFunction": {
+    "name": "modify_close_ticket_wrapper",
+    "pythonCode": "tools/modify_close_ticket_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper to call the API to modify/close the ticket."
+  },
+  "displayName": "modify_close_ticket_wrapper"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "submit_payment_arrangement_order",
+  "pythonFunction": {
+    "name": "submit_payment_arrangement_order",
+    "pythonCode": "tools/submit_payment_arrangement_order/python_function/python_code.py",
+    "description": "Webhook Wrapper to submit the payment arrangement order."
+  },
+  "displayName": "submit_payment_arrangement_order"
+}

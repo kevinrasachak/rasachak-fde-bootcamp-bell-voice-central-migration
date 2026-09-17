@@ -1,0 +1,80 @@
+tests:
+- name: en-sat tv
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: hi
+    expectations:
+    - type: fuzzy_match
+      value: Can you tell me which service you need help with?
+  - turn: Turn 2
+    user: tv
+    expectations:
+    - type: fuzzy_match
+      value: Are you looking for support on Satellite TV or Fibe TV?
+  - turn: Turn 3
+    user: sat tv
+    expectations:
+    - type: fuzzy_match
+      value: 'Sorry, I''m unable to transfer you to an agent due to an unexpected
+        system issue. Please try calling '
+- name: fr-sat_tv-aqd
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: bonjour
+    variables:
+      language: fr-ca
+    expectations:
+    - type: fuzzy_match
+      value: Pouvez-vous me dire avec quel service vous avez besoin d’aide ?
+  - turn: Turn 2
+    user: tv
+    expectations:
+    - type: fuzzy_match
+      value: Bonjour! Comment puis-je vous aider aujourd'hui?
+  - turn: Turn 3
+    user: sat tv
+    expectations:
+    - type: fuzzy_match
+      value: Désolé, je ne peux pas vous transférer à un agent à cause d'un problème
+        système inattendu. Vous pouv
+- name: fr-sat_tv
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: bonjour
+    variables:
+      language: fr-ca
+    expectations:
+    - type: fuzzy_match
+      value: Pouvez-vous me dire avec quel service vous avez besoin d’aide ?
+  - turn: Turn 2
+    user: tv
+    expectations:
+    - type: fuzzy_match
+      value: Bonjour! Comment puis-je vous aider aujourd'hui?
+  - turn: Turn 3
+    user: sat tv
+    expectations:
+    - type: fuzzy_match
+      value: Désolé, je ne peux pas vous transférer à un agent à cause d'un problème
+        système inattendu. Vous pouv
+- name: sat_tv_en
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: hi
+    expectations:
+    - type: fuzzy_match
+      value: Can you tell me which service you need help with?
+  - turn: Turn 2
+    user: sat tv
+    expectations:
+    - type: fuzzy_match
+      value: 'Sorry, I''m unable to transfer you to an agent due to an unexpected
+        system issue. Please try calling '

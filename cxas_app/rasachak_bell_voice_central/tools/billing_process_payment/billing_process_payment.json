@@ -1,0 +1,9 @@
+{
+  "name": "billing_process_payment",
+  "displayName": "billing_process_payment",
+  "pythonFunction": {
+    "name": "billing_process_payment",
+    "description": "Processes bill payment via saved card on file, new credit card, or PAD.",
+    "pythonCode": "tools/billing_process_payment/python_function/python_code.py"
+  }
+}

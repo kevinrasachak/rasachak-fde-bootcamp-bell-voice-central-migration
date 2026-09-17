@@ -1,0 +1,9 @@
+{
+  "name": "set_tech_visit_routing_variables",
+  "pythonFunction": {
+    "name": "set_tech_visit_routing_variables",
+    "pythonCode": "tools/set_tech_visit_routing_variables/python_function/python_code.py",
+    "description": "State/Variable Manipulator to set routing parameters.\n\nArgs:\n    route (str): The specific issue classification for routing.\n    lob (str): The Line of Business Context to preserve."
+  },
+  "displayName": "set_tech_visit_routing_variables"
+}

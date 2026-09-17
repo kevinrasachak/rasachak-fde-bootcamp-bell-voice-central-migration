@@ -1,0 +1,9 @@
+{
+  "name": "calculate_clp_status_manipulator",
+  "pythonFunction": {
+    "name": "calculate_clp_status_manipulator",
+    "pythonCode": "tools/calculate_clp_status_manipulator/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Performs mathematical evaluation of balances and updates statuses."
+  },
+  "displayName": "calculate_clp_status_manipulator"
+}

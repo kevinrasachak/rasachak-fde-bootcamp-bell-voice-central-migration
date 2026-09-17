@@ -1,0 +1,9 @@
+{
+  "name": "extract_customer_postal_code",
+  "pythonFunction": {
+    "name": "extract_customer_postal_code",
+    "pythonCode": "tools/extract_customer_postal_code/python_function/python_code.py",
+    "description": "Parses the customer_id_search_response object. Extracts all unique postal codes."
+  },
+  "displayName": "extract_customer_postal_code"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "send_agent_transfer_data",
+  "pythonFunction": {
+    "name": "send_agent_transfer_data",
+    "pythonCode": "tools/send_agent_transfer_data/python_function/python_code.py",
+    "description": "Executes the OpenAPI call to push CTI transfer data."
+  },
+  "displayName": "send_agent_transfer_data"
+}

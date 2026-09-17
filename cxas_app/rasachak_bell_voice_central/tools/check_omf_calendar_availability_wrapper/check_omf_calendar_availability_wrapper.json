@@ -1,0 +1,9 @@
+{
+  "name": "check_omf_calendar_availability_wrap",
+  "pythonFunction": {
+    "name": "check_omf_calendar_availability_wrapper",
+    "pythonCode": "tools/check_omf_calendar_availability_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper: Calls calendar availability. Evaluates consistent_calendars and automatically executes a fallback (+14/+28 days) if false. Returns appointment_count and slots."
+  },
+  "displayName": "check_omf_calendar_availability_wrapper"
+}

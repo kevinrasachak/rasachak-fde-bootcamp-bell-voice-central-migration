@@ -1,0 +1,9 @@
+{
+  "name": "set_default_faq_url",
+  "pythonFunction": {
+    "name": "set_default_faq_url",
+    "pythonCode": "tools/set_default_faq_url/python_function/python_code.py",
+    "description": "State Manipulator. Assigns fallback URL to faq_link."
+  },
+  "displayName": "set_default_faq_url"
+}

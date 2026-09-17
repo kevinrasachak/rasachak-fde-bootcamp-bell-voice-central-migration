@@ -1,0 +1,9 @@
+{
+  "name": "get_intent_sdl_mapping_wrapper",
+  "pythonFunction": {
+    "name": "get_intent_sdl_mapping_wrapper",
+    "pythonCode": "tools/get_intent_sdl_mapping_wrapper/python_function/python_code.py",
+    "description": "Retrieves the intent-specific support URL mapping."
+  },
+  "displayName": "get_intent_sdl_mapping_wrapper"
+}

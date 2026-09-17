@@ -1,0 +1,9 @@
+{
+  "name": "format_handoff_parameters",
+  "pythonFunction": {
+    "name": "format_handoff_parameters",
+    "pythonCode": "tools/format_handoff_parameters/python_function/python_code.py",
+    "description": "Evaluates the va_to_ccaip flag and securely formats session parameters for live agent routing."
+  },
+  "displayName": "format_handoff_parameters"
+}

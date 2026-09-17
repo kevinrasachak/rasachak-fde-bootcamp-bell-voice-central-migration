@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_account_and_services",
+  "pythonFunction": {
+    "name": "evaluate_account_and_services",
+    "pythonCode": "tools/evaluate_account_and_services/python_function/python_code.py",
+    "description": "Parses billing_account_info_list to extract service types (Mobility, TV, Internet) and delinquent_flag, saving them to state variables."
+  },
+  "displayName": "evaluate_account_and_services"
+}

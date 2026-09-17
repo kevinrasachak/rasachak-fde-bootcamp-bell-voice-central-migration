@@ -1,0 +1,9 @@
+{
+  "name": "sales_process_warranty_replacement",
+  "displayName": "sales_process_warranty_replacement",
+  "pythonFunction": {
+    "name": "sales_process_warranty_replacement",
+    "description": "Processes device warranty claims with zero physical/liquid damage check and swollen battery safety protocol.",
+    "pythonCode": "tools/sales_process_warranty_replacement/python_function/python_code.py"
+  }
+}

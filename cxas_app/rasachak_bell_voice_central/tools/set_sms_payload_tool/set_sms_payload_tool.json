@@ -1,0 +1,9 @@
+{
+  "name": "set_sms_payload_tool",
+  "pythonFunction": {
+    "name": "set_sms_payload_tool",
+    "pythonCode": "tools/set_sms_payload_tool/python_function/python_code.py",
+    "description": "Evaluates the language session variable to set localized sms_content and sms_type payloads."
+  },
+  "displayName": "set_sms_payload_tool"
+}

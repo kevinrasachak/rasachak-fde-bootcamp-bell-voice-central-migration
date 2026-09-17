@@ -1,0 +1,9 @@
+{
+  "name": "book_wfas_appointment",
+  "pythonFunction": {
+    "name": "book_wfas_appointment",
+    "pythonCode": "tools/book_wfas_appointment/python_function/python_code.py",
+    "description": "Bundles WFAS booking and ACUT modification."
+  },
+  "displayName": "book_wfas_appointment"
+}

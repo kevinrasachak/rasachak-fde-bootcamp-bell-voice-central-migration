@@ -1,0 +1,9 @@
+{
+  "name": "fetch_active_appointments_wrapper",
+  "pythonFunction": {
+    "name": "fetch_active_appointments_wrapper",
+    "pythonCode": "tools/fetch_active_appointments_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper. Bundles OMF order summary and ACUT search into a single sequential execution."
+  },
+  "displayName": "fetch_active_appointments_wrapper"
+}

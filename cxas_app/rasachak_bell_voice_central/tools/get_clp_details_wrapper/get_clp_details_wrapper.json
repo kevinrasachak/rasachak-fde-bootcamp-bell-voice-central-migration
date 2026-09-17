@@ -1,0 +1,9 @@
+{
+  "name": "get_clp_details_wrapper",
+  "pythonFunction": {
+    "name": "get_clp_details_wrapper",
+    "pythonCode": "tools/get_clp_details_wrapper/python_function/python_code.py",
+    "description": "Retrieves Credit Limit Program (CLP) details for the user."
+  },
+  "displayName": "get_clp_details_wrapper"
+}

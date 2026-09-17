@@ -1,0 +1,29 @@
+tests:
+- name: EEPA-1953 - EN - Flow Routing Back to Start Flow
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: I need help with a different number
+    expectations:
+    - type: fuzzy_match
+      value: Sure, what is the other number?
+  - turn: Turn 2
+    user: '5198729999'
+    expectations:
+    - type: fuzzy_match
+      value: Alright, now what do you want to talk about?
+- name: EEPA-1953 - FR - Flow Routing Back to Start Flow
+  tags:
+  - '#migrated-dfcx'
+  turns:
+  - turn: Turn 1
+    user: Je veux parler d’un autre numéro.
+    expectations:
+    - type: fuzzy_match
+      value: D'accord, quel est l'autre numéro de téléphone ?
+  - turn: Turn 2
+    user: '5198729519'
+    expectations:
+    - type: fuzzy_match
+      value: Et maintenant de quoi voulez-vous parler ?

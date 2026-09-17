@@ -1,0 +1,9 @@
+{
+  "name": "set_session_variable",
+  "pythonFunction": {
+    "name": "set_session_variable",
+    "pythonCode": "tools/set_session_variable/python_function/python_code.py",
+    "description": "State Manipulator. Generative LLMs cannot reliably set session variables via plain text. This tool explicitly updates a given session variable to a specified string value (e.g., setting 'route' to 'sales_order_device')."
+  },
+  "displayName": "set_session_variable"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "execute_ivr_telephony_transfer",
+  "pythonFunction": {
+    "name": "execute_ivr_telephony_transfer",
+    "pythonCode": "tools/execute_ivr_telephony_transfer/python_function/python_code.py",
+    "description": "Webhook Wrapper: Executes the SIP/CTI transfer webhook."
+  },
+  "displayName": "execute_ivr_telephony_transfer"
+}

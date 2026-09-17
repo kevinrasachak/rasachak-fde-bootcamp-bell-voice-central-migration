@@ -1,0 +1,9 @@
+{
+  "name": "evaluate_collection_status",
+  "pythonFunction": {
+    "name": "evaluate_collection_status",
+    "pythonCode": "tools/evaluate_collection_status/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Evaluates special_status against pastDueAmount and accountBalance, and calculates negative account balances if applicable."
+  },
+  "displayName": "evaluate_collection_status"
+}

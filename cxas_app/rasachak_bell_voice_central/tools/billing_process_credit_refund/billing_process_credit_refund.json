@@ -1,0 +1,9 @@
+{
+  "name": "billing_process_credit_refund",
+  "displayName": "billing_process_credit_refund",
+  "pythonFunction": {
+    "name": "billing_process_credit_refund",
+    "description": "Processes billing disputes, downtime credits, and refunds against the 5 policy cap.",
+    "pythonCode": "tools/billing_process_credit_refund/python_function/python_code.py"
+  }
+}

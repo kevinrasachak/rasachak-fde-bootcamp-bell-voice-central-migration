@@ -1,0 +1,9 @@
+{
+  "name": "extract_otp_numbers",
+  "pythonFunction": {
+    "name": "extract_otp_numbers",
+    "pythonCode": "tools/extract_otp_numbers/python_function/python_code.py",
+    "description": "State Manipulator. Parses billing_account_info_list extracting service_id for Mobility."
+  },
+  "displayName": "extract_otp_numbers"
+}

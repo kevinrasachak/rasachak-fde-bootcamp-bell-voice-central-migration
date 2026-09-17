@@ -1,0 +1,9 @@
+{
+  "name": "validate_and_format_amount",
+  "pythonFunction": {
+    "name": "validate_and_format_amount",
+    "pythonCode": "tools/validate_and_format_amount/python_function/python_code.py",
+    "description": "State Manipulator. Parses input, checks if >= 1 and <= 10000, formats to 2 decimal places. Returns is_valid, formatted_amount, and error_reason."
+  },
+  "displayName": "validate_and_format_amount"
+}

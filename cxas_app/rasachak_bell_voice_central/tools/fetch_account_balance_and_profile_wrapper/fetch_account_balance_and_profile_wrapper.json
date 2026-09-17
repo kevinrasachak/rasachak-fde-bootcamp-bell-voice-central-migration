@@ -1,0 +1,9 @@
+{
+  "name": "fetch_account_balance_and_profile_wr",
+  "pythonFunction": {
+    "name": "fetch_account_balance_and_profile_wrapper",
+    "pythonCode": "tools/fetch_account_balance_and_profile_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper orchestrating backend queries for account balance, last payment, clp spending limit, and determining IVR handoff conditions."
+  },
+  "displayName": "fetch_account_balance_and_profile_wrapper"
+}

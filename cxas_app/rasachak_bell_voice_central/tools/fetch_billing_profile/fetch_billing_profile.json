@@ -1,0 +1,9 @@
+{
+  "name": "fetch_billing_profile",
+  "pythonFunction": {
+    "name": "fetch_billing_profile",
+    "pythonCode": "tools/fetch_billing_profile/python_function/python_code.py",
+    "description": "Evaluates ban_type and ban_sub_type to call the appropriate NM1 profile webhook (customer or ban). Updates session variables and handles mock mode."
+  },
+  "displayName": "fetch_billing_profile"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "increment_global_error_counter",
+  "pythonFunction": {
+    "name": "increment_global_error_counter",
+    "pythonCode": "tools/increment_global_error_counter/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Retrieves the session variable 'global_error_counter', adds 1, saves it back, and returns the new value."
+  },
+  "displayName": "increment_global_error_counter"
+}

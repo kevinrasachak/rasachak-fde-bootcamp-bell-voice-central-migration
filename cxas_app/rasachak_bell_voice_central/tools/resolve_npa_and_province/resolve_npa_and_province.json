@@ -1,0 +1,9 @@
+{
+  "name": "resolve_npa_and_province",
+  "pythonFunction": {
+    "name": "resolve_npa_and_province",
+    "pythonCode": "tools/resolve_npa_and_province/python_function/python_code.py",
+    "description": "Evaluates clid and CIRN to determine phone number, extracts NPA/NXX, calls lookup, and sets variables."
+  },
+  "displayName": "resolve_npa_and_province"
+}

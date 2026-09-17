@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Telco Voice Central - Reconciled PRD v2.0</title>
+<style>
+  @page {
+    size: letter;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+    font-size: 13px;
+  }
+  h1 { font-size: 24px; color: #111827; border-bottom: 2px solid #2563eb; padding-bottom: 8px; margin-top: 24px; }
+  h2 { font-size: 18px; color: #1e40af; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 20px; page-break-after: avoid; }
+  h3 { font-size: 15px; color: #1f2937; margin-top: 16px; page-break-after: avoid; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 11px;
+    page-break-inside: auto;
+  }
+  tr { page-break-inside: avoid; page-break-after: auto; }
+  th, td {
+    border: 1px solid #d1d5db;
+    padding: 6px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #111827;
+  }
+  tr:nth-child(even) { background-color: #f9fafb; }
+  code {
+    background-color: #f3f4f6;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 11px;
+    color: #b91c1c;
+  }
+  pre {
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 11px;
+    page-break-inside: avoid;
+  }
+  pre code { background: none; color: inherit; padding: 0; }
+  blockquote {
+    border-left: 4px solid #2563eb;
+    margin: 12px 0;
+    padding: 6px 12px;
+    background-color: #eff6ff;
+    color: #1e40af;
+  }
+  ul, ol { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 4px; }
+  hr { border: 0; border-top: 1px solid #e5e7eb; margin: 20px 0; }
+  @media print {
+    body { max-width: 100%; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<h1>Product Requirements Document (Reconciled v2.0)</h1>
+<h2>Product Name</h2>
+<p><strong>Telco Voice Central (Bell Voice Central) — AI Voice Assistant</strong></p>
+<hr />
+<h2>Executive Summary — PRD vs. Public Evals Gap Analysis &amp; Reconciliation</h2>
+<p>A comprehensive audit of the baseline <strong>Day 2 (DFCX to CXAS) PRD: Telco Voice Central AI Voice Assistant</strong> against the <strong>70 Public Simulation Evaluations (<code>dfcx__cxas_agent_migration_public_evals</code>)</strong> identified <strong>15 critical functional, compliance, security, and architectural gaps</strong>.</p>
+<p>This v2.0 PRD reconciles every gap to ensure 100% alignment between product specifications, CXAS agent instructions/tools/callbacks, and the 70 public evaluation scenarios.</p>
+<h3>Summary of Identified Gaps &amp; Reconciliations</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Gap ID</th>
+<th style="text-align:left">PRD Section Affected</th>
+<th style="text-align:left">Public Eval Scenarios Covered</th>
+<th style="text-align:left">Baseline PRD Gap / Discrepancy</th>
+<th style="text-align:left">v2.0 Reconciled Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>GAP-01</strong></td>
+<td style="text-align:left">Sec 2 (M7), Sec 4, Sec 6</td>
+<td style="text-align:left"><code>sim__cancel_service_internet_english</code>, <code>sim__cancel_service_mobility_french</code>, <code>sim__port_out_number_english</code>, <code>sim__cancel_tv_service_english</code>, <code>sim__cancel_home_phone_french</code></td>
+<td style="text-align:left">M7 scope omits Service Cancellation &amp; Port-Out; Section 4 lacks verbatim <strong>Mandatory Contract Disclosure</strong> strings (EN/FR); Section 6 lacks a Cancellation/Port-Out CUJ.</td>
+<td style="text-align:left">Added Cancellation &amp; Port-Out across Internet, Mobility, TV, and Home Phone to M7; added <code>contract_disclosure_cancellation</code> &amp; <code>contract_disclosure_port_out</code> verbatim copy in EN &amp; FR; added <strong>CUJ-8</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-02</strong></td>
+<td style="text-align:left">Sec 1 (<code>BR-TV-021</code>), Sec 6</td>
+<td style="text-align:left"><code>sim__speak_immediate_english</code>, <code>sim__speak_immediate_french</code>, <code>sim__speak_mid_call_billing_english</code>, <code>sim__speak_frustrated_english</code>, <code>sim__speak_mid_call_tech_french</code></td>
+<td style="text-align:left">No global rule or CUJ guaranteeing immediate human representative transfer on Turn 1 or mid-call without forcing authentication or self-service deflection.</td>
+<td style="text-align:left">Added <strong>BR-TV-021 (Unconditional Live Representative Handoff)</strong> mandating immediate verbatim <code>live_agent_handoff</code> transfer at any turn in EN/FR; added <strong>CUJ-9</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-03</strong></td>
+<td style="text-align:left">Sec 1 (<code>BR-TV-006</code>, <code>BR-TV-008</code>), Sec 2 (M2)</td>
+<td style="text-align:left"><code>sim__dispute_charge_auth_retry</code>, <code>sim__manage_mfa_auth_failure</code>, <code>sim__reset_password_wrong_number_retry</code></td>
+<td style="text-align:left">Unclear behavior on 1st/2nd failed PIN/OTP attempts vs 3rd strike, and no specification for wrong phone/account number recovery during identification.</td>
+<td style="text-align:left">Explicitly codified: 1st/2nd failed PIN/OTP prompts in-flow retry while preserving pending intent; 3rd failure triggers live-agent escalation. Invalid phone/account numbers during identification prompt inline correction (e.g., fallback to 9-digit account number).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-04</strong></td>
+<td style="text-align:left">Sec 2 (M3), Sec 6</td>
+<td style="text-align:left"><code>sim__pay_mobility_bill_card_file</code>, <code>sim__pay_bill_french_keypad</code>, <code>sim__pay_past_due_bill_prevent_suspension</code>, <code>sim__pay_bill_declined_card_retry</code></td>
+<td style="text-align:left">M3 scope omits one-time Bill Payment processing (card on file, DTMF keypad, past-due immediate payment) and card decline business-error recovery.</td>
+<td style="text-align:left">Added full Bill Payment capabilities to M3 (saved card with last-4 echo per <code>BR-TV-009</code>, French DTMF keypad entry, past-due clearance) and <strong>Card Decline Recovery</strong> (prompting for secondary card on tool business error); added <strong>CUJ-10</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-05</strong></td>
+<td style="text-align:left">Sec 1 (<code>BR-TV-019</code>), Sec 2 (M3), Sec 5</td>
+<td style="text-align:left"><code>sim__setup_autopay_internet_english</code>, <code>sim__setup_autopay_french</code>, <code>sim__setup_autopay_after_paying_bill</code>, <code>sim__manage_mfa_pivot_tech</code>, <code>sim__reset_password_pivot_billing</code></td>
+<td style="text-align:left">Does not specify session authentication persistence across compound sequential intents or autopay bank account support.</td>
+<td style="text-align:left">Codified <strong>Session Auth Persistence</strong>: once <code>auth_status == Pass</code>, authentication persists across multi-intent pivots (e.g., Pay Bill $\rightarrow$ Setup Autopay; Enable MFA $\rightarrow$ Tech Support) without re-authentication. Added Bank Account / Pre-Authorized Debit support to Autopay.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-06</strong></td>
+<td style="text-align:left">Sec 1, Sec 2 (M3), Sec 3, Sec 6</td>
+<td style="text-align:left"><code>sim__dispute_unrecognized_streaming_charge</code>, <code>sim__dispute_billing_charge_french</code>, <code>sim__request_credit_outage_days</code>, <code>sim__request_refund_overcharge_french</code>, <code>sim__request_refund_exceeding_threshold_escalation</code></td>
+<td style="text-align:left">Policy threshold ($25.00) only mentioned in passing in CUJ-2; omits overcharge refunds, outage downtime credits, and specialist escalation workflow for $&gt; $25.00$.</td>
+<td style="text-align:left">Codified <strong>$25.00 Self-Service Credit/Refund Threshold Rule</strong>: disputes, overpayments, and verifiable outage downtime credits $\le $25.00$ auto-process with verbatim <code>refund_confirmation_pattern</code>. Requests $&gt; $25.00$ (e.g., $150 equipment charge) authenticate first, then escalate via verbatim <code>transfer_to_specialist</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-07</strong></td>
+<td style="text-align:left">Sec 3, Sec 4</td>
+<td style="text-align:left"><code>sim__check_outage_active_postal_code</code>, <code>sim__check_outage_french_active</code>, <code>sim__check_outage_none_found_sms_troubleshoot</code></td>
+<td style="text-align:left">Section 3 wrongly requires <code>Authenticated</code> for all <code>&quot;Internet is down&quot;</code> calls; Section 4 has <strong>6 truncated French Canadian verbatim strings (<code>...</code>)</strong>.</td>
+<td style="text-align:left">Fixed Section 3: Regional Outage Check by Postal Code operates at <strong>Guest / Identified</strong> tier (no PIN/OTP required) and offers SMS troubleshooting when no outage is active. Replaced all 6 truncated French verbatim strings in Section 4 with complete, production-compliant French copy.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-08</strong></td>
+<td style="text-align:left">Sec 1 (<code>BR-TV-006</code>), Sec 2 (M6)</td>
+<td style="text-align:left"><code>sim__check_tech_status_standard</code>, <code>sim__check_ticket_status_french</code>, <code>sim__check_tech_status_reschedule_pivot</code>, <code>sim__check_ticket_status_retry_strikes</code></td>
+<td style="text-align:left">M6 omits open trouble ticket status lookup (<code>statut de mon billet</code>), dynamic delay-to-reschedule pivoting, and silent-turn strike reset behavior.</td>
+<td style="text-align:left">Expanded M6 to cover both installation appointments and repair tickets (<code>statut de mon billet</code>); added dynamic pivot from delayed technician status directly into offering 2–3 reschedule slots; clarified <code>local_noinput_counter</code> resets to 0 on Turn 3 valid input.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-09</strong></td>
+<td style="text-align:left">Sec 2 (M7), Sec 3</td>
+<td style="text-align:left"><code>sim__reset_password_standard</code>, <code>sim__reset_password_french</code>, <code>sim__reset_password_sms_escalation</code>, <code>sim__reset_password_pivot_billing</code></td>
+<td style="text-align:left">No fallback when SMS password reset link fails to arrive; unclear tiered step-up when pivoting from <code>Identified</code> to <code>Authenticated</code>.</td>
+<td style="text-align:left">Added <strong>SMS Non-Receipt Escalation Rule</strong> (escalating to live agent via <code>live_agent_handoff</code> if caller reports SMS link not received) and seamless tiered step-up (prompting only for PIN/OTP when pivoting from Password Reset to Billing).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-10</strong></td>
+<td style="text-align:left">Sec 2 (M7), Sec 3, Sec 6</td>
+<td style="text-align:left"><code>sim__manage_mfa_disable</code>, <code>sim__manage_mfa_enable</code>, <code>sim__manage_mfa_french_disable</code>, <code>sim__manage_mfa_auth_failure</code></td>
+<td style="text-align:left">Section 3 treats Enable MFA and Disable MFA identically (<code>Yes + Step-Up Auth</code>). Evals enforce asymmetric security.</td>
+<td style="text-align:left">Codified <strong>Asymmetric MFA Security Rules</strong>: <strong>Enabling MFA</strong> requires standard <code>Authenticated</code> (PIN/OTP); <strong>Disabling MFA</strong> strictly requires <code>Authenticated</code> (PIN/OTP) <strong>PLUS Step-Up Verification Code sent to backup email</strong>. Added <strong>CUJ-11</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-11</strong></td>
+<td style="text-align:left">Sec 1 (<code>BR-TV-013</code>), Sec 2 (M7), Sec 3, Sec 6</td>
+<td style="text-align:left"><code>sim__report_fraud_standard</code>, <code>sim__report_fraud_french</code>, <code>sim__report_fraud_phishing</code>, <code>sim__report_fraud_mid_call_switch</code>, <code>sim__report_fraud_sim_swap</code></td>
+<td style="text-align:left">Fraud definition only mentions generic &quot;hacked account&quot;; risks misrouting SIM Swap victims to Tech Support or failing mid-call billing fraud discovery.</td>
+<td style="text-align:left">Expanded Fraud taxonomy to explicitly include: (1) Turn 1 hacked/unauthorized claims, (2) Phishing/scam SMS reports, (3) <strong>Suspected SIM Swap / sudden mobile service loss with number theft concern</strong>, and (4) <strong>Mid-call discovery of unauthorized billing charges</strong>. All bypass/abort self-service, emit verbatim <code>empathy_protocol</code>, and trigger immediate <code>fraud_escalation</code>. Added <strong>CUJ-12</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-12</strong></td>
+<td style="text-align:left">Sec 2 (M7/M3), Sec 6 (<code>CUJ-6</code>)</td>
+<td style="text-align:left"><code>sim__restore_service_standard</code>, <code>sim__restore_service_french</code>, <code>sim__restore_service_payment_arrangement</code>, <code>sim__restore_service_already_paid</code>, <code>sim__restore_service_business_deflection</code></td>
+<td style="text-align:left">CUJ-6 only describes immediate balance payment; misses Payment Arrangements for callers unable to pay today and Prior Payment Verification for recent payments.</td>
+<td style="text-align:left">Expanded Service Restoration into <strong>Three Mandatory Paths</strong>: (1) Immediate Full Payment, (2) <strong>Structured Payment Arrangement (Promise-to-Pay)</strong>, and (3) <strong>Prior Payment Verification (verifying payments made yesterday without double-charging)</strong>, plus Business Deflection (<code>business_handoff</code>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-13</strong></td>
+<td style="text-align:left">Sec 2 (M4), Sec 5, Sec 6</td>
+<td style="text-align:left"><code>sim__troubleshoot_tv_signal</code>, <code>sim__troubleshoot_mobile_service_french</code>, <code>sim__troubleshoot_satellite_tv_error</code>, <code>sim__troubleshoot_mobile_data_slow</code>, <code>sim__troubleshoot_tv_app_freezing</code></td>
+<td style="text-align:left">PRD only details outage checks; lacks interactive Virtual Repair diagnostics across TV sub-types (<code>streaming</code>, <code>satellite</code>, <code>streaming_only</code>) and Mobility network issues.</td>
+<td style="text-align:left">Added granular <strong>Virtual Repair Diagnostic Matrix</strong> covering Fibe TV Receiver (<code>no signal</code> HDMI/reboot), Satellite TV (<code>Error 101</code> dish/receiver recovery), Fibe TV App (<code>streaming_only</code> cache clear/reinstall), and Mobility (<code>aucun service</code> vs <code>slow cellular data</code> network reset). Added <strong>CUJ-13</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-14</strong></td>
+<td style="text-align:left">Sec 2 (M5), Sec 3, Sec 6</td>
+<td style="text-align:left"><code>sim__upgrade_mobile_plan_data</code>, <code>sim__upgrade_internet_speed_french</code>, <code>sim__upgrade_tv_package_sports</code>, <code>sim__upgrade_mobile_plan_budget</code>, <code>sim__upgrade_internet_wfh</code>, <code>sim__warranty_replacement_*</code> (5 evals), <code>sim__transfer_number_*</code> (3 evals)</td>
+<td style="text-align:left">Section 3 lists Plan Upgrades as <code>Recommended (Identified)</code> (violating <code>BR-TV-008</code>); omits budget/WFH filtering, TV sports add-on, Warranty damage exclusion &amp; swollen battery rules, and Port-In parameter schema.</td>
+<td style="text-align:left">Reclassified Plan/Package Upgrades as strictly <strong>Authenticated (<code>BR-TV-008</code>)</strong>; added budget ($\le $60/\text{mo}$) &amp; WFH bandwidth filtering; codified <strong>Device Warranty Rules</strong> (coverage check, mandatory physical/water damage exclusion check, urgent swollen battery dispatch); codified <strong>Number Port-In Schema</strong> (temp Bell number, external number, prior carrier account/PIN for competitor mobile, landline-to-mobile, and family plan add-a-line). Added <strong>CUJ-14</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>GAP-15</strong></td>
+<td style="text-align:left">Sec 6, Sec 7</td>
+<td style="text-align:left">All 70 Public Simulation Evaluations</td>
+<td style="text-align:left">Section 6 has only 7 CUJs; Section 7 references an outdated &quot;806 deterministic and simulation evaluation suites&quot; metric without mapping to the 70 public evals.</td>
+<td style="text-align:left">Expanded Section 6 to <strong>14 Core CUJs</strong> (mapping 1:1 to all 14 evaluation families / 70 public simulations) and updated Section 7 benchmarks to explicitly require <strong>$\ge 90%$ pass rate across the 70 Public Simulation Evaluations and migrated deterministic unit tests</strong>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Executive Summary</h2>
+<p><strong>Telco Voice Central (Bell Voice Central)</strong> is a voice-first, bilingual conversational customer service application for a major Canadian telecommunications provider (Bell Canada). Serving residential and mobility subscribers across Canada in English (<code>en-CA</code>) and Canadian French (<code>fr-CA</code>), the assistant resolves the six primary customer contact domains—<strong>Billing &amp; Payments, Technical Support &amp; Outages, Sales &amp; Equipment (Upgrades, Warranty &amp; Port-In), Appointments &amp; Trouble Tickets, Account &amp; Security Management (Password, MFA, Service Restoration, Cancellations/Port-Out, Fraud), and Live Representative Handoffs</strong>—through self-contained generative automation or context-preserving live-agent escalation.</p>
+<p>The product replaces rigid legacy touch-tone IVR and deterministic speech trees with a consolidated Customer Experience Agent Studio (CXAS) multi-agent architecture while strictly enforcing 3-tier authentication (<code>Guest</code> $\rightarrow$ <code>Identified</code> $\rightarrow$ <code>Authenticated</code>), verbatim regulatory disclosures, PII redaction, and zero data hallucination.</p>
+<hr />
+<h2>Problem Statement</h2>
+<p>Telecom customers calling support face frustrating, rigid IVR trees where slight phrasing variations, bilingual nuances, or multi-domain inquiries result in misrouting, repetitive authentication prompts, or long hold times.</p>
+<p>Furthermore, real-world telecom calls frequently involve <strong>mid-call pivots and compound intents</strong>—such as a caller paying a past-due bill and immediately enrolling in autopay, checking a delayed technician appointment and pivoting to reschedule, or inquiring about a high bill balance and discovering unauthorized charges that require immediate fraud escalation. Legacy IVRs cannot preserve session state or authentication across these pivots, causing high abandonment and unnecessary live-agent transfers.</p>
+<hr />
+<h2>Goals &amp; Non-Goals</h2>
+<h3>Goals</h3>
+<ul>
+<li><strong>Voice-Friendly Resolution</strong>: Deliver natural, concise spoken responses (under 50 words / 300 characters per breath span where feasible) across Mobility, Internet (Fibe/DSL), TV (Fibe TV Receiver, Satellite TV, Fibe TV App), and Home Phone services.</li>
+<li><strong>Strict 3-Tier Auth Ladder &amp; Session Persistence</strong>: Enforce <code>Guest</code> $\rightarrow$ <code>Identified</code> $\rightarrow$ <code>Authenticated</code> transitions before exposing or mutating account data, while <strong>persisting authenticated status across multi-intent pivots within the same session</strong>.</li>
+<li><strong>Proactive Outage &amp; Interactive Virtual Repair</strong>: Check regional outage databases by postal code at <code>Guest/Identified</code> tier, offer proactive SMS restoration notifications, and guide authenticated callers through device-specific Virtual Repair diagnostics (Fibe TV HDMI/reboot, Satellite Error 101, Streaming App freezing, Mobility network resets) or dispatch SMS troubleshooting guides.</li>
+<li><strong>Bilingual Excellence (<code>en-CA</code> &amp; <code>fr-CA</code>)</strong>: Detect language at Turn 1, lock language for the entire session (self-service through specialist transfer), support French DTMF keypad entry, and emit complete, untruncated French Canadian compliance strings.</li>
+<li><strong>Graceful Topic Switching &amp; Escalation</strong>: Seamlessly re-classify and re-route mid-call pivots, honor unconditional human agent requests at any turn (<code>BR-TV-021</code>), deflect business accounts immediately (<code>BR-TV-012</code>), and transfer fraud reports (including phishing and SIM swap) with zero authentication friction (<code>BR-TV-013</code>).</li>
+<li><strong>Verbatim Compliance</strong>: Strictly emit all legal, privacy, contract cancellation/port-out, refund, business handoff, and specialist transfer disclosures verbatim without LLM paraphrasing (<code>BR-TV-011</code>).</li>
+</ul>
+<h3>Non-Goals</h3>
+<ul>
+<li>Do not process unauthorized financial transactions or store raw credit card CVV numbers in plaintext.</li>
+<li>Do not disclose Personally Identifiable Information (PII), account balances, or ticket details to unauthenticated callers (<code>BR-TV-008</code>, <code>BR-TV-009</code>).</li>
+<li>Do not process self-service billing credits or refunds exceeding the <strong>$25.00 policy threshold</strong> without escalating to a billing specialist (<code>transfer_to_specialist</code>).</li>
+<li>Do not approve device warranty replacements if the caller reports physical damage or liquid/water damage.</li>
+<li>Do not promise guaranteed technician arrival times or speculative outage restoration times without backend tool confirmation (<code>BR-TV-017</code>).</li>
+</ul>
+<hr />
+<h2>Target Audience</h2>
+<ul>
+<li><strong>Residential Subscribers</strong>: Customers managing Fibe/DSL Internet, Fibe TV (IPTV/App), Satellite TV, or Home Phone landline services (upgrades, outages, cancellations, landline-to-mobile porting).</li>
+<li><strong>Mobility Subscribers</strong>: Smartphone users managing cellular data plans, budget-constrained upgrades ($\le $60/\text{mo}$), warranty replacements (iPhone, Samsung, Pixel), number port-ins (competitor or family plan add-a-line), and network/SIM troubleshooting.</li>
+<li><strong>Bilingual Callers</strong>: Canadian consumers interacting in English or Canadian French (<code>fr-CA</code>).</li>
+<li><strong>Distressed / Urgent Callers</strong>: Customers facing service suspension for non-payment, swollen phone batteries, account takeover/phishing/SIM swap fraud, or urgent technician delays.</li>
+<li><strong>Business Callers (Deflection Target)</strong>: Commercial/business account holders who must be identified immediately via <code>business_flag</code> and deflected to dedicated business support representatives.</li>
+</ul>
+<hr />
+<h2>Section 1 — Global Behavioral Requirements Register (<code>BR-TV-001</code> to <code>BR-TV-021</code>)</h2>
+<p>The agent must strictly satisfy all <strong>21 global behavioral requirements</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ID</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Core Behavioral Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>BR-TV-001</strong></td>
+<td style="text-align:left"><strong>Recording Notice</strong></td>
+<td style="text-align:left">The regional privacy disclosure (<code>recording_notice</code>) is emitted verbatim on the initial greeting. If asked, the agent repeats it verbatim.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-002</strong></td>
+<td style="text-align:left"><strong>Restricted Caller Check</strong></td>
+<td style="text-align:left">Incoming Caller ID (<code>clid</code>) is checked against a blocklist before greeting; blocked calls hear a deflection message and disconnect immediately.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-003</strong></td>
+<td style="text-align:left"><strong>Regional Service Alert</strong></td>
+<td style="text-align:left">Active regional service alerts prepend an advisory banner to the standard greeting.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-004</strong></td>
+<td style="text-align:left"><strong>Language Locking</strong></td>
+<td style="text-align:left">Language (<code>en</code> or <code>fr-ca</code>) is detected at Turn 1 and locked in session state (<code>language</code>) for the entire call. Only an explicit caller request switches language.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-005</strong></td>
+<td style="text-align:left"><strong>Module Coverage</strong></td>
+<td style="text-align:left">Every customer intent must accurately classify and route to the correct functional capability module (<code>M1</code> through <code>M8</code>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-006</strong></td>
+<td style="text-align:left"><strong>Retry Strikes &amp; Strike Reset</strong></td>
+<td style="text-align:left">3 consecutive no-input turns (<code>local_noinput_counter == 3</code>), 3 unresolved no-match events (<code>no_match_confirmation_count == 3</code>), or 3 consecutive failed PIN/OTP authentication attempts trigger graceful live-agent escalation (<code>no_input_escalation</code> / <code>disambig_max_attempts</code> / <code>live_agent_handoff</code>). <strong>Crucial Recovery Rule</strong>: If a caller is silent for 1 or 2 turns (e.g., distracted) or enters 1 or 2 wrong PINs/identifiers and then provides valid input on Turn 3, the respective error counter resets to <code>0</code> and the conversation proceeds normally.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-007</strong></td>
+<td style="text-align:left"><strong>DTMF Capture</strong></td>
+<td style="text-align:left">Spoken or telephone keypad DTMF entries (account numbers, PINs, payment confirmations in English or French) are normalized and written to session variable <code>dtmf_digits</code> on the arrival turn.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-008</strong></td>
+<td style="text-align:left"><strong>Strict 3-Tier Auth Ladder &amp; Persistence</strong></td>
+<td style="text-align:left">Enforce <code>Guest</code> $\rightarrow$ <code>Identified</code> $\rightarrow$ <code>Authenticated</code>. Account reads, billing lookups/payments, plan upgrades, warranty claims, number port-ins, and service cancellations strictly require <code>Authenticated</code> (<code>auth_status == Pass</code>). Once <code>Authenticated</code> is achieved in a session, <strong>authentication persists across all subsequent intra-module and cross-module pivots</strong> without re-prompting for PIN/OTP.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-009</strong></td>
+<td style="text-align:left"><strong>PII Redaction</strong></td>
+<td style="text-align:left">Account numbers (<code>billing_account</code>), customer reference numbers (<code>cirn</code>), and credit card numbers are spoken back and logged as <strong>last-4 digits only</strong>. 4-digit PINs and 6-digit SMS OTP codes are <strong>never echoed</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-010</strong></td>
+<td style="text-align:left"><strong>Tool-Error Tri-State &amp; Recovery</strong></td>
+<td style="text-align:left">System errors end session immediately or escalate (<code>global_err_count</code>); <strong>business errors surface to the model to offer alternative options</strong> (e.g., if a payment credit card is declined, gracefully prompt the caller to provide a secondary/alternative credit card and retry); validation errors prompt inline retry (e.g., unrecognized phone number prompts fallback to 9-digit account number).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-011</strong></td>
+<td style="text-align:left"><strong>Verbatim Compliance</strong></td>
+<td style="text-align:left">All legal, privacy, contract cancellation/port-out, refund confirmation, business handoff, empathy, outage, and specialist transfer strings in Section 4 must be emitted <strong>verbatim</strong> in the locked language without model contraction, truncation, or paraphrasing.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-012</strong></td>
+<td style="text-align:left"><strong>Business Handoff</strong></td>
+<td style="text-align:left">Whenever a caller states they are calling about a business account or account lookup sets <code>business_flag == True</code> (across Billing, Tech Status, or Service Restoration), the agent immediately emits verbatim <code>business_handoff</code> and transfers to a commercial representative without attempting residential self-service or PIN/OTP auth.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-013</strong></td>
+<td style="text-align:left"><strong>Fraud &amp; Compromise Escalation</strong></td>
+<td style="text-align:left">Any report of account hacking, unauthorized charges (Turn 1 or discovered mid-call during billing review), phishing/scam SMS messages, or <strong>suspected fraudulent SIM swap (sudden loss of mobile service with number theft concern)</strong> immediately aborts self-service, emits verbatim <code>empathy_protocol</code>, and executes immediate transfer (<code>fraud_escalation</code>) to the Fraud Specialist queue <strong>without requiring authentication</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-014</strong></td>
+<td style="text-align:left"><strong>After-Hours Awareness</strong></td>
+<td style="text-align:left">Outage and Fraud queues operate 24/7. Sales, plan changes, and appointment scheduling route to next-business-day callback scheduling when queues are closed.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-015</strong></td>
+<td style="text-align:left"><strong>Session-Context Handoff</strong></td>
+<td style="text-align:left">Every live-agent or specialist escalation carries the full session variable payload (<code>clid</code>, <code>billing_account</code>, <code>auth_status</code>, <code>language</code>, <code>route</code>, conversation summary) to the receiving representative's console.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-016</strong></td>
+<td style="text-align:left"><strong>Malicious Utterance</strong></td>
+<td style="text-align:left">Classifier hits for abusive, profane, or malicious input terminate the session immediately with reason <code>malicious_input</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-017</strong></td>
+<td style="text-align:left"><strong>No Invented Data</strong></td>
+<td style="text-align:left">If a tool lookup fails or returns empty, the agent must never fabricate account balances, plan prices, warranty dates, or technician ETAs. Generation is strictly conditioned on tool outputs.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-018</strong></td>
+<td style="text-align:left"><strong>Audio Recording</strong></td>
+<td style="text-align:left">Every voice interaction produces an archived session recording verified by compliance audits.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-019</strong></td>
+<td style="text-align:left"><strong>Mid-Call Topic Switch &amp; Compound Intents</strong></td>
+<td style="text-align:left">The agent must dynamically re-classify and re-route whenever the caller pivots mid-call (e.g., Password Reset $\rightarrow$ Billing Balance; Enable MFA $\rightarrow$ Tech Support; Check Tech Status $\rightarrow$ Reschedule Appointment; Pay Bill $\rightarrow$ Setup Autopay) while retaining all established identity and authentication state.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-020</strong></td>
+<td style="text-align:left"><strong>Language Non-Degradation</strong></td>
+<td style="text-align:left">A call initiated in French (<code>fr-ca</code>) or English (<code>en</code>) must remain strictly in that language throughout all self-service modules, tool error recoveries, verbatim disclosures, and transfer handoffs to a matching bilingual representative.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>BR-TV-021</strong></td>
+<td style="text-align:left"><strong>Unconditional Live Representative Handoff</strong></td>
+<td style="text-align:left">If the caller explicitly requests to speak to a human representative/person/agent at <strong>Turn 1 or at any point mid-call</strong> (e.g., <code>&quot;I want to talk to a person&quot;</code>, <code>&quot;Representative, please!&quot;</code>, <code>&quot;Je veux parler à un représentant&quot;</code>), the agent immediately bypasses/aborts self-service and authentication, emits verbatim <code>live_agent_handoff</code> in the active language, and executes transfer.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Section 2 — Capability Modules Architecture (<code>M1</code> – <code>M8</code>)</h2>
+<p>The conversational application is structured into <strong>8 Functional Capability Modules (<code>M1</code> – <code>M8</code>)</strong> operating in a Hub-and-Spoke / Routed Specialist topology:</p>
+<pre><code class="language-mermaid">graph TD
+    User([Customer Voice Call]) &lt;--&gt; M1[&quot;M1: Session Lifecycle &amp; Routing Hub&quot;]
+    M1 --&gt; M2[&quot;M2: Authentication &amp; Identity Gatekeeper&quot;]
+    M1 --&gt; M3[&quot;M3: Billing, Payments &amp; Credits&quot;]
+    M1 --&gt; M4[&quot;M4: Tech Support, Outages &amp; Virtual Repair&quot;]
+    M1 --&gt; M5[&quot;M5: Sales, Upgrades, Warranty &amp; Port-In&quot;]
+    M1 --&gt; M6[&quot;M6: Appointments &amp; Trouble Tickets&quot;]
+    M1 --&gt; M7[&quot;M7: Account, Security, Restoration &amp; Cancellations&quot;]
+    M1 --&gt; M8[&quot;M8: French Canadian (fr-ca) Specialist Support&quot;]
+
+    M2 -.-&gt;|Auth Status = Pass / Escalate| M1
+    M3 -.-&gt;|Topic Switch / Specialist Transfer / Complete| M1
+    M4 -.-&gt;|Topic Switch / SMS Dispatched / Complete| M1
+    M5 -.-&gt;|Topic Switch / Order Confirmed / Complete| M1
+    M6 -.-&gt;|Topic Switch / Rescheduled / Complete| M1
+    M7 -.-&gt;|Topic Switch / Fraud or Cancel Transfer / Complete| M1
+    M8 -.-&gt;|Topic Switch / Complete| M1
+</code></pre>
+<h3>Module Responsibilities &amp; Volume Breakdown</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Module</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Call Volume</th>
+<th style="text-align:left">Reconciled Purpose, Scope &amp; Business Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>M1</strong></td>
+<td style="text-align:left"><strong>Session Lifecycle &amp; Routing</strong></td>
+<td style="text-align:left">Entry / Exit (100%)</td>
+<td style="text-align:left">Emit verbatim <code>recording_notice</code> and <code>greeting_main</code>; run blocklist check (<code>BR-TV-002</code>) and regional alerts (<code>BR-TV-003</code>); detect and lock language (<code>en</code> or <code>fr-ca</code>); capture DTMF input (<code>dtmf_digits</code>); handle unconditional human agent requests (<code>BR-TV-021</code>); orchestrate cross-module mid-call topic switches (<code>BR-TV-019</code>); manage 3-strike error counters (<code>BR-TV-006</code>); execute closing sign-off.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>M2</strong></td>
+<td style="text-align:left"><strong>Authentication &amp; Identity</strong></td>
+<td style="text-align:left">Gatekeeper</td>
+<td style="text-align:left">Manage 3-tier ladder (<code>Guest</code> $\rightarrow$ <code>Identified</code> $\rightarrow$ <code>Authenticated</code>). Identify accounts via 10-digit phone number or 9-digit <code>billing_account</code> (with inline retry if wrong number entered). Authenticate via 4-digit PIN (<code>id_verification_pin</code>) or 6-digit SMS OTP (<code>id_verification_otp</code>), supporting spoken or DTMF keypad input. Allow up to 2 retry attempts on incorrect PIN/OTP; escalate to live agent on 3rd failure. Detect <code>business_flag == True</code> and trigger immediate <code>business_handoff</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>M3</strong></td>
+<td style="text-align:left"><strong>Billing, Payments &amp; Credits</strong></td>
+<td style="text-align:left">~25%</td>
+<td style="text-align:left"><strong>Requires <code>Authenticated</code></strong>. Look up balances and itemized charges; process one-time <strong>Bill Payments</strong> via saved credit card on file (speaking back last-4 digits only per <code>BR-TV-009</code>), new credit card, or French DTMF keypad; handle <strong>Card Decline Recovery</strong> by prompting for an alternative credit card; enroll accounts in <strong>Autopay</strong> (via Credit Card or Bank Account / Pre-Authorized Debit), including sequential <code>Pay Bill -&gt; Setup Autopay</code> flows; process <strong>Charge Disputes, Overpayment Refunds, and Outage Downtime Credits</strong> strictly within the <strong>$\le $25.00$ self-service threshold</strong> (emitting verbatim <code>refund_confirmation_pattern</code>). For credit/refund requests <strong>$&gt; $25.00$</strong> (e.g., $150 returned equipment charge), authenticate caller and escalate via verbatim <code>transfer_to_specialist</code>. Support <strong>Payment Arrangements</strong> for suspended/past-due callers.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>M4</strong></td>
+<td style="text-align:left"><strong>Tech Support, Outages &amp; Virtual Repair</strong></td>
+<td style="text-align:left">~30%</td>
+<td style="text-align:left"><strong>Tiered Auth</strong>: Regional <strong>Outage Checks by Postal Code</strong> operate at <code>Guest / Identified</code> tier (no PIN/OTP required); if active outage found, emit verbatim <code>outage_active</code> and offer proactive SMS restoration alerts. If no outage is active, proactively offer an <strong>SMS Troubleshooting Guide</strong>. For interactive <strong>Virtual Repair Diagnostics</strong> (<code>Authenticated</code>), disambiguate service/device sub-type (<code>lob</code> and <code>tv_sub_type</code>) and execute targeted workflows: (1) <strong>Fibe TV Receiver (<code>no signal</code>)</strong>: HDMI cable verification &amp; receiver reboot; (2) <strong>Satellite TV (<code>Error 101</code>)</strong>: Satellite signal acquisition &amp; receiver recovery specific to Error 101; (3) <strong>Fibe TV App (<code>streaming_only</code> / app freezing)</strong>: Cache clear &amp; app reinstall; (4) <strong>Mobility Network (<code>no service / aucun service</code> vs <code>slow cellular data</code>)</strong>: Network settings reset, SIM check, and data speed diagnostics (or SMS guide dispatch).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>M5</strong></td>
+<td style="text-align:left"><strong>Sales, Upgrades, Warranty &amp; Port-In</strong></td>
+<td style="text-align:left">~15%</td>
+<td style="text-align:left"><strong>Requires <code>Authenticated</code> for all account mutations/orders (<code>BR-TV-008</code>)</strong>. (1) <strong>Plan &amp; Package Upgrades</strong>: Present 2–3 curated options across Mobility data tiers, Home Internet speed tiers (including <strong>Work-From-Home bandwidth profiles</strong>), and <strong>TV Add-On Packages (e.g., Sports Channel Package)</strong>; support <strong>strict monthly budget filtering (e.g., $\le $60/\text{month}$)</strong>; capture selection and confirm order/ETA. (2) <strong>Device Warranty Replacement</strong>: Check warranty coverage status by purchase date (<code>sim__warranty_replacement_check_status</code>); enforce <strong>Mandatory Physical &amp; Liquid Damage Exclusion Check</strong> (must confirm zero physical/water damage); support iPhone (screen flickering), Samsung (charging failure), and Google Pixel (dead microphone); handle <strong>Urgent Safety Defects (swollen battery / <code>batterie gonflée</code>)</strong> with priority replacement dispatch. (3) <strong>Number Port-In (Transfer to Bell)</strong>: Collect required porting payload (<strong>temporary Bell number, external phone number to transfer, and previous carrier account number/PIN</strong>) for Competitor Mobile port-in, <strong>Wireline/Landline-to-Mobile conversion</strong>, and <strong>Family Plan Add-a-Line port-in</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>M6</strong></td>
+<td style="text-align:left"><strong>Appointments &amp; Trouble Tickets</strong></td>
+<td style="text-align:left">~10%</td>
+<td style="text-align:left"><strong>Requires <code>Authenticated</code></strong>. Look up active field installation appointments (<code>Where is my technician?</code>) and open repair/trouble tickets (<code>statut de mon billet</code>); report real-time technician en-route/delay status; <strong>dynamically pivot from delayed technician status directly into offering 2–3 reschedule time slots</strong>; commit appointment reschedules or cancellations and dispatch SMS confirmation. Deflect business lines via <code>business_handoff</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>M7</strong></td>
+<td style="text-align:left"><strong>Account, Security, Restoration &amp; Cancellations</strong></td>
+<td style="text-align:left">~15%</td>
+<td style="text-align:left">Manage 5 high-compliance account lifecycles: (1) <strong>Password Reset (<code>Identified</code> tier)</strong>: Verify account via phone/account number (with retry on wrong number) and dispatch 30-minute valid SMS reset link; <strong>escalate to live agent (<code>live_agent_handoff</code>) if caller reports SMS not received</strong>. (2) <strong>MFA Management</strong>: <strong>Enabling MFA</strong> requires standard <code>Authenticated</code> (PIN/OTP); <strong>Disabling MFA</strong> requires <code>Authenticated</code> (PIN/OTP) <strong>PLUS Step-Up Verification Code sent to registered backup email</strong>. (3) <strong>Fraud &amp; Compromise Escalation (<code>Guest/Unauthenticated</code>)</strong>: Immediately detect Turn 1 or mid-call reports of hacked accounts, unauthorized billing charges, phishing/scam texts, or <strong>suspected SIM swap</strong>, emit verbatim <code>empathy_protocol</code>, and transfer via <code>fraud_escalation</code>. (4) <strong>Service Restoration (<code>Authenticated</code>)</strong>: Support 3 paths for suspended lines—Immediate Full Balance Payment (via M3), <strong>Structured Payment Arrangement (Promise-to-Pay)</strong>, and <strong>Prior Payment Verification (verifying payment made yesterday and restoring without duplicate charge)</strong>. (5) <strong>Service Cancellation &amp; Number Port-Out (<code>Authenticated</code>)</strong>: Process cancellations for Home Internet, Mobility, Fibe TV, and Home Phone landline, as well as Mobile Number Port-Out to external carriers; <strong>strictly emit verbatim Mandatory Contract Disclosure (<code>contract_disclosure_cancellation</code> / <code>contract_disclosure_port_out</code>)</strong> and capture explicit caller confirmation before executing cancellation.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>M8</strong></td>
+<td style="text-align:left"><strong>Secondary Language Fallback (<code>fr-ca</code>)</strong></td>
+<td style="text-align:left">Variable</td>
+<td style="text-align:left">Provide native French Canadian (<code>fr-ca</code>) conversational execution, DTMF capture, regional Quebec postal code outage handling (e.g., <code>G1R 4A6</code>), and complete French verbatim compliance copy across all M1–M7 capabilities without language degradation (<code>BR-TV-020</code>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Section 3 — Reconciled Intent Coverage &amp; Routing Table</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Representative Caller Utterance</th>
+<th style="text-align:left">Route To</th>
+<th style="text-align:left">Auth Required (Reconciled)</th>
+<th style="text-align:left">Mandatory Special Handling / Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&quot;I want to talk to a person&quot;</code> / <code>&quot;Representative, please!&quot;</code> / <code>&quot;Je veux parler à un représentant&quot;</code></td>
+<td style="text-align:left"><strong>Live Agent Handoff (M1)</strong></td>
+<td style="text-align:left"><strong>None (Immediate Transfer)</strong></td>
+<td style="text-align:left">Emit verbatim <code>live_agent_handoff</code> at Turn 1 or mid-call (<code>BR-TV-021</code>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Someone hacked my account&quot;</code> / <code>&quot;Fraud&quot;</code> / <code>&quot;Scam text asking for PIN&quot;</code> / <code>&quot;Lost service, suspect SIM swap&quot;</code></td>
+<td style="text-align:left"><strong>M7 (Account - Fraud)</strong></td>
+<td style="text-align:left"><strong>None (Immediate Empathy + Escalation)</strong></td>
+<td style="text-align:left">Emit verbatim <code>empathy_protocol</code> + immediate <code>fraud_escalation</code> transfer (<code>BR-TV-013</code>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Dispute a charge on my business account&quot;</code> / <code>&quot;Check tech status for business line&quot;</code> / <code>&quot;Restore suspended business line&quot;</code></td>
+<td style="text-align:left"><strong>Business Queue Deflection (M1/M2)</strong></td>
+<td style="text-align:left"><strong>None (Immediate Business Deflection)</strong></td>
+<td style="text-align:left">Upon <code>business_flag == True</code>, emit verbatim <code>business_handoff</code> and transfer (<code>BR-TV-012</code>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Check if there is an internet outage in postal code H3Z 2Y7&quot;</code> / <code>&quot;Panne dans mon secteur G1R 4A6&quot;</code></td>
+<td style="text-align:left"><strong>M4 (Tech Support - Outage)</strong></td>
+<td style="text-align:left"><strong>Guest / Identified (Postal Code only)</strong></td>
+<td style="text-align:left">Check outage API by postal code. If active: verbatim <code>outage_active</code> + SMS alert opt-in. If none: offer SMS troubleshooting guide.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Forgot my password&quot;</code> / <code>&quot;Reset login&quot;</code> / <code>&quot;Réinitialiser mon mot de passe&quot;</code></td>
+<td style="text-align:left"><strong>M7 (Account - Password)</strong></td>
+<td style="text-align:left"><strong>Identified (Phone or 9-digit Account #)</strong></td>
+<td style="text-align:left">Dispatch 30-min SMS link. Allow retry on wrong phone #. <strong>Escalate to live agent if SMS link is not received.</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;My bill is wrong&quot;</code> / <code>&quot;Dispute a $12.50 streaming charge&quot;</code> / <code>&quot;Credit for 3 days internet outage&quot;</code> / <code>&quot;Refund overpayment&quot;</code></td>
+<td style="text-align:left"><strong>M3 (Billing - Disputes &amp; Credits)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> via PIN/OTP)</strong></td>
+<td style="text-align:left">Auto-approve credits/refunds <strong>$\le $25.00$</strong> with verbatim <code>refund_confirmation_pattern</code>. If <strong>$&gt; $25.00$</strong> (e.g. $150 modem charge), escalate via verbatim <code>transfer_to_specialist</code>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;I want to pay my bill&quot;</code> / <code>&quot;Pay mobility balance with card on file&quot;</code> / <code>&quot;Payer ma facture avec le clavier&quot;</code></td>
+<td style="text-align:left"><strong>M3 (Billing - Payments)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> via PIN/OTP or DTMF)</strong></td>
+<td style="text-align:left">Echo saved card as <strong>last-4 digits only</strong> (<code>BR-TV-009</code>). If primary card declines, <strong>prompt for alternative card &amp; retry</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Set up autopay&quot;</code> / <code>&quot;Pay my bill first, then set up autopay&quot;</code> / <code>&quot;Paiements préautorisés&quot;</code></td>
+<td style="text-align:left"><strong>M3 (Billing - Autopay)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> - persists across turns)</strong></td>
+<td style="text-align:left">Support Credit Card or Bank Account. In sequential <code>Pay Bill -&gt; Autopay</code>, <strong>do not re-authenticate</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Restore my suspended service&quot;</code> / <code>&quot;Can't pay full balance today, need payment arrangement&quot;</code> / <code>&quot;Already paid yesterday&quot;</code></td>
+<td style="text-align:left"><strong>M7 (Account) $\leftrightarrow$ M3 (Billing)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> via PIN/OTP)</strong></td>
+<td style="text-align:left">Support 3 paths: (1) Pay full balance, (2) <strong>Set up Payment Arrangement</strong>, or (3) <strong>Verify payment made yesterday &amp; restore</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Enable MFA&quot;</code> / <code>&quot;Turn on two-factor authentication&quot;</code></td>
+<td style="text-align:left"><strong>M7 (Account - MFA Enable)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> via PIN/OTP)</strong></td>
+<td style="text-align:left">Standard primary authentication sufficient to enable MFA.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Disable two-factor&quot;</code> / <code>&quot;Lost authenticator phone, disable MFA&quot;</code> / <code>&quot;Désactiver l'authentification multifacteur&quot;</code></td>
+<td style="text-align:left"><strong>M7 (Account - MFA Disable)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code>) + Step-Up Email Auth</strong></td>
+<td style="text-align:left">Requires primary PIN/OTP <strong>PLUS Step-Up verification code sent to registered backup email</strong>. Escalate on 3 auth failures.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Cancel my internet/mobility/TV/home phone service&quot;</code> / <code>&quot;Port out my mobile number to another carrier&quot;</code></td>
+<td style="text-align:left"><strong>M7 (Account - Cancellations &amp; Port-Out)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code>) + Mandatory Contract Disclosure</strong></td>
+<td style="text-align:left">Must emit verbatim <code>contract_disclosure_cancellation</code> or <code>contract_disclosure_port_out</code> in EN/FR and capture explicit confirmation.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;TV says no signal&quot;</code> / <code>&quot;Satellite TV Error 101&quot;</code> / <code>&quot;Fibe TV app freezing&quot;</code> / <code>&quot;Cellular data slow&quot;</code> / <code>&quot;Aucun service mobile&quot;</code></td>
+<td style="text-align:left"><strong>M4 (Tech Support - Virtual Repair)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> via PIN/OTP)</strong></td>
+<td style="text-align:left">Route to device-specific interactive diagnostic flow (HDMI/reboot, Error 101 recovery, App cache/reinstall, Mobile network reset) or SMS guide.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Where is my technician?&quot;</code> / <code>&quot;Check ticket status (statut de mon billet)&quot;</code> / <code>&quot;Tech is delayed, reschedule my appointment&quot;</code></td>
+<td style="text-align:left"><strong>M6 (Appointments &amp; Tickets)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> via PIN/OTP)</strong></td>
+<td style="text-align:left">Report en-route/ticket status. If technician is delayed, <strong>pivot seamlessly to offer 2–3 reschedule slots</strong> and confirm via SMS.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Upgrade mobile data plan&quot;</code> / <code>&quot;Upgrade internet speed (WFH)&quot;</code> / <code>&quot;Add sports TV package&quot;</code> / <code>&quot;Upgrade plan under $60 budget&quot;</code></td>
+<td style="text-align:left"><strong>M5 (Sales - Upgrades)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> required to commit order)</strong></td>
+<td style="text-align:left">Filter 2–3 curated options by <strong>budget cap ($\le $60/\text{mo}$)</strong> or <strong>WFH/Sports criteria</strong>; confirm order &amp; delivery/activation ETA.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;My iPhone screen is flickering&quot;</code> / <code>&quot;Samsung won't charge&quot;</code> / <code>&quot;Pixel mic dead&quot;</code> / <code>&quot;Swollen battery (urgent)&quot;</code> / <code>&quot;Check warranty&quot;</code></td>
+<td style="text-align:left"><strong>M5 (Sales - Warranty Replacement)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> via PIN/OTP)</strong></td>
+<td style="text-align:left">Verify warranty period coverage; enforce <strong>Mandatory Zero Physical/Water Damage check</strong>; prioritize urgent safety dispatch for <strong>swollen batteries</strong>.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&quot;Transfer my number from old carrier to Bell&quot;</code> / <code>&quot;Transfer landline to mobile&quot;</code> / <code>&quot;Add daughter's number to family plan&quot;</code></td>
+<td style="text-align:left"><strong>M5 (Sales - Number Port-In)</strong></td>
+<td style="text-align:left"><strong>Yes (<code>Authenticated</code> via PIN/OTP)</strong></td>
+<td style="text-align:left">Collect <strong>Temporary Bell #, External # to port, and Old Carrier Account #/PIN</strong>. Support competitor mobile, landline-to-mobile, and family plan add-a-line.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Section 4 — Verbatim Compliance Copy Library (Complete &amp; Reconciled)</h2>
+<p>All strings in this library must be emitted <strong>verbatim</strong> without model paraphrasing, contraction, or truncation (<code>BR-TV-011</code>). All baseline French Canadian (<code>fr-CA</code>) truncations (<code>...</code>) have been fully restored, and the missing <strong>Mandatory Contract Disclosures</strong> for Cancellations and Port-Outs have been added:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th style="text-align:left">Primary Language (English <code>en-CA</code>) Verbatim String</th>
+<th style="text-align:left">Secondary Language (French Canadian <code>fr-CA</code>) Verbatim String</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong><code>greeting_main</code></strong></td>
+<td style="text-align:left"><code>&quot;Welcome to Telco. I can help with billing, technical support, or managing your account. To get started, could you tell me the phone number or account number associated with your service?&quot;</code></td>
+<td style="text-align:left"><code>&quot;Bienvenue chez Telco. Je peux vous aider avec la facturation, le soutien technique ou la gestion de votre compte. Pour commencer, pourriez-vous me donner le numéro de téléphone ou le numéro de compte associé à votre service?&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>recording_notice</code></strong></td>
+<td style="text-align:left"><code>&quot;This call may be recorded for quality and training purposes.&quot;</code></td>
+<td style="text-align:left"><code>&quot;Cet appel peut être enregistré à des fins de qualité et de formation.&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>id_verification_otp</code></strong></td>
+<td style="text-align:left"><code>&quot;For your security, I just sent a 6-digit code to that number — please read it back to me.&quot;</code></td>
+<td style="text-align:left"><code>&quot;Pour votre sécurité, je viens d'envoyer un code à 6 chiffres à ce numéro — veuillez me le lire.&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>id_verification_pin</code></strong></td>
+<td style="text-align:left"><code>&quot;For your security, I'll need to verify your identity. Please enter the 4-digit PIN you set up.&quot;</code></td>
+<td style="text-align:left"><code>&quot;Pour votre sécurité, veuillez entrer le NIP à 4 chiffres associé à votre compte.&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>live_agent_handoff</code></strong></td>
+<td style="text-align:left"><code>&quot;I'll connect you to a representative who can help. Please hold.&quot;</code></td>
+<td style="text-align:left"><code>&quot;Je vous transfère à un représentant qui pourra vous aider. Veuillez patienter.&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>business_handoff</code></strong></td>
+<td style="text-align:left"><code>&quot;To get you the best support for your business account, I'll transfer you to an agent. You'll need to use your phone keypad instead of talking to the virtual assistant. Just a moment while I connect you.&quot;</code></td>
+<td style="text-align:left"><code>&quot;Afin d'obtenir le meilleur soutien pour votre compte d'affaires, je vous transfère à un agent. Vous devrez utiliser le clavier de votre téléphone plutôt que de parler à l'assistant virtuel. Un instant pendant que je vous transfère.&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>refund_confirmation_pattern</code></strong></td>
+<td style="text-align:left"><code>&quot;Your refund of ${amount} will appear on your next statement within {days} business days.&quot;</code></td>
+<td style="text-align:left"><code>&quot;Votre remboursement de {amount} $ apparaîtra sur votre prochain relevé dans un délai de {days} jours ouvrables.&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>empathy_protocol</code></strong></td>
+<td style="text-align:left"><code>&quot;I'm very sorry to hear that you are facing challenges. I will ensure we handle your request with the utmost care.&quot;</code></td>
+<td style="text-align:left"><code>&quot;Je suis sincèrement désolé d'apprendre que vous éprouvez des difficultés. Je vais m'assurer que nous traitions votre demande avec le plus grand soin.&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>outage_active</code></strong></td>
+<td style="text-align:left"><code>&quot;I see there's an active outage in your area. We're working on it. Would you like me to text you when it's restored?&quot;</code></td>
+<td style="text-align:left"><code>&quot;Je constate qu'il y a une panne active dans votre secteur. Nous y travaillons actuellement. Voulez-vous que je vous envoie un message texte dès que le service sera rétabli?&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>transfer_to_specialist</code></strong></td>
+<td style="text-align:left"><code>&quot;I'll connect you to a specialist now — they'll have everything we've already discussed.&quot;</code></td>
+<td style="text-align:left"><code>&quot;Je vous transfère à un spécialiste dès maintenant — il disposera de tous les détails dont nous avons déjà discuté.&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>contract_disclosure_cancellation</code></strong> <em>(NEW — Reconciled Gap 1)</em></td>
+<td style="text-align:left"><code>&quot;Please note that cancelling your service may result in early cancellation fees or remaining device balance charges on your final bill, in accordance with your service agreement. Would you like to proceed with cancelling your service?&quot;</code></td>
+<td style="text-align:left"><code>&quot;Veuillez noter que l'annulation de votre service peut entraîner des frais de résiliation anticipée ou le solde restant de votre appareil sur votre facture finale, conformément à votre entente de service. Souhaitez-vous confirmer l'annulation de votre service?&quot;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>contract_disclosure_port_out</code></strong> <em>(NEW — Reconciled Gap 1)</em></td>
+<td style="text-align:left"><code>&quot;Please note that porting your phone number to another provider will automatically cancel your current mobile line with us, and any remaining device balance or early cancellation fees will apply on your final statement. Do you confirm you want to proceed with porting out your number?&quot;</code></td>
+<td style="text-align:left"><code>&quot;Veuillez noter que le transfert de votre numéro de téléphone vers un autre fournisseur annulera automatiquement votre ligne mobile actuelle chez nous, et que tout solde d'appareil ou frais de résiliation anticipée s'appliquera sur votre relevé final. Confirmez-vous vouloir procéder au transfert de votre numéro?&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Section 5 — Session Data Model &amp; Scoped Variables</h2>
+<p>The agent maintains session-scoped variables partitioned into isolated functional namespaces (consolidating raw DFCX parameters into clean CXAS session state under the 95-variable platform cap):</p>
+<h3>1. Identity &amp; Profile</h3>
+<ul>
+<li><code>clid</code> (<code>string</code>): 10-digit caller ID from telephony.</li>
+<li><code>tfn</code> (<code>string</code>): Toll-free number dialed (drives brand routing).</li>
+<li><code>cirn</code> (<code>string</code>, PII): Customer reference number (spoken/logged as last-4 only).</li>
+<li><code>billing_account</code> (<code>string</code>, PII): 9-digit account number (spoken/logged as last-4 only).</li>
+<li><code>customer_type</code> (<code>enum</code>): <code>New</code> | <code>Existing</code>.</li>
+<li><code>postal_code</code> (<code>string</code>): 6-character Canadian postal code (e.g., <code>H3Z 2Y7</code>, <code>G1R 4A6</code>) used for regional outage checks.</li>
+</ul>
+<h3>2. Authentication &amp; Security State</h3>
+<ul>
+<li><code>identification_status</code> (<code>enum</code>): <code>Pass</code> | <code>Fail</code> (set upon phone/account number lookup).</li>
+<li><code>auth_status</code> (<code>enum</code>): <code>Pass</code> | <code>Fail</code> (derived strictly from PIN/OTP verification tool return; <strong>persists across all module pivots once <code>Pass</code></strong>).</li>
+<li><code>step_up_auth_status</code> (<code>enum</code>): <code>Pass</code> | <code>Fail</code> (required for high-risk mutations such as <strong>Disabling MFA</strong> via backup email verification code).</li>
+<li><code>business_flag</code> (<code>boolean</code>): Triggers immediate business queue deflection (<code>business_handoff</code>).</li>
+<li><code>auth_retry_count</code> (<code>int</code>): Tracks consecutive PIN/OTP failures (prompts retry at 1 and 2; escalates to live agent at 3; resets to 0 on success).</li>
+</ul>
+<h3>3. Routing, Line of Business &amp; Device Context</h3>
+<ul>
+<li><code>route</code> (<code>enum</code>): Classified target module (<code>billing</code>, <code>tech</code>, <code>sales</code>, <code>appointments</code>, <code>account</code>, <code>agent_handoff</code>, <code>fraud</code>).</li>
+<li><code>lob</code> (<code>enum</code>): Line of Business (<code>mobility</code>, <code>internet</code>, <code>tv</code>, <code>homephone</code>, <code>smarthome</code>).</li>
+<li><code>tv_sub_type</code> (<code>enum</code>): <code>streaming</code> (Fibe TV Receiver) | <code>satellite</code> (Satellite TV) | <code>streaming_only</code> (Fibe TV App).</li>
+<li><code>language</code> (<code>enum</code>): <code>primary</code> (<code>en</code>) | <code>secondary</code> (<code>fr-ca</code>) (locked at Turn 1).</li>
+<li><code>dtmf_digits</code> (<code>string</code>): Keypad digits captured on current turn.</li>
+</ul>
+<h3>4. Transaction, Porting &amp; Warranty Context</h3>
+<ul>
+<li><code>dispute_or_refund_amount</code> (<code>float</code>): Requested credit/refund amount (enforces $\le $25.00$ self-service cap vs $&gt; $25.00$ specialist escalation).</li>
+<li><code>budget_cap</code> (<code>float</code>): Caller's maximum monthly budget constraint for plan upgrades (e.g., <code>60.0</code>).</li>
+<li><code>warranty_damage_free</code> (<code>boolean</code>): Mandatory eligibility gate confirming zero physical or water damage (<code>True</code> required for replacement).</li>
+<li><code>warranty_urgent_safety</code> (<code>boolean</code>): Flags hazardous hardware defects (e.g., swollen battery / <code>batterie gonflée</code>) for priority replacement.</li>
+<li><code>port_in_payload</code> (<code>object</code>): Stores <code>temp_bell_number</code>, <code>external_number_to_port</code>, <code>old_carrier_account</code>, and <code>port_type</code> (<code>competitor_mobile</code> | <code>landline_to_mobile</code> | <code>family_add_line</code>).</li>
+</ul>
+<h3>5. Error Counters &amp; Diagnostics</h3>
+<ul>
+<li><code>local_noinput_counter</code> (<code>int</code>): Consecutive no-input count for current prompt (re-prompts at 1 &amp; 2; <strong>resets to 0 on valid Turn 3 input</strong>; escalates at 3).</li>
+<li><code>no_match_confirmation_count</code> (<code>int</code>): Consecutive unresolved no-match count (escalates at 3).</li>
+<li><code>global_err_count</code> (<code>int</code>): Cumulative system/validation error count (ends session / escalates at 3).</li>
+</ul>
+<hr />
+<h2>Section 6 — Customer User Journeys (Reconciled 14 Core CUJ Test Scenarios)</h2>
+<p>To achieve 100% alignment with the <strong>70 Public Simulation Evaluations</strong> (5 evaluations per functional journey family), the test suite validates the agent across <strong>14 Core Customer User Journeys (<code>CUJ-1</code> through <code>CUJ-14</code>)</strong>:</p>
+<h3>CUJ-1: Account Password Reset &amp; SMS Escalation (<code>M7</code>)</h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__reset_password_standard</code>, <code>sim__reset_password_french</code>, <code>sim__reset_password_wrong_number_retry</code>, <code>sim__reset_password_pivot_billing</code>, <code>sim__reset_password_sms_escalation</code></li>
+<li><strong>User Goal</strong>: Reset self-serve portal password via SMS link in English or French, recover from wrong phone number entry, pivot mid-flow to check billing balance, or escalate if SMS fails to arrive.</li>
+<li><strong>Success Criteria</strong>: Agent identifies caller at <code>Identified</code> tier (allowing inline correction to 9-digit account number if initial phone lookup fails), dispatches 30-minute valid SMS reset link without handling raw passwords verbally, upgrades to <code>Authenticated</code> (PIN) seamlessly if caller pivots to billing balance, and <strong>escalates to a live representative (<code>live_agent_handoff</code>) if the caller reports not receiving the SMS link</strong>.</li>
+</ul>
+<h3>CUJ-2: Billing Charge Dispute &amp; Refund Thresholds (<code>M3</code>)</h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__dispute_unrecognized_streaming_charge</code>, <code>sim__dispute_billing_charge_french</code>, <code>sim__dispute_charge_business_account_deflection</code>, <code>sim__dispute_charge_auth_retry</code>, <code>sim__request_credit_outage_days</code>, <code>sim__request_refund_overcharge_french</code>, <code>sim__request_refund_exceeding_threshold_escalation</code></li>
+<li><strong>User Goal</strong>: Dispute unfamiliar charges ($12.50 streaming, French long-distance), claim 3-day outage downtime credits, request duplicate-payment refunds, or request a $150 returned modem refund.</li>
+<li><strong>Success Criteria</strong>: Agent deflects business accounts immediately (<code>business_handoff</code>); allows PIN retry on 1st failed attempt; authenticates residential callers (<code>Authenticated</code>); processes disputes/refunds/outage credits <strong>$\le $25.00$</strong> automatically with verbatim <code>refund_confirmation_pattern</code> in EN/FR; and for requests <strong>$&gt; $25.00$</strong> ($150 equipment charge), authenticates first and escalates via verbatim <code>transfer_to_specialist</code>.</li>
+</ul>
+<h3>CUJ-3: Regional Outage Detection &amp; Proactive SMS Troubleshooting (<code>M4</code>)</h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__check_outage_active_postal_code</code>, <code>sim__check_outage_french_active</code>, <code>sim__check_outage_none_found_sms_troubleshoot</code></li>
+<li><strong>User Goal</strong>: Check if home Wi-Fi/internet/TV downtime is caused by a regional outage in English (<code>H3Z 2Y7</code>) or French (<code>G1R 4A6</code>), and get next steps if no outage exists.</li>
+<li><strong>Success Criteria</strong>: Agent checks outage API by postal code at <code>Guest / Identified</code> tier (without forcing PIN/OTP); if active outage is detected, emits complete verbatim <code>outage_active</code> in EN/FR and enrolls caller in SMS restoration alerts; <strong>if no active outage is found, proactively offers and dispatches an SMS virtual repair troubleshooting guide</strong>.</li>
+</ul>
+<h3>CUJ-4: Technician Appointment &amp; Trouble Ticket Status / Rescheduling (<code>M6</code>)</h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__check_tech_status_standard</code>, <code>sim__check_ticket_status_french</code>, <code>sim__check_tech_status_reschedule_pivot</code>, <code>sim__check_ticket_status_retry_strikes</code>, <code>sim__check_tech_status_business_deflection</code></li>
+<li><strong>User Goal</strong>: Check installation technician arrival status (<code>Where is my technician?</code>) or open repair ticket status in French (<code>statut de mon billet</code>), recover from distracted silent turns, or reschedule if the technician is delayed.</li>
+<li><strong>Success Criteria</strong>: Agent recovers cleanly when caller is silent for 2 turns (<code>local_noinput_counter</code> resets on Turn 3 input); deflects business accounts (<code>business_handoff</code>); authenticates residential callers (<code>Authenticated</code>); reports real-time tech/ticket status; and <strong>when informed a technician is delayed, dynamically pivots in-flow to offer 2–3 reschedule slots</strong>, books the selected slot, and sends SMS confirmation.</li>
+</ul>
+<h3>CUJ-5: Sales Plan &amp; Package Upgrades (<code>M5</code>)</h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__upgrade_mobile_plan_data</code>, <code>sim__upgrade_internet_speed_french</code>, <code>sim__upgrade_tv_package_sports</code>, <code>sim__upgrade_mobile_plan_budget</code>, <code>sim__upgrade_internet_wfh</code></li>
+<li><strong>User Goal</strong>: Upgrade mobile data tier, increase home internet speed (in French or for Work-From-Home reliability), add a TV Sports Channel package, or upgrade within a strict <strong>$60/month budget cap</strong>.</li>
+<li><strong>Success Criteria</strong>: Agent enforces full <code>Authenticated</code> status (<code>BR-TV-008</code>) before committing plan mutations; filters and presents 2–3 curated options strictly honoring caller constraints (<strong>$\le $60/\text{mo}$ budget cap</strong>, WFH upload/reliability, or TV Sports package); captures selection; and confirms order with activation/delivery details in EN/FR.</li>
+</ul>
+<h3>CUJ-6: Service Restoration from Suspension (<code>M7</code> $\leftrightarrow$ <code>M3</code>)</h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__restore_service_standard</code>, <code>sim__restore_service_french</code>, <code>sim__restore_service_payment_arrangement</code>, <code>sim__restore_service_already_paid</code>, <code>sim__restore_service_business_deflection</code></li>
+<li><strong>User Goal</strong>: Restore suspended mobile or internet service via immediate payment, a payment arrangement, or verification of a bill paid yesterday.</li>
+<li><strong>Success Criteria</strong>: Deflects suspended business lines immediately (<code>business_handoff</code>). For authenticated residential callers, supports <strong>all three restoration paths</strong>: (1) Immediate payment of past-due balance; (2) <strong>Setting up a structured Payment Arrangement (Promise-to-Pay)</strong> when caller cannot pay in full today; or (3) <strong>Verifying a payment made yesterday</strong> and triggering immediate service restoration without duplicate charges.</li>
+</ul>
+<h3>CUJ-7: Bilingual French Canadian (<code>fr-CA</code>) End-to-End Parity (<code>M8</code>)</h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: All 22 French Canadian simulation evaluations across M1–M7 (<code>*_french*</code>).</li>
+<li><strong>User Goal</strong>: Conduct complete self-service or specialist escalation interactions in Canadian French (<code>fr-CA</code>), including spoken and DTMF keypad input.</li>
+<li><strong>Success Criteria</strong>: Agent detects French at Turn 1, locks <code>language = fr-ca</code>, processes French DTMF inputs and Quebec postal codes (<code>G1R 4A6</code>), emits <strong>complete, untruncated French verbatim compliance strings</strong>, and maintains 100% French language fidelity through resolution or transfer to a French-speaking representative (<code>BR-TV-004</code>, <code>BR-TV-020</code>).</li>
+</ul>
+<h3>CUJ-8: Service Cancellation &amp; Number Port-Out (<code>M7</code>) <em>(NEW — Reconciled Gap 1)</em></h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__cancel_service_internet_english</code>, <code>sim__cancel_service_mobility_french</code>, <code>sim__port_out_number_english</code>, <code>sim__cancel_tv_service_english</code>, <code>sim__cancel_home_phone_french</code></li>
+<li><strong>User Goal</strong>: Cancel residential Home Internet (moving out of country), Mobility plan (in French), Fibe TV (switching to streaming), or Home Phone landline (in French), or port a mobile number out to another carrier.</li>
+<li><strong>Success Criteria</strong>: Agent authenticates caller (<code>Authenticated</code> via PIN/OTP), <strong>emits the complete verbatim Mandatory Contract Disclosure (<code>contract_disclosure_cancellation</code> or <code>contract_disclosure_port_out</code>) in English or French</strong>, captures explicit customer confirmation after disclosure, and executes the cancellation/port-out order cleanly.</li>
+</ul>
+<h3>CUJ-9: Immediate &amp; Mid-Call Live Representative Handoff (<code>M1</code>) <em>(NEW — Reconciled Gap 2)</em></h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__speak_immediate_english</code>, <code>sim__speak_immediate_french</code>, <code>sim__speak_frustrated_english</code>, <code>sim__speak_mid_call_billing_english</code>, <code>sim__speak_mid_call_tech_french</code></li>
+<li><strong>User Goal</strong>: Bypass automation immediately on Turn 1 (<code>&quot;I want to talk to a person&quot;</code>, <code>&quot;Representative, please!&quot;</code>, <code>&quot;Je veux parler à un représentant&quot;</code>) or abandon a billing/tech inquiry mid-call to speak to a human agent.</li>
+<li><strong>Success Criteria</strong>: Agent honors <code>BR-TV-021</code> unconditionally at Turn 1 or mid-call across any module without forcing authentication or self-service deflection, emits verbatim <code>live_agent_handoff</code> in the locked language (EN/FR), and transfers session context immediately.</li>
+</ul>
+<h3>CUJ-10: Bill Payment, Autopay Enrollment &amp; Declined Card Recovery (<code>M3</code>) <em>(NEW — Reconciled Gap 4 &amp; 5)</em></h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__pay_mobility_bill_card_file</code>, <code>sim__pay_bill_french_keypad</code>, <code>sim__pay_past_due_bill_prevent_suspension</code>, <code>sim__pay_bill_declined_card_retry</code>, <code>sim__setup_autopay_internet_english</code>, <code>sim__setup_autopay_french</code>, <code>sim__setup_autopay_after_paying_bill</code></li>
+<li><strong>User Goal</strong>: Pay outstanding or past-due mobility/internet bills using saved credit card or French DTMF keypad, recover from a declined primary card using a secondary card, enroll in Autopay (credit card or bank account), or execute sequential <code>Pay Bill -&gt; Setup Autopay</code> in one call.</li>
+<li><strong>Success Criteria</strong>: Agent authenticates caller (<code>Authenticated</code>); speaks back saved card numbers as <strong>last-4 digits only</strong> (<code>BR-TV-009</code>); <strong>handles primary card decline business errors gracefully by prompting for alternative card details and retrying</strong> (<code>BR-TV-010</code>); configures Autopay in EN/FR; and <strong>transitions from Bill Payment to Autopay enrollment without requiring re-authentication</strong>.</li>
+</ul>
+<h3>CUJ-11: Multi-Factor Authentication (MFA) Management &amp; Step-Up Security (<code>M7</code>) <em>(NEW — Reconciled Gap 10)</em></h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__manage_mfa_enable</code>, <code>sim__manage_mfa_disable</code>, <code>sim__manage_mfa_french_disable</code>, <code>sim__manage_mfa_auth_failure</code>, <code>sim__manage_mfa_pivot_tech</code></li>
+<li><strong>User Goal</strong>: Enable MFA for added security, disable MFA after losing an authenticator phone (in English or French), escalate after failing PIN/OTP 3 times, or pivot to Tech Support after enabling MFA.</li>
+<li><strong>Success Criteria</strong>: Agent enforces <strong>asymmetric security</strong>: <strong>Enabling MFA</strong> completes after standard <code>Authenticated</code> (PIN/OTP); <strong>Disabling MFA</strong> strictly requires primary <code>Authenticated</code> (PIN/OTP) <strong>PLUS Step-Up Verification via code sent to backup email</strong>. Three consecutive failed auth attempts escalate to a live agent (<code>live_agent_handoff</code>). Post-MFA pivot to M4 Tech Support retains <code>Authenticated</code> status.</li>
+</ul>
+<h3>CUJ-12: Fraud &amp; Account Compromise Escalation (<code>M7</code>) <em>(NEW — Reconciled Gap 11)</em></h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__report_fraud_standard</code>, <code>sim__report_fraud_french</code>, <code>sim__report_fraud_phishing</code>, <code>sim__report_fraud_mid_call_switch</code>, <code>sim__report_fraud_sim_swap</code></li>
+<li><strong>User Goal</strong>: Report hacked account / unauthorized charges on Turn 1 (EN/FR), report a suspicious phishing SMS asking for a PIN, report sudden loss of mobile service due to suspected <strong>SIM swap</strong>, or discover unauthorized charges mid-call during a billing check.</li>
+<li><strong>Success Criteria</strong>: Agent classifies all 4 fraud vectors accurately (<strong>never misrouting SIM swap victims to M4 Tech Support</strong>), aborts/bypasses authentication barriers (<code>BR-TV-013</code>), emits verbatim <code>empathy_protocol</code> in EN/FR, and executes immediate <code>fraud_escalation</code> transfer.</li>
+</ul>
+<h3>CUJ-13: Interactive Virtual Repair &amp; Multi-Device Tech Troubleshooting (<code>M4</code>) <em>(NEW — Reconciled Gap 13)</em></h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__troubleshoot_tv_signal</code>, <code>sim__troubleshoot_mobile_service_french</code>, <code>sim__troubleshoot_satellite_tv_error</code>, <code>sim__troubleshoot_mobile_data_slow</code>, <code>sim__troubleshoot_tv_app_freezing</code></li>
+<li><strong>User Goal</strong>: Troubleshoot Fibe TV <code>&quot;no signal&quot;</code>, Satellite TV <code>&quot;Error 101&quot;</code>, Fibe TV streaming app freezing, mobile <code>&quot;aucun service&quot;</code> in French, or extremely slow cellular data.</li>
+<li><strong>Success Criteria</strong>: Agent authenticates caller (<code>Authenticated</code>), identifies specific device/service sub-type (<code>tv_sub_type</code> / <code>lob</code>), and delivers targeted interactive Virtual Repair steps (HDMI/receiver reboot for Fibe TV, Error 101 recovery for Satellite TV, cache clear/reinstall for Streaming App, network reset/diagnostics for Mobility) or dispatches the corresponding SMS guide.</li>
+</ul>
+<h3>CUJ-14: Device Warranty Replacement &amp; Number Port-In (<code>M5</code>) <em>(NEW — Reconciled Gap 14)</em></h3>
+<ul>
+<li><strong>Public Evals Covered</strong>: <code>sim__warranty_replacement_iphone_screen</code>, <code>sim__warranty_replacement_samsung_french</code>, <code>sim__warranty_replacement_pixel_mic</code>, <code>sim__warranty_replacement_check_status</code>, <code>sim__warranty_replacement_swollen_battery_french</code>, <code>sim__transfer_number_competitor</code>, <code>sim__transfer_landline_mobile_french</code>, <code>sim__transfer_family_member_number</code></li>
+<li><strong>User Goal</strong>: Check warranty status and request replacement for defective iPhone (flickering screen), Samsung (won't charge / swollen battery in French), or Pixel (dead mic); or port a phone number into Bell from a competitor mobile carrier, residential landline (in French), or onto a family plan.</li>
+<li><strong>Success Criteria</strong>: For <strong>Warranty Replacements</strong>: Agent authenticates caller, verifies active warranty coverage period, <strong>strictly verifies zero physical or water damage</strong>, flags <strong>swollen batteries (<code>batterie gonflée</code>)</strong> for urgent safety replacement, and submits replacement order. For <strong>Number Port-In</strong>: Agent authenticates caller, collects <strong>temporary Bell number, external number to transfer, and old carrier account details</strong>, and initiates port-in across mobile, landline-to-mobile, or family plan add-a-line.</li>
+</ul>
+<hr />
+<h2>Section 7 — Success Metrics &amp; Acceptance Criteria</h2>
+<h3>Success Metrics</h3>
+<ul>
+<li><strong>First-Contact Containment</strong>: <strong>$\ge 75%$</strong> self-service containment across eligible billing, payment, autopay, outage, virtual repair, upgrade, warranty, port-in, password reset, MFA, and appointment inquiries.</li>
+<li><strong>Authentication &amp; Step-Up Success Rate</strong>: <strong>$\ge 85%$</strong> self-service verification across Returning Caller PIN/OTP (<code>Authenticated</code>) and Backup Email Step-Up flows, with <strong>100% session auth persistence</strong> across multi-intent pivots.</li>
+<li><strong>Routing &amp; Disambiguation Accuracy</strong>: <strong>$\ge 95%$</strong> intent and sub-type classification accuracy across all 8 capability modules (<code>M1</code>–<code>M8</code>), including accurate separation of SIM Swap Fraud (<code>M7</code>) from Mobile Tech Support (<code>M4</code>) and Guest Outage Checks (<code>M4</code>) from Authenticated Diagnostics.</li>
+<li><strong>Zero PII &amp; Data Hallucination</strong>: <strong>$0%$</strong> unredacted PII exposure (100% last-4 masking on account/card numbers, 0 echoed PINs/OTPs per <code>BR-TV-009</code>) and <strong>$0%$</strong> fabricated balances, plans, or ETAs (<code>BR-TV-017</code>).</li>
+<li><strong>Evaluation Benchmark</strong>: <strong>$\ge 90%$ pass rate across all 70 Public Simulation Evaluations (<code>dfcx__cxas_agent_migration_public_evals</code>)</strong> and migrated deterministic unit test suites.</li>
+</ul>
+<h3>Acceptance Criteria (Release Gates)</h3>
+<ol>
+<li><strong>Verbatim Compliance Gate (<code>BR-TV-001</code>, <code>BR-TV-011</code>)</strong>: 100% exact verbatim emission (in both English and untruncated Canadian French) for <code>recording_notice</code>, <code>greeting_main</code>, <code>id_verification_otp</code>, <code>id_verification_pin</code>, <code>live_agent_handoff</code>, <code>business_handoff</code>, <code>refund_confirmation_pattern</code>, <code>empathy_protocol</code>, <code>outage_active</code>, <code>transfer_to_specialist</code>, <code>contract_disclosure_cancellation</code>, and <code>contract_disclosure_port_out</code>.</li>
+<li><strong>Bilingual Fidelity Gate (<code>BR-TV-004</code>, <code>BR-TV-020</code>)</strong>: Language is locked at Turn 1 and preserved without English fallback or degradation across all 22 French Canadian evaluation scenarios, including French DTMF keypad capture.</li>
+<li><strong>Strict Tiered Auth &amp; Persistence Gate (<code>BR-TV-008</code>)</strong>:
+<ul>
+<li>Outage checks by postal code (<code>M4</code>) and Fraud/Live Agent handoffs (<code>M7</code>/<code>M1</code>) succeed at <code>Guest/Identified</code> tier without forcing PIN/OTP.</li>
+<li>Password resets (<code>M7</code>) succeed at <code>Identified</code> tier (with SMS failure escalation fallback).</li>
+<li>Billing lookups/payments/disputes (<code>M3</code>), Plan Upgrades/Warranty/Port-In (<code>M5</code>), Appointments (<code>M6</code>), Service Restoration (<code>M7</code>), and Cancellations (<code>M7</code>) strictly enforce <code>Authenticated</code> (<code>auth_status == Pass</code>).</li>
+<li>Disabling MFA (<code>M7</code>) strictly enforces <code>Authenticated</code> + <strong>Step-Up Email Verification</strong>.</li>
+<li>Authenticated status persists across sequential multi-intent turns (<code>Pay Bill -&gt; Autopay</code>, <code>MFA -&gt; Tech Support</code>).</li>
+</ul>
+</li>
+<li><strong>Policy &amp; Error Recovery Gate (<code>BR-TV-006</code>, <code>BR-TV-010</code>)</strong>:
+<ul>
+<li>Self-service credits/refunds are strictly capped at <strong>$\le $25.00$</strong>; requests <strong>$&gt; $25.00$</strong> ($150 modem refund) escalate via verbatim <code>transfer_to_specialist</code>.</li>
+<li>Declined primary payment cards prompt inline recovery with a secondary credit card (<code>sim__pay_bill_declined_card_retry</code>).</li>
+<li>Silent turns (up to 2) or failed PIN attempts (up to 2) allow in-flow recovery and counter reset on Turn 3 (<code>sim__check_ticket_status_retry_strikes</code>, <code>sim__dispute_charge_auth_retry</code>), escalating only on the 3rd consecutive strike (<code>sim__manage_mfa_auth_failure</code>).</li>
+</ul>
+</li>
+<li><strong>Immediate Deflection Gate (<code>BR-TV-012</code>, <code>BR-TV-013</code>, <code>BR-TV-021</code>)</strong>:
+<ul>
+<li>Explicit human agent requests at Turn 1 or mid-call immediately emit <code>live_agent_handoff</code> and transfer (<code>BR-TV-021</code>).</li>
+<li>Business accounts (<code>business_flag == True</code>) immediately emit <code>business_handoff</code> and transfer (<code>BR-TV-012</code>).</li>
+<li>Fraud reports (Turn 1, mid-call billing discovery, phishing SMS, or suspected SIM swap) immediately emit <code>empathy_protocol</code> and transfer via <code>fraud_escalation</code> (<code>BR-TV-013</code>).</li>
+</ul>
+</li>
+</ol>
+
+</body>
+</html>

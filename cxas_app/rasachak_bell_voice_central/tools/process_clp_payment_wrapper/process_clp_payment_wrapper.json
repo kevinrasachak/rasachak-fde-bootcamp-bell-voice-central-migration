@@ -1,0 +1,9 @@
+{
+  "name": "process_clp_payment_wrapper",
+  "pythonFunction": {
+    "name": "process_clp_payment_wrapper",
+    "pythonCode": "tools/process_clp_payment_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper. Executes payment capture and submission sequence."
+  },
+  "displayName": "process_clp_payment_wrapper"
+}

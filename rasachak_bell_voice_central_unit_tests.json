@@ -1,0 +1,1838 @@
+{
+  "M1_SessionLifecycleAndRouting": [
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Basic Ping",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Ping",
+          "user": "hi",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "contains",
+              "value": "Hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: extract_lob_services_wrapper",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_extract_lob_services_wrapper",
+          "user": "Please execute the extract_lob_services_wrapper action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "extract_lob_services_wrapper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: fetch_account_profile_wrapper",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_fetch_account_profile_wrapper",
+          "user": "Please execute the fetch_account_profile_wrapper action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "fetch_account_profile_wrapper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: trigger_self_help_sms",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_trigger_self_help_sms",
+          "user": "Please execute the trigger_self_help_sms action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "trigger_self_help_sms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: get_ban_profile",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_get_ban_profile",
+          "user": "Please execute the get_ban_profile action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "get_ban_profile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: format_and_validate_phone_number",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_format_and_validate_phone_number",
+          "user": "Please execute the format_and_validate_phone_number action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "format_and_validate_phone_number"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: match_intent",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_match_intent",
+          "user": "Please execute the match_intent action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "match_intent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: execute_ivr_telephony_transfer",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_execute_ivr_telephony_transfer",
+          "user": "Please execute the execute_ivr_telephony_transfer action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "execute_ivr_telephony_transfer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: end_session",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_end_session",
+          "user": "Please execute the end_session action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "end_session"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Tool Binding: get_agent_queue_details",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_get_agent_queue_details",
+          "user": "Please execute the get_agent_queue_details action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "get_agent_queue_details"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Routing: M8 FrenchCanadianSupport",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M8 FrenchCanadianSupport",
+          "user": "I want to talk to M8 FrenchCanadianSupport.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M8 FrenchCanadianSupport"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Routing: M3 BillingAndPayments",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M3 BillingAndPayments",
+          "user": "I want to talk to M3 BillingAndPayments.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M3 BillingAndPayments"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Routing: M7 AccountSecurityAndCancellations",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M7 AccountSecurityAndCancellations",
+          "user": "I want to talk to M7 AccountSecurityAndCancellations.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M7 AccountSecurityAndCancellations"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Routing: M5 SalesUpgradesAndWarranty",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M5 SalesUpgradesAndWarranty",
+          "user": "I want to talk to M5 SalesUpgradesAndWarranty.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M5 SalesUpgradesAndWarranty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Routing: M2 AuthenticationAndIdentity",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M2 AuthenticationAndIdentity",
+          "user": "I want to talk to M2 AuthenticationAndIdentity.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M2 AuthenticationAndIdentity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Routing: M4 TechSupportAndVirtualRepair",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M4 TechSupportAndVirtualRepair",
+          "user": "I want to talk to M4 TechSupportAndVirtualRepair.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M4 TechSupportAndVirtualRepair"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M1_SessionLifecycleAndRouting] Routing: M6 AppointmentsAndTickets",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M6 AppointmentsAndTickets",
+          "user": "I want to talk to M6 AppointmentsAndTickets.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M6 AppointmentsAndTickets"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "M2_AuthenticationAndIdentity": [
+    {
+      "name": "[M2_AuthenticationAndIdentity] Basic Ping",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Ping",
+          "user": "hi",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "contains",
+              "value": "Hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Tool Binding: send_verification_otp",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_send_verification_otp",
+          "user": "Please execute the send_verification_otp action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "send_verification_otp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Tool Binding: prepare_sms_content_tool",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_prepare_sms_content_tool",
+          "user": "Please execute the prepare_sms_content_tool action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "prepare_sms_content_tool"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Tool Binding: validate_pin_wrapper",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_validate_pin_wrapper",
+          "user": "Please execute the validate_pin_wrapper action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "validate_pin_wrapper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Tool Binding: initialize_auth_session",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_initialize_auth_session",
+          "user": "Please execute the initialize_auth_session action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "initialize_auth_session"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Tool Binding: validate_verification_otp",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_validate_verification_otp",
+          "user": "Please execute the validate_verification_otp action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "validate_verification_otp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Tool Binding: validate_postal_code",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_validate_postal_code",
+          "user": "Please execute the validate_postal_code action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "validate_postal_code"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Tool Binding: get_intent_sdl_mapping_wrapper",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_get_intent_sdl_mapping_wrapper",
+          "user": "Please execute the get_intent_sdl_mapping_wrapper action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "get_intent_sdl_mapping_wrapper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Tool Binding: get_account_profile_and_eligibility",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_get_account_profile_and_eligibility",
+          "user": "Please execute the get_account_profile_and_eligibility action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "get_account_profile_and_eligibility"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Routing: M1 SessionLifecycleAndRouting",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M1 SessionLifecycleAndRouting",
+          "user": "I want to talk to M1 SessionLifecycleAndRouting.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M1 SessionLifecycleAndRouting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M2_AuthenticationAndIdentity] Routing: M3 BillingAndPayments",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M3 BillingAndPayments",
+          "user": "I want to talk to M3 BillingAndPayments.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M3 BillingAndPayments"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "M3_BillingAndPayments": [
+    {
+      "name": "[M3_BillingAndPayments] Basic Ping",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Ping",
+          "user": "hi",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "contains",
+              "value": "Hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M3_BillingAndPayments] Routing: M1 SessionLifecycleAndRouting",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M1 SessionLifecycleAndRouting",
+          "user": "I want to talk to M1 SessionLifecycleAndRouting.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M1 SessionLifecycleAndRouting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M3_BillingAndPayments] Routing: M2 AuthenticationAndIdentity",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M2 AuthenticationAndIdentity",
+          "user": "I want to talk to M2 AuthenticationAndIdentity.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M2 AuthenticationAndIdentity"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "M4_TechSupportAndVirtualRepair": [
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Basic Ping",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Ping",
+          "user": "hi",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "contains",
+              "value": "Hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Tool Binding: check_service_outage_bundled",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_check_service_outage_bundled",
+          "user": "Please execute the check_service_outage_bundled action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "check_service_outage_bundled"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Tool Binding: EN_Bell_Tech_Support_Wireless",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_EN_Bell_Tech_Support_Wireless",
+          "user": "Please execute the EN_Bell_Tech_Support_Wireless action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "EN_Bell_Tech_Support_Wireless"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Tool Binding: FR_Bell_vr_cda_faq",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_FR_Bell_vr_cda_faq",
+          "user": "Please execute the FR_Bell_vr_cda_faq action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "FR_Bell_vr_cda_faq"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Tool Binding: Fr_Bell_Tech_Support_Wireless",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_Fr_Bell_Tech_Support_Wireless",
+          "user": "Please execute the Fr_Bell_Tech_Support_Wireless action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "Fr_Bell_Tech_Support_Wireless"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Tool Binding: EN_Bell_vr_cda_faq",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_EN_Bell_vr_cda_faq",
+          "user": "Please execute the EN_Bell_vr_cda_faq action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "EN_Bell_vr_cda_faq"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Tool Binding: end_session",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_end_session",
+          "user": "Please execute the end_session action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "end_session"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Routing: M1 SessionLifecycleAndRouting",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M1 SessionLifecycleAndRouting",
+          "user": "I want to talk to M1 SessionLifecycleAndRouting.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M1 SessionLifecycleAndRouting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Routing: M5 SalesUpgradesAndWarranty",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M5 SalesUpgradesAndWarranty",
+          "user": "I want to talk to M5 SalesUpgradesAndWarranty.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M5 SalesUpgradesAndWarranty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Routing: M6 AppointmentsAndTickets",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M6 AppointmentsAndTickets",
+          "user": "I want to talk to M6 AppointmentsAndTickets.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M6 AppointmentsAndTickets"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M4_TechSupportAndVirtualRepair] Routing: M3 BillingAndPayments",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M3 BillingAndPayments",
+          "user": "I want to talk to M3 BillingAndPayments.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M3 BillingAndPayments"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "M5_SalesUpgradesAndWarranty": [
+    {
+      "name": "[M5_SalesUpgradesAndWarranty] Basic Ping",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Ping",
+          "user": "hi",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "contains",
+              "value": "Hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M5_SalesUpgradesAndWarranty] Tool Binding: EN_Bell_Equipment_Inquires",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_EN_Bell_Equipment_Inquires",
+          "user": "Please execute the EN_Bell_Equipment_Inquires action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "EN_Bell_Equipment_Inquires"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M5_SalesUpgradesAndWarranty] Routing: M1 SessionLifecycleAndRouting",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M1 SessionLifecycleAndRouting",
+          "user": "I want to talk to M1 SessionLifecycleAndRouting.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M1 SessionLifecycleAndRouting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M5_SalesUpgradesAndWarranty] Routing: M8 FrenchCanadianSupport",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M8 FrenchCanadianSupport",
+          "user": "I want to talk to M8 FrenchCanadianSupport.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M8 FrenchCanadianSupport"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M5_SalesUpgradesAndWarranty] Routing: M4 TechSupportAndVirtualRepair",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M4 TechSupportAndVirtualRepair",
+          "user": "I want to talk to M4 TechSupportAndVirtualRepair.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M4 TechSupportAndVirtualRepair"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "M6_AppointmentsAndTickets": [
+    {
+      "name": "[M6_AppointmentsAndTickets] Basic Ping",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Ping",
+          "user": "hi",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "contains",
+              "value": "Hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M6_AppointmentsAndTickets] Tool Binding: cancel_ticket_wrapper",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_cancel_ticket_wrapper",
+          "user": "Please execute the cancel_ticket_wrapper action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "cancel_ticket_wrapper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M6_AppointmentsAndTickets] Tool Binding: fetch_active_omf_and_acut_tickets",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_fetch_active_omf_and_acut_tickets",
+          "user": "Please execute the fetch_active_omf_and_acut_tickets action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "fetch_active_omf_and_acut_tickets"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M6_AppointmentsAndTickets] Tool Binding: wfas_book_and_acut_modify_wrapper",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_wfas_book_and_acut_modify_wrapper",
+          "user": "Please execute the wfas_book_and_acut_modify_wrapper action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "wfas_book_and_acut_modify_wrapper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M6_AppointmentsAndTickets] Tool Binding: wfas_check_availability_wrapper",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_wfas_check_availability_wrapper",
+          "user": "Please execute the wfas_check_availability_wrapper action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "wfas_check_availability_wrapper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M6_AppointmentsAndTickets] Routing: M1 SessionLifecycleAndRouting",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M1 SessionLifecycleAndRouting",
+          "user": "I want to talk to M1 SessionLifecycleAndRouting.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M1 SessionLifecycleAndRouting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M6_AppointmentsAndTickets] Routing: M2 AuthenticationAndIdentity",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M2 AuthenticationAndIdentity",
+          "user": "I want to talk to M2 AuthenticationAndIdentity.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M2 AuthenticationAndIdentity"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M6_AppointmentsAndTickets] Routing: M4 TechSupportAndVirtualRepair",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M4 TechSupportAndVirtualRepair",
+          "user": "I want to talk to M4 TechSupportAndVirtualRepair.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M4 TechSupportAndVirtualRepair"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "M7_AccountSecurityAndCancellations": [
+    {
+      "name": "[M7_AccountSecurityAndCancellations] Basic Ping",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Ping",
+          "user": "hi",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "contains",
+              "value": "Hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M7_AccountSecurityAndCancellations] Routing: M1 SessionLifecycleAndRouting",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M1 SessionLifecycleAndRouting",
+          "user": "I want to talk to M1 SessionLifecycleAndRouting.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M1 SessionLifecycleAndRouting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M7_AccountSecurityAndCancellations] Routing: M5 SalesUpgradesAndWarranty",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M5 SalesUpgradesAndWarranty",
+          "user": "I want to talk to M5 SalesUpgradesAndWarranty.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M5 SalesUpgradesAndWarranty"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M7_AccountSecurityAndCancellations] Routing: M8 FrenchCanadianSupport",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M8 FrenchCanadianSupport",
+          "user": "I want to talk to M8 FrenchCanadianSupport.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M8 FrenchCanadianSupport"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M7_AccountSecurityAndCancellations] Routing: M4 TechSupportAndVirtualRepair",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M4 TechSupportAndVirtualRepair",
+          "user": "I want to talk to M4 TechSupportAndVirtualRepair.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M4 TechSupportAndVirtualRepair"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "M8_FrenchCanadianSupport": [
+    {
+      "name": "[M8_FrenchCanadianSupport] Basic Ping",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Ping",
+          "user": "hi",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "contains",
+              "value": "Hi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Tool Binding: FR_Generic_Datastore",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_FR_Generic_Datastore",
+          "user": "Please execute the FR_Generic_Datastore action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "FR_Generic_Datastore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Tool Binding: FR_Bell_Equipment_Inquires",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_FR_Bell_Equipment_Inquires",
+          "user": "Please execute the FR_Bell_Equipment_Inquires action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "FR_Bell_Equipment_Inquires"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Tool Binding: EN_Bell_AccountManagement",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_EN_Bell_AccountManagement",
+          "user": "Please execute the EN_Bell_AccountManagement action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "EN_Bell_AccountManagement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Tool Binding: FR_Bell_AccountManagement",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_FR_Bell_AccountManagement",
+          "user": "Please execute the FR_Bell_AccountManagement action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "FR_Bell_AccountManagement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Tool Binding: EN_Generic_Datastore",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_EN_Generic_Datastore",
+          "user": "Please execute the EN_Generic_Datastore action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "EN_Generic_Datastore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Tool Binding: EN_Bell_Manage_plans_and_features",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_EN_Bell_Manage_plans_and_features",
+          "user": "Please execute the EN_Bell_Manage_plans_and_features action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "EN_Bell_Manage_plans_and_features"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Tool Binding: Fr_Bell_Tech_Support_Wireless",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_Fr_Bell_Tech_Support_Wireless",
+          "user": "Please execute the Fr_Bell_Tech_Support_Wireless action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "Fr_Bell_Tech_Support_Wireless"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Tool Binding: FR_Bell_Manage_plans_and_features",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Tool_FR_Bell_Manage_plans_and_features",
+          "user": "Please execute the FR_Bell_Manage_plans_and_features action.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "tool_called",
+              "value": "FR_Bell_Manage_plans_and_features"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "[M8_FrenchCanadianSupport] Routing: M1 SessionLifecycleAndRouting",
+      "tags": [],
+      "user": null,
+      "event": null,
+      "variables": {},
+      "historical_contexts": null,
+      "turn_count": null,
+      "config": {},
+      "expectations": [],
+      "turns": [
+        {
+          "turn": "Routing_M1 SessionLifecycleAndRouting",
+          "user": "I want to talk to M1 SessionLifecycleAndRouting.",
+          "event": null,
+          "variables": {},
+          "config": {},
+          "expectations": [
+            {
+              "type": "agent_transfer",
+              "value": "M1 SessionLifecycleAndRouting"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

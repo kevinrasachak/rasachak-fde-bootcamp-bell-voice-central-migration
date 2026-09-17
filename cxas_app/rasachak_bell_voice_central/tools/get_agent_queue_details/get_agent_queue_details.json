@@ -1,0 +1,9 @@
+{
+  "name": "get_agent_queue_details",
+  "pythonFunction": {
+    "name": "get_agent_queue_details",
+    "pythonCode": "tools/get_agent_queue_details/python_function/python_code.py",
+    "description": "Fetches target department_id and menu_id for agent routing based on evaluated flags."
+  },
+  "displayName": "get_agent_queue_details"
+}

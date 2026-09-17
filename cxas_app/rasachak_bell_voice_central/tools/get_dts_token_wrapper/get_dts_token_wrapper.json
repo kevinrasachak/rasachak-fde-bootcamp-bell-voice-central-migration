@@ -1,0 +1,9 @@
+{
+  "name": "get_dts_token_wrapper",
+  "pythonFunction": {
+    "name": "get_dts_token_wrapper",
+    "pythonCode": "tools/get_dts_token_wrapper/python_function/python_code.py",
+    "description": "Retrieves DTS token details and flags success/failure state."
+  },
+  "displayName": "get_dts_token_wrapper"
+}

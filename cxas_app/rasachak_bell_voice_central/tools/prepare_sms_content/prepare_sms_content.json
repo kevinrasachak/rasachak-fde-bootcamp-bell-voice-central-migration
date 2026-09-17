@@ -1,0 +1,9 @@
+{
+  "name": "prepare_sms_content",
+  "pythonFunction": {
+    "name": "prepare_sms_content",
+    "pythonCode": "tools/prepare_sms_content/python_function/python_code.py",
+    "description": "State Manipulator. Sets sms_content and sms_type variables based on active language."
+  },
+  "displayName": "prepare_sms_content"
+}

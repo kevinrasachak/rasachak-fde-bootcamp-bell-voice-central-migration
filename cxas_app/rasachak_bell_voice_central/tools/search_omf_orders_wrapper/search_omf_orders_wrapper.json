@@ -1,0 +1,9 @@
+{
+  "name": "search_omf_orders_wrapper",
+  "pythonFunction": {
+    "name": "search_omf_orders_wrapper",
+    "pythonCode": "tools/search_omf_orders_wrapper/python_function/python_code.py",
+    "description": "Webhook Wrapper. Searches for recent OMF orders by the specified LOB."
+  },
+  "displayName": "search_omf_orders_wrapper"
+}

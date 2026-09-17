@@ -1,0 +1,9 @@
+{
+  "name": "set_refund_variables",
+  "pythonFunction": {
+    "name": "set_refund_variables",
+    "pythonCode": "tools/set_refund_variables/python_function/python_code.py",
+    "description": "State/Variable Manipulator. Safely updates session variables 'outage_type' and 'event_type'."
+  },
+  "displayName": "set_refund_variables"
+}

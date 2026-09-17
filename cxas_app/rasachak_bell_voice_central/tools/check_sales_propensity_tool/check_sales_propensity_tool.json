@@ -1,0 +1,9 @@
+{
+  "name": "check_sales_propensity_tool",
+  "pythonFunction": {
+    "name": "check_sales_propensity_tool",
+    "pythonCode": "tools/check_sales_propensity_tool/python_function/python_code.py",
+    "description": "Fetches DEAI customer information to determine sales propensity for cross-selling."
+  },
+  "displayName": "check_sales_propensity_tool"
+}

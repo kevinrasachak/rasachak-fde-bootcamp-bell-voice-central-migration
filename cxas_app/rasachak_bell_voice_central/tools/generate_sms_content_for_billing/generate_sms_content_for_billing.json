@@ -1,0 +1,9 @@
+{
+  "name": "generate_sms_content_for_billing",
+  "pythonFunction": {
+    "name": "generate_sms_content_for_billing",
+    "pythonCode": "tools/generate_sms_content_for_billing/python_function/python_code.py",
+    "description": "State Manipulator that maps the billing intent route and language to a deterministic SMS URL.\nSets 'sms_content' and 'sms_type' directly to prevent LLM hallucinations."
+  },
+  "displayName": "generate_sms_content_for_billing"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "validate_expiry_date",
+  "pythonFunction": {
+    "name": "validate_expiry_date",
+    "pythonCode": "tools/validate_expiry_date/python_function/python_code.py",
+    "description": "Validates expiry date is future and correctly formatted MMYY/MMYYYY."
+  },
+  "displayName": "validate_expiry_date"
+}

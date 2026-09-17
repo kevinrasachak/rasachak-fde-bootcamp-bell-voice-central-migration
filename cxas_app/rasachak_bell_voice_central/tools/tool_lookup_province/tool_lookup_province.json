@@ -1,0 +1,9 @@
+{
+  "name": "tool_lookup_province",
+  "pythonFunction": {
+    "name": "tool_lookup_province",
+    "pythonCode": "tools/tool_lookup_province/python_function/python_code.py",
+    "description": "Executes npa-nxx-lookup. Parses the first 6 digits to determine province."
+  },
+  "displayName": "tool_lookup_province"
+}

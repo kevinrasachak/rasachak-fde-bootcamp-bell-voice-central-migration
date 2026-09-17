@@ -1,0 +1,9 @@
+{
+  "name": "validate_pin_wrapper",
+  "pythonFunction": {
+    "name": "validate_pin_wrapper",
+    "pythonCode": "tools/validate_pin_wrapper/python_function/python_code.py",
+    "description": "Validates a 4-digit PIN against the callKey session."
+  },
+  "displayName": "validate_pin_wrapper"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "acut_modify_contact_wrapper",
+  "pythonFunction": {
+    "name": "acut_modify_contact_wrapper",
+    "pythonCode": "tools/acut_modify_contact_wrapper/python_function/python_code.py",
+    "description": "Calls the ACUT modify tool to update customer contact preferences."
+  },
+  "displayName": "acut_modify_contact_wrapper"
+}
