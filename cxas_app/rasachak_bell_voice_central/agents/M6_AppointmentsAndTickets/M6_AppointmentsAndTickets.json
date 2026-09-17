@@ -7,7 +7,9 @@
   },
   "instruction": "agents/M6_AppointmentsAndTickets/instruction.txt",
   "tools": [
-    "appointment_manage_booking"
+    "appointment_manage_booking",
+    "auth_lookup_account",
+    "auth_verify_pin_otp"
   ],
   "beforeModelCallbacks": [
     {

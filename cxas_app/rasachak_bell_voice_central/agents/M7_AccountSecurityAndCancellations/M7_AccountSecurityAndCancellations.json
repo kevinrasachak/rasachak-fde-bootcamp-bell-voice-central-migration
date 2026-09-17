@@ -12,7 +12,9 @@
     "account_manage_mfa",
     "account_restore_service",
     "account_process_cancellation",
-    "auth_verify_pin_otp"
+    "auth_verify_pin_otp",
+    "auth_lookup_account",
+    "billing_get_account_balance"
   ],
   "beforeModelCallbacks": [
     {

@@ -17,7 +17,8 @@
     "sales_process_number_port_in",
     "auth_verify_pin_otp",
     "account_manage_mfa",
-    "account_manage_password_reset"
+    "account_manage_password_reset",
+    "billing_manage_autopay"
   ],
   "beforeModelCallbacks": [
     {
